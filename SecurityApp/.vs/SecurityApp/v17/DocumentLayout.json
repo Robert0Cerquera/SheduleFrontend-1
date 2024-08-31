@@ -1,0 +1,346 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\model\\security\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\model\\security\\roleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\roleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\dto\\usersrolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\usersrolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\dto\\rolesviewsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\rolesviewsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\interfaces\\irolesviewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\interfaces\\irolesviewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96434C52-8FE0-4CFA-AFB8-3103C69D22FE}|Business\\Business.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\business\\security\\implementations\\rolesviewsbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96434C52-8FE0-4CFA-AFB8-3103C69D22FE}|Business\\Business.csproj|solutionrelative:business\\security\\implementations\\rolesviewsbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\dto\\personsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\personsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96434C52-8FE0-4CFA-AFB8-3103C69D22FE}|Business\\Business.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\business\\security\\implementations\\personsbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96434C52-8FE0-4CFA-AFB8-3103C69D22FE}|Business\\Business.csproj|solutionrelative:business\\security\\implementations\\personsbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\personsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\personsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\interfaces\\ipersonsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\interfaces\\ipersonsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\context\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\context\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\model\\security\\modules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\modules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\modulesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\modulesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\rolesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\rolesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\rolesviewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\rolesviewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\usersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\usersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\usersrolesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\usersrolesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\data\\implementations\\viewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497546B8-567C-4AD5-9C9C-1E6FF213D3E0}|Data\\Data.csproj|solutionrelative:data\\implementations\\viewsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|c:\\users\\jimmy\\onedrive\\escritorio\\csharp\\securityapp\\entity\\migrations\\20240810013528_migrationv1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9444293D-2AF4-4145-AA16-CC40637CCEF5}|Entity\\Entity.csproj|solutionrelative:entity\\migrations\\20240810013528_migrationv1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\UserRole.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\UserRole.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\UserRole.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\UserRole.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAUwB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T02:53:59.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoleView.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\RoleView.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\RoleView.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\RoleView.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\RoleView.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T02:53:50.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersRolesDto.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\UsersRolesDto.cs",
+              "RelativeDocumentMoniker": "Entity\\Dto\\UsersRolesDto.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\UsersRolesDto.cs",
+              "RelativeToolTip": "Entity\\Dto\\UsersRolesDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T02:53:23.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RolesViewsDto.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\RolesViewsDto.cs",
+              "RelativeDocumentMoniker": "Entity\\Dto\\RolesViewsDto.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\RolesViewsDto.cs",
+              "RelativeToolTip": "Entity\\Dto\\RolesViewsDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T02:52:57.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRolesViewsData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Interfaces\\IRolesViewsData.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IRolesViewsData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Interfaces\\IRolesViewsData.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IRolesViewsData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T02:52:50.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RolesViewsBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Business\\Security\\Implementations\\RolesViewsBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Security\\Implementations\\RolesViewsBusiness.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Business\\Security\\Implementations\\RolesViewsBusiness.cs",
+              "RelativeToolTip": "Business\\Security\\Implementations\\RolesViewsBusiness.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAqwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T01:49:34.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20240810013528_MigrationV1.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Migrations\\20240810013528_MigrationV1.cs",
+              "RelativeDocumentMoniker": "Entity\\Migrations\\20240810013528_MigrationV1.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Migrations\\20240810013528_MigrationV1.cs",
+              "RelativeToolTip": "Entity\\Migrations\\20240810013528_MigrationV1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T01:35:28.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IPersonsData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Interfaces\\IPersonsData.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IPersonsData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Interfaces\\IPersonsData.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IPersonsData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:36:48.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonsDto.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\PersonsDto.cs",
+              "RelativeDocumentMoniker": "Entity\\Dto\\PersonsDto.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Dto\\PersonsDto.cs",
+              "RelativeToolTip": "Entity\\Dto\\PersonsDto.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA/wCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:35:38.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Context\\AplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Entity\\Context\\AplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Context\\AplicationDbContext.cs",
+              "RelativeToolTip": "Entity\\Context\\AplicationDbContext.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:34:15.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonsBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Business\\Security\\Implementations\\PersonsBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Security\\Implementations\\PersonsBusiness.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Business\\Security\\Implementations\\PersonsBusiness.cs",
+              "RelativeToolTip": "Business\\Security\\Implementations\\PersonsBusiness.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAewGcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:32:55.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\Person.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Person.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\Person.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Person.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAtwDEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:30:11.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Modules.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\Modules.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Modules.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Entity\\Model\\Security\\Modules.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Modules.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:30:13.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\UsersData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\UsersData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\UsersData.cs",
+              "RelativeToolTip": "Data\\Implementations\\UsersData.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAswFEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:16:39.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PersonsData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\PersonsData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\PersonsData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\PersonsData.cs",
+              "RelativeToolTip": "Data\\Implementations\\PersonsData.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDIAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:15:43.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UsersRolesData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\UsersRolesData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\UsersRolesData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\UsersRolesData.cs",
+              "RelativeToolTip": "Data\\Implementations\\UsersRolesData.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAswFQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:16:57.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RolesViewsData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\RolesViewsData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\RolesViewsData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\RolesViewsData.cs",
+              "RelativeToolTip": "Data\\Implementations\\RolesViewsData.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswFQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:16:27.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ViewsData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\ViewsData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\ViewsData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\ViewsData.cs",
+              "RelativeToolTip": "Data\\Implementations\\ViewsData.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAswFAAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:17:06.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RolesData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\RolesData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\RolesData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\RolesData.cs",
+              "RelativeToolTip": "Data\\Implementations\\RolesData.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAA9wFAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:16:07.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModulesData.cs",
+              "DocumentMoniker": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\ModulesData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementations\\ModulesData.cs",
+              "ToolTip": "C:\\Users\\jimmy\\OneDrive\\Escritorio\\CSharp\\SecurityApp\\Data\\Implementations\\ModulesData.cs",
+              "RelativeToolTip": "Data\\Implementations\\ModulesData.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAswFgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T23:15:21.312Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\bin\Debug\Diagram.dll
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\bin\Debug\Diagram.pdb
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\obj\Debug\Diagram.csproj.AssemblyReference.cache
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\obj\Debug\Diagram.csproj.CoreCompileInputs.cache
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\obj\Debug\Diagram.dll
+C:\Users\jimmy\OneDrive\Escritorio\CSharp\SecurityApp\Diagram\obj\Debug\Diagram.pdb
