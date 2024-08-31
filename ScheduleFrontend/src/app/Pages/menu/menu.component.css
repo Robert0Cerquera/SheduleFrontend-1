@@ -57,5 +57,5 @@
 
 
 .submenu li a:hover {
-  background-color: #00688B;
+  background-color: #00688B; /*/72E000* por si lo manejo con verde*/
 }
