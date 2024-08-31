@@ -1,0 +1,101 @@
+/* Estilos Globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #004455;
+    margin-bottom: 20px;
+}
+
+.contact-header p {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Formulario de Contacto */
+.contact-form-section h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80bdff;
+}
+
+button[type="submit"] {
+    background-color: #004455;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #004455;
+}
+
+/* Mapa */
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Información de contacto */
+.contact-info-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info-section li {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-info-section i {
+    color: #004455;
+    margin-right: 10px;
+    font-size: 24px;
+}

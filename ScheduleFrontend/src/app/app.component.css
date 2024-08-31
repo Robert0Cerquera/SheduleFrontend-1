@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #004455;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .nav-item a {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav-item:hover::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  
+  

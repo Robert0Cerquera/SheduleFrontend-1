@@ -1,0 +1,126 @@
+/* Estilos Globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .about-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #004455; /* Verde principal */
+    margin-bottom: 20px;
+  }
+  
+  .about-header p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Características */
+  .features-section {
+    margin-top: 50px;
+  }
+  
+  .features-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .feature {
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature i {
+    font-size: 40px;
+    color: #004455;
+  }
+  
+  .feature h3 {
+    font-size: 22px;
+    color: #343a40;
+    margin-top: 15px;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Misión y Visión */
+  .mission-vision {
+    margin: 60px 0;
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    padding: 50px 30px;
+  }
+  
+  .mission-vision h2 {
+    font-size: 28px;
+    color: #004455;
+    margin-bottom: 30px;
+  }
+  
+  .mission-vision p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+  }
+  
+  /* Contacto */
+  .team-contact h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #004455;
+  }
+  
+  .buttons a {
+    padding: 15px 30px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .buttons .btn-success {
+    background-color: #004455;
+  }
+  
+  .buttons .btn-outline-success {
+    border-color: #004455;
+    color: #004455;
+  }
+  
+  .buttons .btn-outline-success:hover {
+    background-color: #004455;
+    color: #fff;
+  }
+  
+  .buttons a i {
+    margin-right: 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    flex: 1;
+  }
+  
+  .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .fs-3{
+    color: #004455;
+  }
+
+  
+  

@@ -1,0 +1,61 @@
+.sidebar {
+  width: 250px;
+  background-color: #004455;
+  padding: 15px;
+  color: white;
+  position: fixed;
+  top: 60px; /* Debajo del navbar */
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.menu > li {
+  margin-bottom: 10px;
+}
+
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+.menu a:hover {
+  background-color: #0077a9;
+}
+
+
+.submenu {
+  list-style-type: none;
+  padding-left: 15px;
+  display: none;
+}
+
+
+.menu > li:hover .submenu {
+  display: block;
+}
+
+
+.submenu li a {
+  padding: 8px 10px;
+  display: block;
+}
+
+
+.submenu li a:hover {
+  background-color: #00688B;
+}

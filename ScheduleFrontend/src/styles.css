@@ -1,0 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .layout {
+    display: flex;
+    margin-top: 60px; /* Compensa el tamaño del navbar */
+  }
+  
+  .content {
+    margin-left: 250px; /* Compensa el ancho del sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 60px); /* Ajuste para ocupar toda la pantalla */
+    box-sizing: border-box;
+  }
+  
+  
+  
