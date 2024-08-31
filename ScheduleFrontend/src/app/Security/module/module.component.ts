@@ -10,9 +10,9 @@ import { ModuleService } from '../../Services/module.service';
   templateUrl: './module.component.html',
   styleUrl: './module.component.css'
 })
-export class ModuleComponent implements OnInit {
+export class ModuleComponent {
 
-  modules: any[] = [];
+ /* modules: any[] = [];
 
   constructor(private moduleService: ModuleService) {}
 
@@ -44,5 +44,5 @@ export class ModuleComponent implements OnInit {
     this.moduleService.deleteModule(id).subscribe(() => {
       this.modules = this.modules.filter(module => module.id !== id);
     });
-  }
+  } */
 }

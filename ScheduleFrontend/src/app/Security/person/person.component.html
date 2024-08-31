@@ -1,1 +1,94 @@
-<p>person works!</p>
+<div class="container mt-5">
+  <!-- Formulario de Registro -->
+  <h2 class="text-center mb-4">Registrar Persona</h2>
+  <form id="personForm">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Primer Nombre:</label>
+      <input type="text" id="firstName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="secondName" class="form-label">Segundo Nombre:</label>
+      <input type="text" id="secondName" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="firstSurname" class="form-label">Primer Apellido:</label>
+      <input type="text" id="firstSurname" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="secondSurname" class="form-label">Segundo Apellido:</label>
+      <input type="text" id="secondSurname" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="typeDocument" class="form-label">Tipo de Documento:</label>
+      <select id="typeDocument" class="form-control" required>
+        <option value="" disabled selected>Seleccione un tipo de documento</option>
+        <option value="CC">Cédula de Ciudadanía</option>
+        <option value="TI">Tarjeta de Identidad</option>
+        <option value="CE">Cédula de Extranjería</option>
+        <option value="PASSPORT">Pasaporte</option>
+        <!-- Añade otras opciones según el enum de Java -->
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="document" class="form-label">Documento:</label>
+      <input type="text" id="document" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo Electrónico:</label>
+      <input type="email" id="email" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Género:</label>
+      <select id="gender" class="form-control" required>
+        <option value="" disabled selected>Seleccione un género</option>
+        <option value="MALE">Masculino</option>
+        <option value="FEMALE">Femenino</option>
+        <option value="OTHER">Otro</option>
+        <!-- Añade otras opciones según el enum de Java -->
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Dirección:</label>
+      <input type="text" id="address" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Teléfono:</label>
+      <input type="text" id="phone" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
+      <input type="date" id="birthdate" class="form-control" required>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="button" class="btn btn-primary" id="savePerson" onclick="Save()">Guardar</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla para Mostrar las Personas -->
+<div class="table-container mt-5">
+  <h2 class="text-center mb-4">Lista de Personas</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Primer Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Primer Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Tipo de Documento</th>
+          <th>Documento</th>
+          <th>Correo Electrónico</th>
+          <th>Género</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody id="personDataResult">
+        <!-- Aquí se cargará la lista de Personas dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+</div>

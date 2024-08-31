@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #004455;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+input.form-control, select.form-control {
+    border-radius: 10px;
+    border: 1px solid #004455;
+    padding: 10px;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #004455;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #39A900;
+}
+
+/* Estilos para centrar y organizar la tabla */
+.table-container {
+    max-width: 800px; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.table th {
+    background-color: #004455;
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para los botones de acción */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn i {
+    font-size: 16px;
+}
