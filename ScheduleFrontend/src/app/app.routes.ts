@@ -24,7 +24,7 @@ import { ModuleComponent } from './Security/module/module.component';
 
 export const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: HomeComponent,
     },
     {

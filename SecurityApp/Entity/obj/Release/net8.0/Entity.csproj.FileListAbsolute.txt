@@ -1,0 +1,15 @@
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\bin\Release\net8.0\Entity.deps.json
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\bin\Release\net8.0\Entity.runtimeconfig.json
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\bin\Release\net8.0\Entity.dll
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\bin\Release\net8.0\Entity.pdb
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.csproj.AssemblyReference.cache
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.AssemblyInfoInputs.cache
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.AssemblyInfo.cs
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.sourcelink.json
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.dll
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\refint\Entity.dll
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.pdb
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\Entity.genruntimeconfig.cache
+C:\Users\Maryu\Desktop\2024\CSharp\SecurityApp\Entity\obj\Release\net8.0\ref\Entity.dll
