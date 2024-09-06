@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LZmM6hTQ7eA=",
+  "dgSpecHash": "osLVLc1UQRo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maryu\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Maryu\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

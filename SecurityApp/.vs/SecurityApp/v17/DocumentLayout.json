@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E781F14-0C56-47D6-9313-DE113AEE8760}|Web\\Web.csproj|c:\\users\\maryu\\desktop\\2024\\csharp\\securityapp\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E781F14-0C56-47D6-9313-DE113AEE8760}|Web\\Web.csproj|c:\\users\\maryu\\desktop\\2024\\shedulefrontend\\securityapp\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E781F14-0C56-47D6-9313-DE113AEE8760}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E781F14-0C56-47D6-9313-DE113AEE8760}|Web\\Web.csproj|c:\\users\\maryu\\desktop\\2024\\shedulefrontend\\securityapp\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E781F14-0C56-47D6-9313-DE113AEE8760}|Web\\Web.csproj|solutionrelative:web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Web\\appsettings.json",
+              "RelativeToolTip": "Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-05T00:54:48.644Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Web\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Web\\Program.cs",
               "RelativeDocumentMoniker": "Web\\Program.cs",
-              "ToolTip": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Web\\Program.cs",
               "RelativeToolTip": "Web\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAANAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAAGUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-01T09:16:07.951Z",
               "EditorCaption": ""

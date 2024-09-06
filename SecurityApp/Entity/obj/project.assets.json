@@ -4148,11 +4148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Entity\\Entity.csproj",
+      "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Entity\\Entity.csproj",
+      "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Entity\\obj\\",
+      "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

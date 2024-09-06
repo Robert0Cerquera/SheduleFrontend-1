@@ -8115,11 +8115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Utilities\\Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
       "projectName": "Utilities",
-      "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Utilities\\Utilities.csproj",
+      "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
       "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\CSharp\\SecurityApp\\Utilities\\obj\\",
+      "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
