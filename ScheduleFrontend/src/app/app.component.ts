@@ -5,6 +5,7 @@ import { AboutComponent } from "./Pages/about/about.component";
 import { MenuComponent } from "./Pages/menu/menu.component";
 import { NavbarComponent } from "./Pages/navbar/navbar.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

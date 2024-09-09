@@ -1,29 +1,29 @@
 <div class="container mt-5">
-    <!-- Formulario de Registro -->
-    <h2 class="text-center mb-4">Registrar Usuario</h2>
-    <form id="userForm">
-      <div class="mb-3">
-        <label for="username" class="form-label">Nombre de Usuario:</label>
-        <input type="text" id="username" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Contraseña:</label>
-        <input type="password" id="password" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="personId" class="form-label">Persona:</label>
-        <select id="personId" class="form-control" required>
-          <option value="" disabled selected>Seleccione una persona</option>
-          <!-- Aquí se cargarán las opciones de personas -->
-        </select>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" id="saveUser" onclick="Save()">Guardar</button>
-      </div>
-    </form>
-  </div>
-  
- <!-- Tabla para Mostrar los Usuarios -->
+  <!-- Formulario de Registro -->
+  <h2 class="text-center mb-4">Registrar Usuario</h2>
+  <form (ngSubmit)="createUser()">
+    <div class="mb-3">
+      <label for="usuario" class="form-label">Nombre de Usuario:</label>
+      <input [(ngModel)]="newUser.usuario" name="usuario" type="text" id="usuario" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="contrasenia" class="form-label">Contraseña:</label>
+      <input [(ngModel)]="newUser.contrasenia" name="contrasenia" type="password" id="contrasenia" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="personId" class="form-label">Persona:</label>
+      <select [(ngModel)]="newUser.personId" name="personId" id="personId" class="form-control" required>
+        <option value="" disabled selected>Seleccione una persona</option>
+        <option *ngFor="let person of persons" [value]="person.id">{{ person.primerNombre }} {{ person.segundoNombre }}</option>
+      </select>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla para Mostrar los Usuarios -->
 <div class="table-container mt-5">
   <h2 class="text-center mb-4">Lista de Usuarios</h2>
   <div class="table-responsive">
@@ -35,16 +35,15 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <tbody id="userDataResult">
-        <!-- Aquí se cargará la lista de Usuarios -->
-        <tr>
-          <td>MarGonzalez</td>
-          <td>Maryury Gonzalez/td>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.usuario }}</td>
+          <td>{{ getPersonName(user.personId) }}</td>
           <td>
-            <button class="btn btn-sm btn-warning me-2">
+            <button class="btn btn-sm btn-warning me-2" (click)="updateUser(user.id)">
               <i class="bi bi-pencil-square"></i>
             </button>
-            <button class="btn btn-sm btn-danger">
+            <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">
               <i class="bi bi-trash"></i>
             </button>
           </td>
@@ -53,4 +52,3 @@
     </table>
   </div>
 </div>
-  

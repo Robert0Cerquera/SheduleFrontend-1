@@ -86,9 +86,25 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <tbody id="personDataResult">
-        <!-- Aquí se cargará la lista de Personas dinámicamente -->
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{ person.primerNombre }}</td>
+          <td>{{ person.segundoNombre }}</td>
+          <td>{{ person.tipoDocumento }}</td>
+          <td>{{ person.numeroDocumento }}</td>
+          <td>{{ person.telefono }}</td>
+          <td>{{ person.email }}</td>
+         <!-- <td>{{ person.gender }}</td>
+          <td>{{ person.address }}</td>
+          <td>{{ person.phone }}</td>
+          <td>{{ person.birthdate | date:'dd/MM/yyyy' }}</td>-->
+          <td>
+            <button (click)="updatePerson(person.id)" class="btn btn-primary btn-sm">Editar</button>
+            <button (click)="deletePerson(person.id)" class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
+
