@@ -4,7 +4,15 @@ export interface Person {
     segundoNombre: string;
     tipoDocumento: string;
     numeroDocumento: string;
-    telefono: string;  // Ajusta el tipo según lo que maneje tu API
+    telefono: string;
     email: string;
-   
+    primerApellido: string;
+    segundoApellido: string;
+    direccion: string;
+    fechaNacimiento: string; 
+    genero: string;
+    state: boolean; 
+    createdAt: string; 
+    updatedAt: string;
+    deletedAt?: string | null; 
 }

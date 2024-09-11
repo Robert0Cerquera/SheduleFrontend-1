@@ -8,7 +8,7 @@ import { Person } from '../models/person'; // Ajusta la ruta si es necesario
 })
 export class PersonService {
 
-  private apiUrl = 'http://localhost:9000/base/api/v1/base/persona/';
+  private apiUrl = 'http://localhost:9000/base/api/v1/base/security/persona';
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +19,7 @@ export class PersonService {
 
   // Método para obtener una persona por ID
   getPersonById(id: number): Observable<Person> {
-    return this.http.get<Person>(`${this.apiUrl}${id}`);
+    return this.http.get<Person>(`${this.apiUrl}/${id}`);
   }
 
   // Método para crear una nueva persona
@@ -28,13 +28,13 @@ export class PersonService {
   }
 
   // Método para actualizar una persona
-  updatePerson(id: number, persona: Person): Observable<Person> {
-    return this.http.put<Person>(`${this.apiUrl}${id}`, persona);
+  updatePerson(person: Person): Observable<Person> {
+    return this.http.put<Person>(`${this.apiUrl}/${person.id}`, person);
   }
 
   // Método para eliminar una persona por ID
   deletePerson(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}${id}`);
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 
 }

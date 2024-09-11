@@ -25,7 +25,7 @@ public abstract class BaseEntity {
 	@Column(name="updated_at", nullable= false)
 	private LocalDateTime updatedAt;
 	
-	@Column(name="deleted_at", nullable= false)
+	@Column(name="deleted_at", nullable= true)
 	private LocalDateTime deletedAt;
 
 	public Long getId() {

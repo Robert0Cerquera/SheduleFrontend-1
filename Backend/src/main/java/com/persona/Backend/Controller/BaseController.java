@@ -36,7 +36,7 @@ public class BaseController<T> {
 	@Operation(summary = "Consultar registros por id", responses = {
 			@ApiResponse(responseCode = "200", description = "consulta de registro por id exitosa "),
 			@ApiResponse(responseCode = "404", description = "No se encontro registro por id ") })
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public Optional<T> findById(@PathVariable Long id) throws Exception {
 		return serviceT.findById(id);
 	}
@@ -59,7 +59,7 @@ public class BaseController<T> {
 			@ApiResponse(responseCode = "200", description = "Actualizacion exitosa "),
 			@ApiResponse(responseCode = "404", description = "Error al modificar ") })
 
-	@PutMapping("{id}" )
+	@PutMapping("/{id}" )
 	public ResponseEntity<ApiResponseDto<T>> update(@PathVariable Long id, @RequestBody T instanceEntity) {
 		try {
 			serviceT.update(id, instanceEntity);
@@ -73,7 +73,7 @@ public class BaseController<T> {
 			@ApiResponse(responseCode = "204", description = "Registro eliminado exitosamente "),
 			@ApiResponse(responseCode = "404", description = " no encontrado ") })
 
-	@DeleteMapping("{id}" )
+	@DeleteMapping("/{id}" )
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)//respuestas sin contenido
 	public void delete(@PathVariable Long id) throws Exception {
 		serviceT.delete(id);

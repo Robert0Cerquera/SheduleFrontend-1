@@ -1,26 +1,31 @@
 <div class="container mt-5">
-  <!-- Formulario de Registro -->
-  <h2 class="text-center mb-4">Registrar Persona</h2>
-  <form id="personForm">
+  <!-- Formulario de Registro / Edición -->
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Persona' : 'Registrar Persona' }}</h2>
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
     <div class="mb-3">
       <label for="firstName" class="form-label">Primer Nombre:</label>
-      <input type="text" id="firstName" class="form-control" required>
+      <input type="text" id="firstName" class="form-control" [(ngModel)]="selectedPerson.primerNombre"
+        name="primerNombre" required>
     </div>
     <div class="mb-3">
       <label for="secondName" class="form-label">Segundo Nombre:</label>
-      <input type="text" id="secondName" class="form-control">
+      <input type="text" id="secondName" class="form-control" [(ngModel)]="selectedPerson.segundoNombre"
+        name="segundoNombre">
     </div>
     <div class="mb-3">
       <label for="firstSurname" class="form-label">Primer Apellido:</label>
-      <input type="text" id="firstSurname" class="form-control" required>
+      <input type="text" id="firstSurname" class="form-control" [(ngModel)]="selectedPerson.primerApellido"
+        name="primerApellido" required>
     </div>
     <div class="mb-3">
       <label for="secondSurname" class="form-label">Segundo Apellido:</label>
-      <input type="text" id="secondSurname" class="form-control">
+      <input type="text" id="secondSurname" class="form-control" [(ngModel)]="selectedPerson.segundoApellido"
+        name="segundoApellido">
     </div>
     <div class="mb-3">
       <label for="typeDocument" class="form-label">Tipo de Documento:</label>
-      <select id="typeDocument" class="form-control" required>
+      <select id="typeDocument" class="form-control" [(ngModel)]="selectedPerson.tipoDocumento"
+        name="tipoDocumento" required>
         <option value="" disabled selected>Seleccione un tipo de documento</option>
         <option value="CC">Cédula de Ciudadanía</option>
         <option value="TI">Tarjeta de Identidad</option>
@@ -31,15 +36,17 @@
     </div>
     <div class="mb-3">
       <label for="document" class="form-label">Documento:</label>
-      <input type="text" id="document" class="form-control" required>
+      <input type="text" id="document" class="form-control" [(ngModel)]="selectedPerson.numeroDocumento"
+        name="numeroDocumento" required>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Correo Electrónico:</label>
-      <input type="email" id="email" class="form-control" required>
+      <input type="email" id="email" class="form-control" [(ngModel)]="selectedPerson.email"
+        name="email" required>
     </div>
     <div class="mb-3">
       <label for="gender" class="form-label">Género:</label>
-      <select id="gender" class="form-control" required>
+      <select id="gender" class="form-control" [(ngModel)]="selectedPerson.genero" name="genero" required>
         <option value="" disabled selected>Seleccione un género</option>
         <option value="MALE">Masculino</option>
         <option value="FEMALE">Femenino</option>
@@ -49,18 +56,21 @@
     </div>
     <div class="mb-3">
       <label for="address" class="form-label">Dirección:</label>
-      <input type="text" id="address" class="form-control" required>
+      <input type="text" id="address" class="form-control" [(ngModel)]="selectedPerson.direccion"
+        name="direccion" required>
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">Teléfono:</label>
-      <input type="text" id="phone" class="form-control" required>
+      <input type="text" id="phone" class="form-control" [(ngModel)]="selectedPerson.telefono"
+        name="telefono" required>
     </div>
     <div class="mb-3">
       <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
-      <input type="date" id="birthdate" class="form-control" required>
+      <input type="date" id="birthdate" class="form-control" [(ngModel)]="selectedPerson.fechaNacimiento"
+        name="fechaNacimiento" required>
     </div>
     <div class="modal-footer d-flex justify-content-center">
-      <button type="button" class="btn btn-primary" id="savePerson" onclick="Save()">Guardar</button>
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
     </div>
   </form>
 </div>
@@ -90,16 +100,17 @@
         <tr *ngFor="let person of persons">
           <td>{{ person.primerNombre }}</td>
           <td>{{ person.segundoNombre }}</td>
+          <td>{{ person.primerApellido }}</td>
+          <td>{{ person.segundoApellido }}</td>
           <td>{{ person.tipoDocumento }}</td>
           <td>{{ person.numeroDocumento }}</td>
-          <td>{{ person.telefono }}</td>
           <td>{{ person.email }}</td>
-         <!-- <td>{{ person.gender }}</td>
-          <td>{{ person.address }}</td>
-          <td>{{ person.phone }}</td>
-          <td>{{ person.birthdate | date:'dd/MM/yyyy' }}</td>-->
+          <td>{{ person.genero }}</td>
+          <td>{{ person.direccion }}</td>
+          <td>{{ person.telefono }}</td>
+          <td>{{ person.fechaNacimiento }}</td>
           <td>
-            <button (click)="updatePerson(person.id)" class="btn btn-primary btn-sm">Editar</button>
+            <button (click)="editPerson(person)" class="btn btn-primary btn-sm">Editar</button>
             <button (click)="deletePerson(person.id)" class="btn btn-danger btn-sm">Eliminar</button>
           </td>
         </tr>
@@ -107,4 +118,3 @@
     </table>
   </div>
 </div>
-
