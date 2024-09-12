@@ -14,37 +14,28 @@ import jakarta.persistence.Table;
 @Table(name = "centro_formacion")
 public class CentroFormacion extends BaseEntity {
 
-	@Column(name = "codigo", length = 45, nullable = false)
-	private String codigo;
 
 	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
 
-	@Column(name = "acronimo", length = 45, nullable = false)
+	@Column(name = "acronimo", length = 10, nullable = false)
 	private String acronimo;
 
 	@Column(name = "direccion", length = 45, nullable = false)
 	private String direccion;
 
-	@Column(name = "telefono", length = 45, nullable = false)
+	@Column(name = "telefono", length = 15, nullable = false)
 	private String telefono;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "regional_id", nullable = false, unique = true)
+	@JoinColumn(name = "regional_id", nullable = false, unique = false)
 	private Regional regionalId;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "cuidad_id", nullable = false, unique = true)
+	@JoinColumn(name = "cuidad_id", nullable = false, unique = false)
 	private Ciudad ciudadId;
 
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}

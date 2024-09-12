@@ -1,50 +1,14 @@
 <nav class="sidebar">
   <ul class="menu">
-    <li>
+    <li *ngFor="let modulo of modulos">
       <a href="javascript:void(0)">
-        <i class="fas fa-cogs"></i> Parametrización <span>&#9662;</span>
+        <i [class]="modulo.icono"></i> {{ modulo.nombre }} <span>&#9662;</span>
       </a>
       <ul class="submenu">
-        <li><a href="/continente">Continente</a></li>
-        <li><a href="/pais">Pais</a></li>
-        <li><a href="/departamento">Departamento</a></li>
-        <li><a href="/ciudad">Ciudad</a></li>
-
-        <li><a href="/regional">Regional</a></li>
-        <li><a href="/centroFormacion">Centro Formativo</a></li>
-        <li><a href="/sede">Sede</a></li>
-
-        <li><a href="/piso">piso</a></li>
-        <li><a href="/especialidad">Especialidad</a></li>
-        <li><a href="/ambiente">ambiente</a></li>
-
-        
-      </ul>
-    </li>
-    <li>
-      <a href="javascript:void(0)">
-        <i class="fas fa-shield-alt"></i> Seguridad <span>&#9662;</span>
-      </a>
-      <ul class="submenu">
-        <li><a href="/module">Modulo</a></li>
-        <li><a href="/person">person</a></li>
-        <li><a href="/role">Role</a></li>
-        <li><a href="/roles_views">Roles - Vistas</a></li>
-        <li><a href="/user">Usuario</a></li>
-        <li><a href="/users_roles">Usuarios - Roles</a></li>
-        <li><a href="/view">View</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="javascript:void(0)">
-        <i class="fas fa-tools"></i> Operacional <span>&#9662;</span>
-      </a>
-      <ul class="submenu">
-        <li><a href="/gestion-horarios">Gestión de Horarios</a></li>
-        <li><a href="/instructores">Instructores</a></li>
+        <li *ngFor="let vista of modulo.vistas">
+          <a [routerLink]="vista.ruta">{{ vista.nombre }}</a>
+        </li>
       </ul>
     </li>
   </ul>
 </nav>
-
-

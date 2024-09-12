@@ -23,7 +23,7 @@ public class Sede extends BaseEntity {
 	private String direccion;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "centro_formacion_id", nullable = false, unique = true)
+	@JoinColumn(name = "centro_formacion_id", nullable = false, unique = false)
 	private CentroFormacion centroFormacionId;
 
 	public String getCodigo() {

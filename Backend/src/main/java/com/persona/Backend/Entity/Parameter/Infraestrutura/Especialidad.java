@@ -10,13 +10,13 @@ import jakarta.persistence.Table;
 @Table(name = "especialidad")
 public class Especialidad extends BaseEntity {
 
-	@Column(name = "codigo", length = 45, nullable = false)
+	@Column(name = "codigo", length = 10, nullable = false)
 	private String codigo;
 
 	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
 
-	@Column(name = "descripcion", length = 45, nullable = false)
+	@Column(name = "descripcion", length = 65, nullable = false)
 	private String descripcion;
 
 	public String getCodigo() {

@@ -1,5 +1,6 @@
 package com.persona.Backend.Entity.Security;
 
+
 import com.persona.Backend.Entity.BaseEntity;
 
 import jakarta.persistence.Entity;
@@ -12,12 +13,14 @@ import jakarta.persistence.Table;
 @Table(name = "usuarios_roles")
 public class UsuariosRoles extends BaseEntity {
 
+	
+
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "usuario_id", nullable = false, unique = true)
+	@JoinColumn(name = "usuario_id", nullable = false, unique = false)
 	private Usuario usuarioId;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "role_id", nullable = false, unique = true)
+	@JoinColumn(name = "role_id", nullable = false, unique = false)
 	private Role roleId;
 
 	public Usuario getUsuarioId() {

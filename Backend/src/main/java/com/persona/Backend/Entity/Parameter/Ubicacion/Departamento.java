@@ -20,7 +20,7 @@ public class Departamento extends BaseEntity {
 	private String codigo;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "pais_id", nullable = false, unique = true)
+	@JoinColumn(name = "pais_id", nullable = false, unique = false)
 	private Pais paisId;
 
 	public String getNombre() {

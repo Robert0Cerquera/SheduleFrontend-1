@@ -22,11 +22,11 @@ public class Ambiente extends BaseEntity {
 	private Integer cupo;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "piso_id", nullable = false, unique = true)
+	@JoinColumn(name = "piso_id", nullable = false, unique = false)
 	private Piso pisoId;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "especialidad_id", nullable = false, unique = true)
+	@JoinColumn(name = "especialidad_id", nullable = false, unique = false)
 	private Especialidad especialidadId;
 
 	public String getCodigo() {

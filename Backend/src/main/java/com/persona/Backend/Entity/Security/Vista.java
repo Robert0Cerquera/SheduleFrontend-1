@@ -22,7 +22,7 @@ public class Vista extends BaseEntity {
 	private String ruta;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "modulo_id", nullable = false, unique = true)
+	@JoinColumn(name = "modulo_id", nullable = false, unique = false)
 	private Modulo moduloId;
 
 	public String getNombre() {

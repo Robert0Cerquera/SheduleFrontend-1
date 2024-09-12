@@ -1,11 +1,13 @@
 package com.persona.Backend.Service.Security;
-import java.util.Optional;
 
+import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.persona.Backend.Dto.IDatosUsuarioDto;
-import com.persona.Backend.Dto.IValidarDatosUsuarioDto;
+import com.persona.Backend.Dto.ILoginDto;
+import com.persona.Backend.Dto.Security.PermisosDto;
 import com.persona.Backend.Entity.Security.Usuario;
 import com.persona.Backend.IRepository.Security.IUsuarioRepository;
 import com.persona.Backend.IService.Security.IUsuarioService;
@@ -22,23 +24,37 @@ public class UsuarioService extends BaseService<Usuario> implements IUsuarioServ
 		return repository.ObtenerDatosUsuario(id);
 	}
 
+	
+
+	
 	@Override
-	public Optional<IValidarDatosUsuarioDto> ValidarDatosUsuario(String usuario, String contrasenia) {
-		return repository.ValidarDatosUsuario(usuario, contrasenia);
-		
+	public Boolean getLogin(String user, String password) throws Exception {
+	    Optional<ILoginDto> datosUsuario = repository.getLogin(user);
+	    
+	    // Verificar si el Optional tiene un valor presente
+	    if (datosUsuario.isPresent()) {
+	        // Validar usuario y contraseña
+	        if (user.equals(datosUsuario.get().getUsuarioNombre()) &&
+	            password.equals(datosUsuario.get().getContrasenia())) {
+	            return true;
+	        } else if (!password.equals(datosUsuario.get().getContrasenia())) {
+	            throw new Exception("La contraseña es incorrecta");
+	        }
+	    } else {
+	        // Lanzar excepción si no se encuentra el usuario
+	        throw new Exception("Usuario no encontrado");
+	    }
+	    
+	    return false;
 	}
 
-// Forma sin DTO
-//	@Override
-//	public Boolean ValidarDatosUsuario(String usuario, String contrasenia) {
-//		Integer variable = repository.ValidarDatosUsuario(usuario, contrasenia);
-//
-//		if (variable == 1) {
-//			return true;
-//		} else {
-//			return false;
-//		}
-//	}
-	
+
+
+
+	@Override
+	public List<PermisosDto> validarPermisos(String user) {
+		return repository.validarPermisos(user);
+	}
+
 
 }

@@ -29,7 +29,7 @@ public class Regional extends BaseEntity {
 	private String telefono;
 
 	@OneToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "departamento_id", nullable = false, unique = true)
+	@JoinColumn(name = "departamento_id", nullable = false, unique = false)
 	private Departamento departamentoId;
 
 	public String getNit() {

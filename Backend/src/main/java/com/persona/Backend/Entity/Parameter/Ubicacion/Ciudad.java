@@ -20,7 +20,7 @@ public class Ciudad extends BaseEntity {
 	private String codigo;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "departamento_id", nullable = false, unique = true)
+	@JoinColumn(name = "departamento_id", nullable = false, unique = false)
 	private Departamento departamentoId;
 
 	public String getNombre() {

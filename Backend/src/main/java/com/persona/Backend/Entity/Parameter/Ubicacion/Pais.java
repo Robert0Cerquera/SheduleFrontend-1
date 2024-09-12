@@ -20,7 +20,7 @@ public class Pais extends BaseEntity {
 	private String codigo;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "continente_id", nullable = false, unique = true)
+	@JoinColumn(name = "continente_id", nullable = false, unique = false)
 	private Continente coninenteId;
 
 	public String getNombre() {

@@ -7,19 +7,51 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="competencia")
-public class Competencia extends BaseEntity{
-	
+@Table(name = "competencia")
+public class Competencia extends BaseEntity {
+
 	@Column(name = "codigo", length = 45, nullable = false)
 	private String codigo;
 
 	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
-	
+
 	@Column(name = "descripcion", length = 45, nullable = false)
 	private String descripcion;
-	
+
 	@Column(name = "duraccion", length = 45, nullable = false)
 	private Integer duraccion;
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Integer getDuraccion() {
+		return duraccion;
+	}
+
+	public void setDuraccion(Integer duraccion) {
+		this.duraccion = duraccion;
+	}
 
 }

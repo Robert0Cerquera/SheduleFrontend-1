@@ -13,14 +13,14 @@ import jakarta.persistence.Table;
 @Table(name = "piso")
 public class Piso extends BaseEntity {
 
-	@Column(name = "codigo", length = 45, nullable = false)
+	@Column(name = "codigo", length = 5, nullable = false)
 	private String codigo;
 
 	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "sede_id", nullable = false, unique = true)
+	@JoinColumn(name = "sede_id", nullable = false, unique = false)
 	private Sede sedeId;
 
 	public String getCodigo() {

@@ -13,11 +13,11 @@ import jakarta.persistence.Table;
 public class VistasRoles extends BaseEntity {
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "vista_id", nullable = false, unique = true)
+	@JoinColumn(name = "vista_id", nullable = false, unique = false)
 	private Vista vistaId;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "role_id", nullable = false, unique = true)
+	@JoinColumn(name = "role_id", nullable = false, unique = false)
 	private Role roleId;
 
 	public Vista getVistaId() {
