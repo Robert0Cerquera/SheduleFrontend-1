@@ -31,11 +31,9 @@
             ],
             "styles": [
               "src/styles.css",
-              
+
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css",
-              "https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },

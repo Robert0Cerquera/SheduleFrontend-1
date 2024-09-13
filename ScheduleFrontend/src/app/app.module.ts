@@ -1,15 +1,16 @@
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module'; // Este es el archivo que contiene tus rutas
-import { RouterModule } from '@angular/router'; // Importa RouterModule
-
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
 import { AppComponent } from './app.component';
-import { MenuComponent } from './Pages/menu/menu.component'; // Asegúrate de importar tu componente de menú
+import { MenuComponent } from './Pages/menu/menu.component';
 import { NavbarComponent } from './Pages/navbar/navbar.component';
+// import { LoginComponent } from './Pages/login/login.component';
 
 @NgModule({
   declarations: [
+    // LoginComponent,
     AppComponent,
     MenuComponent,
     NavbarComponent
@@ -17,13 +18,9 @@ import { NavbarComponent } from './Pages/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule // Agrega HttpClientModule en los imports
   ],
-  exports:[
-    NavbarComponent
-  ],
-
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,] //LoginComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class PermisosService {
 
-  private apiUrl = ' http://localhost:9000/base/api/v1/base/security/usuario/validar/permisos?User=miguelatm '; // Coloca aquí la URL de tu backend
+  private apiUrl = ' http://localhost:9000/base/api/v1/base/security/usuario/validar/permisos?User=maryurygb '; // Coloca aquí la URL de tu backend
 
   constructor(private http: HttpClient) {}
 

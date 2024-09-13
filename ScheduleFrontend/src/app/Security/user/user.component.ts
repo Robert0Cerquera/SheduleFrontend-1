@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrl: './user.component.css'
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit{
  
   users: User[] = [];
   persons: Person[] = []; // Lista de personas para el select
@@ -21,11 +21,8 @@ export class UserComponent implements OnInit {
     id: 0,
     usuario: '',
     contrasenia: '',
-    personaId: {
-      id: 0
-    }
+    personId: 0 // Inicializa como 0 o un valor predeterminado válido
   };
-  isEditing: boolean = false; // Variable para manejar el estado de edición
 
   constructor(private userService: UserService, private personService: PersonService) {}
 
@@ -50,18 +47,14 @@ export class UserComponent implements OnInit {
 
   // Crear un nuevo usuario
   createUser(): void {
-    if (!this.newUser.personaId) {
+    if (!this.newUser.personId) {
       console.error('Debe seleccionar una persona');
       return;
     }
-
-    // Establecer fechas para el nuevo usuario
-    this.newUser.createdAt = new Date();
-    this.newUser.updatedAt = new Date();
-
+    
     this.userService.createUser(this.newUser).subscribe(() => {
       this.getUsers(); // Refresca la lista de usuarios
-      this.resetForm(); // Limpia el formulario
+      this.newUser = { id: 0, usuario: '', contrasenia: '', personId: 0 }; // Limpia el formulario
     });
   }
 
@@ -72,26 +65,8 @@ export class UserComponent implements OnInit {
   }
 
   // Editar usuario
-  editUser(user: User): void {
-    this.newUser = { ...user };
-    this.isEditing = true;
-  }
-
-  // Actualizar usuario
-  updateUser(): void {
-    if (!this.newUser.personaId) {
-      console.error('Debe seleccionar una persona');
-      return;
-    }
-    
-    // Establecer la fecha de actualización
-    this.newUser.updatedAt = new Date();
-
-    this.userService.updateUser(this.newUser.id, this.newUser).subscribe(() => {
-      this.getUsers(); // Refresca la lista de usuarios
-      this.resetForm(); // Limpia el formulario
-      this.isEditing = false;
-    });
+  updateUser(id: number): void {
+    console.log('Editar usuario con ID:', id);
   }
 
   // Eliminar usuario
@@ -99,18 +74,5 @@ export class UserComponent implements OnInit {
     this.userService.deleteUser(id).subscribe(() => {
       this.getUsers(); // Refresca la lista de usuarios después de eliminar
     });
-  }
-
-  // Limpiar el formulario
-  resetForm(): void {
-    this.newUser = {
-      id: 0,
-      usuario: '',
-      contrasenia: '',
-      personaId: {
-        id: 0
-      }
-    };
-    this.isEditing = false;
   }
 }

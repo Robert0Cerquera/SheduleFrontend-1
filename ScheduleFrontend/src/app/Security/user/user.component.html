@@ -8,15 +8,13 @@
     </div>
     <div class="mb-3">
       <label for="contrasenia" class="form-label">Contraseña:</label>
-      <input [(ngModel)]="newUser.contrasenia" name="contrasenia" type="password" id="contrasenia" class="form-control"
-        required>
+      <input [(ngModel)]="newUser.contrasenia" name="contrasenia" type="password" id="contrasenia" class="form-control" required>
     </div>
     <div class="mb-3">
-      <label for="personaId" class="form-label">Persona:</label>
-      <select [(ngModel)]="newUser.personaId" name="personaId" id="personaId" class="form-control" required>
+      <label for="personId" class="form-label">Persona:</label>
+      <select [(ngModel)]="newUser.personId" name="personId" id="personId" class="form-control" required>
         <option value="" disabled selected>Seleccione una persona</option>
-        <option *ngFor="let person of persons" [value]="person.id">{{ person.primerNombre }} {{ person.segundoNombre }}
-        </option>
+        <option *ngFor="let person of persons" [value]="person.id">{{ person.primerNombre }} {{ person.segundoNombre }}</option>
       </select>
     </div>
     <div class="modal-footer d-flex justify-content-center">
@@ -40,9 +38,9 @@
       <tbody>
         <tr *ngFor="let user of users">
           <td>{{ user.usuario }}</td>
-          <td>{{ getPersonName(user.personaId) }}</td>
+          <td>{{ getPersonName(user.personId) }}</td>
           <td>
-            <button class="btn btn-sm btn-warning me-2" (click)="editUser(user)">
+            <button class="btn btn-sm btn-warning me-2" (click)="updateUser(user.id)">
               <i class="bi bi-pencil-square"></i>
             </button>
             <button class="btn btn-sm btn-danger" (click)="deleteUser(user.id)">

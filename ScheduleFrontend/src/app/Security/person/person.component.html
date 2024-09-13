@@ -1,6 +1,7 @@
 <div class="container mt-5">
   <!-- Formulario de Registro / Edición -->
   <h2 class="text-center mb-4">{{ isEditing ? 'Editar Persona' : 'Registrar Persona' }}</h2>
+
   <form (ngSubmit)="onSubmit()" #personForm="ngForm">
     <div class="mb-3">
       <label for="firstName" class="form-label">Primer Nombre:</label>
@@ -69,6 +70,17 @@
       <input type="date" id="birthdate" class="form-control" [(ngModel)]="selectedPerson.fechaNacimiento"
         name="fechaNacimiento" required>
     </div>
+
+    <!-- Barra de estado Activo/Inactivo -->
+    <div class="mb-3">
+      <label for="status" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="status" [(ngModel)]="selectedPerson.state"
+          name="estado">
+        <label class="form-check-label" for="status">{{ selectedPerson.state ? 'Activo' : 'Inactivo' }}</label>
+      </div>
+    </div>
+
     <div class="modal-footer d-flex justify-content-center">
       <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
     </div>
@@ -93,6 +105,7 @@
           <th>Dirección</th>
           <th>Teléfono</th>
           <th>Fecha de Nacimiento</th>
+          <th>Estado</th>
           <th>Opciones</th>
         </tr>
       </thead>
@@ -109,6 +122,7 @@
           <td>{{ person.direccion }}</td>
           <td>{{ person.telefono }}</td>
           <td>{{ person.fechaNacimiento }}</td>
+          <td>{{ person.state ? 'Activo' : 'Inactivo' }}</td>
           <td>
             <button (click)="editPerson(person)" class="btn btn-primary btn-sm">Editar</button>
             <button (click)="deletePerson(person.id)" class="btn btn-danger btn-sm">Eliminar</button>

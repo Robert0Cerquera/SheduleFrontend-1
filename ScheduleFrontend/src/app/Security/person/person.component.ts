@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService } from '../../Services/person.service';
-import { Person } from '../../models/person'; 
+import { PersonService } from '../../Services/person.service'; // Asegúrate de que la ruta al servicio sea correcta
+import { Person } from '../../models/person'; // Asegúrate de que la ruta al modelo sea correcta
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -41,8 +41,10 @@ export class PersonComponent implements OnInit {
 
   getPersons(): void {
     this.personService.getPersons().subscribe(data => {
-      console.log(data);
-      this.persons = data;
+      // Filtra solo las personas que no tienen deletedAt
+      this.persons = data.filter(person => !person.deletedAt);
+    }, error => {
+      console.error('Error al obtener las personas:', error);
     });
   }
 
@@ -60,7 +62,7 @@ export class PersonComponent implements OnInit {
     this.selectedPerson.deletedAt = undefined;
 
     this.personService.createPerson(this.selectedPerson).subscribe(
-      (response) => {
+      (response: Person) => {
         console.log('Persona creada con éxito:', response);
         this.getPersons(); // Refresca la lista después de crear
         this.resetForm(); // Limpia el formulario después de crear
@@ -80,7 +82,7 @@ export class PersonComponent implements OnInit {
     person.updatedAt = new Date().toISOString(); // Asegúrate de actualizar el timestamp
 
     this.personService.updatePerson(person).subscribe(
-      (response) => {
+      (response: Person) => {
         console.log('Persona actualizada con éxito:', response);
         this.getPersons(); // Refresca la lista después de actualizar
         this.resetForm(); // Limpia el formulario después de actualizar
@@ -93,10 +95,16 @@ export class PersonComponent implements OnInit {
   }
 
   deletePerson(id: number): void {
-    console.log('Eliminar persona con ID:', id);
-    this.personService.deletePerson(id).subscribe(() => {
-      this.getPersons(); // Refresca la lista después de eliminar
-    });
+    const personToDelete = this.persons.find(person => person.id === id);
+    if (personToDelete) {
+      personToDelete.deletedAt = new Date().toISOString(); // Marca como eliminado con la fecha actual
+      this.personService.updatePerson(personToDelete).subscribe(() => {
+        console.log('Persona eliminada con éxito (soft delete)');
+        this.getPersons(); // Refresca la lista después de eliminar
+      }, error => {
+        console.error('Error al eliminar la persona:', error);
+      });
+    }
   }
 
   resetForm(): void {

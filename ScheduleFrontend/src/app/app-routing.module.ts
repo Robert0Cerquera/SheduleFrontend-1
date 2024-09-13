@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './Pages/home/home.component'; // Ejemplo de ruta
-import { MenuComponent } from './Pages/menu/menu.component'; // Importa tus componentes de las rutas
-import { AppComponent } from './app.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { PersonComponent } from './Security/person/person.component';
+// import { LoginComponent } from './Pages/login/login.component';
 
 const routes: Routes = [
-  { path: 'app-component', 
-    component: AppComponent,
-    loadChildren: () => import('./app.module').then(m => m.AppModule),
-  
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  // { path: 'login', component: LoginComponent },
+{ path: 'home', component: HomeComponent },
+{ path: 'person', component: PersonComponent },
+
+
+  {
+    path: '**',
+    redirectTo: 'home', 
+    pathMatch: 'full'
   }
 ];
 
