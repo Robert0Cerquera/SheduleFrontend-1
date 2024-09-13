@@ -19,7 +19,7 @@ public class Usuario extends BaseEntity {
 	private String contrasenia;
 
 	@OneToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "persona_id", nullable = false, unique = false)
+	@JoinColumn(name = "persona_id", nullable = false, unique = true)
 	private Persona personaId;
 
 	

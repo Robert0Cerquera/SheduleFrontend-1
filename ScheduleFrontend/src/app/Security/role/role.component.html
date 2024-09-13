@@ -1,26 +1,35 @@
 <div class="container mt-5">
-  <!-- Formulario de Registro -->
-  <h2 class="text-center mb-4">Registrar Rol</h2>
-  <form id="roleForm">
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Rol' : 'Registrar Rol' }}</h2>
+
+  <!-- Alerta de nombre duplicado -->
+  <div *ngIf="duplicateNameError" class="alert alert-danger" role="alert">
+    El nombre del rol ya existe. Por favor, elige otro nombre.
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #roleForm="ngForm">
     <div class="mb-3">
-      <label for="name" class="form-label">Nombre:</label>
-      <input type="text" id="name" class="form-control" required>
+      <label for="roleName" class="form-label">Nombre del Rol:</label>
+      <input type="text" id="roleName" class="form-control" [(ngModel)]="selectedRole.nombre" name="nombre" required>
     </div>
     <div class="mb-3">
-      <label for="description" class="form-label">Descripción:</label>
-      <textarea id="description" class="form-control" rows="4" required></textarea>
+      <label for="roleDescription" class="form-label">Descripción:</label>
+      <input type="text" id="roleDescription" class="form-control" [(ngModel)]="selectedRole.descripcion" name="descripcion" required>
     </div>
+
     <div class="mb-3">
-      <label for="code" class="form-label">Código:</label>
-      <input type="text" id="code" class="form-control" required>
+      <label for="status" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="status" [(ngModel)]="selectedRole.state" name="state">
+        <label class="form-check-label" for="status">{{ selectedRole.state ? 'Activo' : 'Inactivo' }}</label>
+      </div>
     </div>
+
     <div class="modal-footer d-flex justify-content-center">
-      <button type="button" class="btn btn-primary" id="saveRole" onclick="Save()">Guardar</button>
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
     </div>
   </form>
 </div>
 
-<!-- Tabla para Mostrar los Roles -->
 <div class="table-container mt-5">
   <h2 class="text-center mb-4">Lista de Roles</h2>
   <div class="table-responsive">
@@ -29,23 +38,18 @@
         <tr>
           <th>Nombre</th>
           <th>Descripción</th>
-          <th>Código</th>
+          <th>Estado</th>
           <th>Opciones</th>
         </tr>
       </thead>
-      <tbody id="roleDataResult">
-        <!-- Aquí se cargará la lista de Roles -->
-        <tr>
-          <td>Rol de Ejemplo</td>
-          <td>Descripción del rol de ejemplo.</td>
-          <td>ROL123</td>
+      <tbody>
+        <tr *ngFor="let role of roles">
+          <td>{{ role.nombre }}</td>
+          <td>{{ role.descripcion }}</td>
+          <td>{{ role.state ? 'Activo' : 'Inactivo' }}</td>
           <td>
-            <button class="btn btn-sm btn-warning me-2">
-              <i class="bi bi-pencil-square"></i>
-            </button>
-            <button class="btn btn-sm btn-danger">
-              <i class="bi bi-trash"></i>
-            </button>
+            <button (click)="editRole(role)" class="btn btn-primary btn-sm">Editar</button>
+            <button (click)="deleteRole(role.id)" class="btn btn-danger btn-sm">Eliminar</button>
           </td>
         </tr>
       </tbody>

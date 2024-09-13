@@ -12,13 +12,13 @@ import jakarta.persistence.Table;
 @Table(name = "vista")
 public class Vista extends BaseEntity {
 
-	@Column(name = "nombre", length = 45, nullable = false)
+	@Column(name = "nombre", length = 100, nullable = false, unique = true)
 	private String nombre;
 
 	@Column(name = "descripcion", length = 100, nullable = true)
 	private String descripcion;
 
-	@Column(name = "ruta", length = 70, nullable = false)
+	@Column(name = "ruta", length = 70, nullable = false, unique= true)
 	private String ruta;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)

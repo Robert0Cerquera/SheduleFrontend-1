@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="container mt-5">
+  <!-- Formulario de Registro / Edición -->
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Módulo' : 'Registrar Módulo' }}</h2>
+
+  <!-- Alerta de nombre duplicado -->
+  <div *ngIf="duplicateNameError" class="alert alert-danger" role="alert">
+    El nombre del módulo ya existe. Por favor, elige otro nombre.
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #moduloForm="ngForm">
+    <div class="mb-3">
+      <label for="moduloName" class="form-label">Nombre del Módulo:</label>
+      <input type="text" id="moduloName" class="form-control" [(ngModel)]="selectedModulo.nombre"
+        name="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="moduloRuta" class="form-label">Ruta:</label>
+      <input type="text" id="moduloRuta" class="form-control" [(ngModel)]="selectedModulo.ruta"
+        name="ruta" required>
+    </div>
+
+    <!-- Dropdown de iconos -->
+    <div class="mb-3">
+      <label for="moduloIcono" class="form-label">Icono:</label>
+      <select id="moduloIcono" class="form-select" [(ngModel)]="selectedIcon" name="icono" required>
+        <option *ngFor="let icon of iconos" [ngValue]="icon">
+          <i class="{{ icon.class }}"></i> {{ icon.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Vista previa del icono seleccionado -->
+    <div class="mb-3">
+      <label>Vista previa del icono seleccionado:</label>
+      <i class="{{ selectedIcon.class }} fa-2x"></i>
+    </div>
+
+    <!-- Barra de estado Activo/Inactivo -->
+    <div class="mb-3">
+      <label for="status" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="status" [(ngModel)]="selectedModulo.state"
+          name="estado">
+        <label class="form-check-label" for="status">{{ selectedModulo.state ? 'Activo' : 'Inactivo' }}</label>
+      </div>
+    </div>
+
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla de Módulos -->
+<div class="table-container mt-5">
+  <h2 class="text-center mb-4">Lista de Módulos</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Ruta</th>
+          <th>Icono</th>
+          <th>Estado</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let modulo of modulos">
+          <td>{{ modulo.nombre }}</td>
+          <td>{{ modulo.ruta }}</td>
+          <td><i class="{{ modulo.icono }} fa-2x"></i></td> <!-- Mostrar el icono aquí -->
+          <td>{{ modulo.state ? 'Activo' : 'Inactivo' }}</td>
+          <td>
+            <button (click)="editModulo(modulo)" class="btn btn-primary btn-sm">Editar</button>
+            <button (click)="deleteModulo(modulo.id)" class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
