@@ -3,12 +3,7 @@ package com.persona.Backend.Controller.Security;
 import java.util.Optional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.persona.Backend.Controller.BaseController;
 import com.persona.Backend.Dto.IDatosUsuarioDto;
@@ -31,6 +26,10 @@ public class UsuarioController extends BaseController<Usuario> {
 		return service.ObtenerDatosUsuario(id);
 	}
 
+	@GetMapping("/UsuarioJwt")
+	public Usuario saveUsuarioJwt(@RequestBody Usuario instanceEntity) throws Exception {
+		return service.saveUsuarioJwt(instanceEntity);
+	}
 	
 	@GetMapping("/validar/datos")
 	public Boolean getLogin(@RequestParam String user, String password) throws Exception{
