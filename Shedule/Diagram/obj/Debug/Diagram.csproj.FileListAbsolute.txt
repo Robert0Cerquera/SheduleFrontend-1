@@ -1,0 +1,14 @@
+C:\Users\ariel\source\repos\Shedule\Diagram\bin\Debug\Diagram.dll.config
+C:\Users\ariel\source\repos\Shedule\Diagram\bin\Debug\Diagram.dll
+C:\Users\ariel\source\repos\Shedule\Diagram\bin\Debug\Diagram.pdb
+C:\Users\ariel\source\repos\Shedule\Diagram\obj\Debug\Diagram.csproj.AssemblyReference.cache
+C:\Users\ariel\source\repos\Shedule\Diagram\obj\Debug\Diagram.csproj.CoreCompileInputs.cache
+C:\Users\ariel\source\repos\Shedule\Diagram\obj\Debug\Diagram.dll
+C:\Users\ariel\source\repos\Shedule\Diagram\obj\Debug\Diagram.pdb
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\bin\Debug\Diagram.dll.config
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\bin\Debug\Diagram.dll
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\bin\Debug\Diagram.pdb
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\obj\Debug\Diagram.csproj.AssemblyReference.cache
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\obj\Debug\Diagram.csproj.CoreCompileInputs.cache
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\obj\Debug\Diagram.dll
+C:\Users\Maryu\Desktop\08-2024-Sena\ProyectosJava\Shedule\DocumentacionFinal\ER\Shedule\Diagram\obj\Debug\Diagram.pdb

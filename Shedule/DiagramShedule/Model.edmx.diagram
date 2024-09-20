@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+	<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+		<!-- Diagram content (shape and connector positions) -->
+		<edmx:Diagrams>
+			<Diagram DiagramId="b485bcfdd2ab4c699835a6542650cdbb" Name="Diagram1" ZoomLevel="55" >
+				<EntityTypeShape EntityType="Diagram.Persona" Width="1.5" PointX="20.25" PointY="0.5" />
+				<EntityTypeShape EntityType="Diagram.Modulo" Width="1.5" PointX="0.75" PointY="0.5" />
+				<EntityTypeShape EntityType="Diagram.Role" Width="1.5" PointX="10.75" PointY="0.625" />
+				<EntityTypeShape EntityType="Diagram.RoleVista" Width="1.5" PointX="6.875" PointY="0.75" />
+				<EntityTypeShape EntityType="Diagram.Vista" Width="1.5" PointX="3.875" PointY="0.5" />
+				<EntityTypeShape EntityType="Diagram.Usuario" Width="1.5" PointX="17.375" PointY="0.5" />
+				<EntityTypeShape EntityType="Diagram.UsuarioRole" Width="1.5" PointX="14" PointY="0.75" />
+				<EntityTypeShape EntityType="Diagram.Instructor" Width="1.5" PointX="20.25" PointY="5.125" />
+				<EntityTypeShape EntityType="Diagram.Contrato" Width="1.5" PointX="24.625" PointY="5.75" />
+				<EntityTypeShape EntityType="Diagram.Fase" Width="1.5" PointX="6.125" PointY="3.875" />
+				<EntityTypeShape EntityType="Diagram.ProgramaFormacion" Width="2.125" PointX="9.125" PointY="9.125" IsExpanded="true" />
+				<AssociationConnector Association="Diagram.ModuloVista" />
+				<AssociationConnector Association="Diagram.Role_VistaVista" />
+				<AssociationConnector Association="Diagram.Role_VistaRole" />
+				<AssociationConnector Association="Diagram.Usuario_RoleRole" />
+				<AssociationConnector Association="Diagram.Usuario_RoleUsuario" />
+				<AssociationConnector Association="Diagram.PersonaUsuario" />
+				<AssociationConnector Association="Diagram.UsuarioInstructor" />
+				<AssociationConnector Association="Diagram.ContratoInstructor" />
+				<EntityTypeShape EntityType="Diagram.InstructorFicha" Width="1.5" PointX="22.625" PointY="7.75" IsExpanded="true" />
+				<AssociationConnector Association="Diagram.Instructor_FichaInstructor" />
+				<EntityTypeShape EntityType="Diagram.GestorLinea" Width="1.5" PointX="23.25" PointY="1.75" IsExpanded="true" />
+				<AssociationConnector Association="Diagram.Gestor_LineaInstructor" />
+				<EntityTypeShape EntityType="Diagram.Fase_Objetivo" Width="1.5" PointX="3.75" PointY="6.375" />
+				<EntityTypeShape EntityType="Diagram.Objetivo" Width="1.5" PointX="3.125" PointY="9.25" />
+				<AssociationConnector Association="Diagram.Fase_ObjetivoObjetivo" />
+				<AssociationConnector Association="Diagram.Fase_ObjetivoFase" />
+				<EntityTypeShape EntityType="Diagram.Competencia" Width="1.5" PointX="6.375" PointY="13" />
+				<EntityTypeShape EntityType="Diagram.Rars" Width="1.5" PointX="6.75" PointY="17.375" />
+				<EntityTypeShape EntityType="Diagram.Ambiente" Width="1.5" PointX="13.625" PointY="18.375" />
+				<EntityTypeShape EntityType="Diagram.Ficha" Width="1.5" PointX="13" PointY="5.5" IsExpanded="true" />
+				<EntityTypeShape EntityType="Diagram.Especialidad" Width="1.5" PointX="9.875" PointY="16.625" />
+				<AssociationConnector Association="Diagram.RarsCompetencia" />
+				<EntityTypeShape EntityType="Diagram.Piso" Width="2" PointX="9.5" PointY="20.875" />
+				<AssociationConnector Association="Diagram.PisoAmbiente" />
+				<AssociationConnector Association="Diagram.EspecialidadAmbiente" />
+				<AssociationConnector Association="Diagram.AmbienteFicha" />
+				<EntityTypeShape EntityType="Diagram.Jornada" Width="1.5" PointX="15" PointY="4" IsExpanded="true" />
+				<AssociationConnector Association="Diagram.JornadaFicha" />
+				<EntityTypeShape EntityType="Diagram.Periodo" Width="1.5" PointX="17.375" PointY="8.75" IsExpanded="true" />
+				<EntityTypeShape EntityType="Diagram.PeriodoFicha" Width="1.5" PointX="16.375" PointY="10.5" />
+				<AssociationConnector Association="Diagram.Periodo_FichaPeriodo" />
+				<AssociationConnector Association="Diagram.Periodo_FichaFicha" />
+				<EntityTypeShape EntityType="Diagram.FichaUsuario" Width="1.5" PointX="15" PointY="7" />
+				<EntityTypeShape EntityType="Diagram.Competencia_Programa" Width="2" PointX="6.375" PointY="9.125" />
+				<AssociationConnector Association="Diagram.Ficha_UsuarioUsuario" />
+				<AssociationConnector Association="Diagram.Ficha_UsuarioFicha" />
+				<AssociationConnector Association="Diagram.Competencia_ProgramaCompetencia" />
+				<AssociationConnector Association="Diagram.Programa_FormacionCompetencia_Programa" />
+				<EntityTypeShape EntityType="Diagram.Centro_Formacion" Width="1.5" PointX="12.875" PointY="22.625" />
+				<AssociationConnector Association="Diagram.EspecialidadPrograma_Formacion" />
+				<EntityTypeShape EntityType="Diagram.Ciudad" Width="1.5" PointX="15.625" PointY="22.75" />
+				<AssociationConnector Association="Diagram.Programa_FormacionFicha" />
+				<AssociationConnector Association="Diagram.Centro_FormacionCiudad" />
+				<EntityTypeShape EntityType="Diagram.Departamento" Width="1.5" PointX="10.625" PointY="26.375" />
+				<EntityTypeShape EntityType="Diagram.Regional" Width="1.5" PointX="12.875" PointY="26.5" />
+				<AssociationConnector Association="Diagram.DepartamentoRegional" />
+				<AssociationConnector Association="Diagram.Centro_FormacionRegional" />
+				<AssociationConnector Association="Diagram.Centro_FormacionPiso" />
+				<AssociationConnector Association="Diagram.Fase_ObjetivoPrograma_Formacion" />
+			</Diagram>
+		</edmx:Diagrams>
+	</edmx:Designer>
+</edmx:Edmx>

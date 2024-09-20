@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eca650e4c2b0413b97ae83b00d55c9a5" Name="Diagram1" ZoomLevel="85" >
+        <EntityTypeShape EntityType="Model.UsuarioRole" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="6.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RoleVista" Width="1.5" PointX="4.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Vista" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Modulo" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Usuario" Width="1.5" PointX="10.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Persona" Width="1.5" PointX="12.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FichaEmpleado" Width="1.5" PointX="16.5" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.ModuloVista" />
+        <AssociationConnector Association="Model.VistaRoleVista" />
+        <AssociationConnector Association="Model.RoleRoleVista" />
+        <AssociationConnector Association="Model.PersonaUsuario" />
+        <AssociationConnector Association="Model.UsuarioUsuarioRole" />
+        <AssociationConnector Association="Model.RoleUsuarioRole" />
+        <EntityTypeShape EntityType="Model.Ficha" Width="2" PointX="14.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProgramaFormacion" Width="2" PointX="9.375" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Especialidad" Width="1.5" PointX="27" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Fase" Width="1.5" PointX="0.5" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.ActividadProyecto" Width="1.5" PointX="3.125" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Ambiente" Width="1.5" PointX="22.625" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.EspecialidadAmbiente" />
+        <EntityTypeShape EntityType="Model.Competencia" Width="1.5" PointX="4.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Rap" Width="1.5" PointX="0.5" PointY="16.625" />
+        <EntityTypeShape EntityType="Model.RapCompetencia" Width="1.5" PointX="2.5" PointY="16.625" />
+        <EntityTypeShape EntityType="Model.Piso" Width="1.875" PointX="24.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Empleado" Width="1.5" PointX="17.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Matricula" Width="1.5" PointX="14.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProyectoFormativo" Width="1.5" PointX="3.125" PointY="5.625" />
+        <EntityTypeShape EntityType="Model.ProyectoFormativoFicha" Width="1.75" PointX="6.25" PointY="7.125" />
+        <AssociationConnector Association="Model.PersonaEmpleado" />
+        <AssociationConnector Association="Model.ProyectoFormativoProyectoFormativoFicha" />
+        <EntityTypeShape EntityType="Model.CompetenciaProgramaFormacion" Width="1.75" PointX="6.875" PointY="16.625" />
+        <AssociationConnector Association="Model.ProgramaFormacionCompetenciaProgramaFormacion" />
+        <EntityTypeShape EntityType="Model.TipoContrato" Width="1.5" PointX="20.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CentroFormacion" Width="1.5" PointX="24.375" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Regional" Width="1.75" PointX="26.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Ciudad" Width="1.5" PointX="30" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Jornada" Width="1.5" PointX="12.125" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.NivelFormacion" Width="1.5" PointX="11.875" PointY="18.375" />
+        <EntityTypeShape EntityType="Model.TipoFormacion" Width="1.5" PointX="9.625" PointY="18.375" />
+        <EntityTypeShape EntityType="Model.Modalidad" Width="1.5" PointX="11.875" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Convocatoria" Width="1.5" PointX="12.125" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Pais" Width="1.5" PointX="33.625" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Continente" Width="1.5" PointX="35.375" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Departamento" Width="1.5" PointX="31.875" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.ContinentePais" />
+        <AssociationConnector Association="Model.PaisDepartamento" />
+        <AssociationConnector Association="Model.DepartamentoCiudad" />
+        <EntityTypeShape EntityType="Model.Sede" Width="1.5" PointX="27.125" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.RegionalCentroFormacion" />
+        <AssociationConnector Association="Model.CentroFormacionSede" />
+        <AssociationConnector Association="Model.SedePiso" />
+        <AssociationConnector Association="Model.CentroFormacionCiudad" />
+        <AssociationConnector Association="Model.TipoContratoEmpleado" />
+        <EntityTypeShape EntityType="Model.Cargo" Width="1.5" PointX="22.125" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.CargoEmpleado" />
+        <EntityTypeShape EntityType="Model.Funciones" Width="1.5" PointX="24.125" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.CargoFunciones" />
+        <AssociationConnector Association="Model.ProgramaFormacionProyectoFormativo" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.9746078125" PointY="14.625" />
+          <ConnectorPoint PointX="9.9746078125" PointY="8.9370472334740789" />
+          <ConnectorPoint PointX="5.4963490465580227" PointY="8.9370472334740789" />
+          <ConnectorPoint PointX="5.4963490465580227" PointY="5.96875" />
+          <ConnectorPoint PointX="4.625" PointY="5.96875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.CentroFormacionProyectoFormativo" />
+        <EntityTypeShape EntityType="Model.ActividadProyectoRap" Width="1.5" PointX="0.875" PointY="10.875" />
+        <AssociationConnector Association="Model.RapRapCompetencia" />
+        <AssociationConnector Association="Model.RapActividadProyectoRap" />
+        <AssociationConnector Association="Model.CompetenciaRapCompetencia" />
+        <AssociationConnector Association="Model.CompetenciaCompetenciaProgramaFormacion" />
+        <AssociationConnector Association="Model.ProgramaFormacionModalidad" />
+        <AssociationConnector Association="Model.ProgramaFormacionNivelFormacion" />
+        <AssociationConnector Association="Model.ProgramaFormacionTipoFormacion" />
+        <AssociationConnector Association="Model.ProyectoFormativoFase" />
+        <AssociationConnector Association="Model.FaseActividadProyecto" />
+        <AssociationConnector Association="Model.ActividadProyectoActividadProyectoRap" />
+        <AssociationConnector Association="Model.ProgramaFormacionFicha" />
+        <AssociationConnector Association="Model.FichaProyectoFormativoFicha" />
+        <AssociationConnector Association="Model.FichaJornada" />
+        <AssociationConnector Association="Model.FichaFichaEmpleado" />
+        <AssociationConnector Association="Model.EmpleadoFichaEmpleado" />
+        <AssociationConnector Association="Model.PersonaMatricula" />
+        <AssociationConnector Association="Model.FichaMatricula" />
+        <AssociationConnector Association="Model.FichaConvocatoria" />
+        <EntityTypeShape EntityType="Model.ProgramacionFicha" Width="2" PointX="17.375" PointY="10.25" />
+        <EntityTypeShape EntityType="Model.HorarioEmpleado" Width="1.5" PointX="17.625" PointY="7.25" />
+        <AssociationConnector Association="Model.ProgramacionFichaHorario" />
+        <EntityTypeShape EntityType="Model.HorarioAmbiente" Width="1.5" PointX="19.625" PointY="7.25" />
+        <AssociationConnector Association="Model.EmpleadoHorarioEmpleado" />
+        <AssociationConnector Association="Model.ProgramacionFichaHorarioAmbiente" />
+        <AssociationConnector Association="Model.AmbienteHorarioAmbiente" />
+        <AssociationConnector Association="Model.PisoAmbiente" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
