@@ -1,16 +1,18 @@
+// permisos.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class PermisosService {
-
-  private apiUrl = ' http://localhost:9000/base/api/v1/base/security/usuario/validar/permisos?User=maryurygb '; // Coloca aquí la URL de tu backend
+  private permisosUrl = 'http://localhost:9000/base/api/v1/base/security/usuario/validar/permisos';
 
   constructor(private http: HttpClient) {}
 
-  getPermisos(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  getPermisos(user: string): Observable<any[]> {
+    let params = new HttpParams().set('User', user);
+    return this.http.get<any[]>(this.permisosUrl, { params });
   }
 }

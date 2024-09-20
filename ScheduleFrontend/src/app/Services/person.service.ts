@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
-import { Observable } from 'rxjs';
-import { Person } from '../models/person'; // Ajusta la ruta si es necesario
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Person } from '../models/person'; 
 
 @Injectable({
   providedIn: 'root'
@@ -14,27 +15,16 @@ export class PersonService {
 
   // Método para obtener todas las personas
   getPersons(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.apiUrl);
+    return this.http.get<Person[]>(this.apiUrl).pipe(
+      catchError(this.handleError)
+    );
   }
 
-  // Método para obtener una persona por ID
-  getPersonById(id: number): Observable<Person> {
-    return this.http.get<Person>(`${this.apiUrl}/${id}`);
+  // Manejo de errores
+  private handleError(error: any) {
+    console.error('Error al obtener personas', error);
+    return throwError('Error al comunicarse con el servidor, por favor intente nuevamente.');
   }
 
-  // Método para crear una nueva persona
-  createPerson(persona: Person): Observable<Person> {
-    return this.http.post<Person>(this.apiUrl, persona);
-  }
-
-  // Método para actualizar una persona
-  updatePerson(person: Person): Observable<Person> {
-    return this.http.put<Person>(`${this.apiUrl}/${person.id}`, person);
-  }
-
-  // Método para eliminar una persona por ID
-  deletePerson(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
-  }
-
+  // Otros métodos (getPersonById, createPerson, etc.)...
 }

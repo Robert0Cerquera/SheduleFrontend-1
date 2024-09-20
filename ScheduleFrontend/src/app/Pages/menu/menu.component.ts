@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { PermisosService  } from '../../Services/permisos.service';
-
+import { PermisosService } from '../../Services/permisos.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit{
+export class MenuComponent implements OnInit {
   permisos: any[] = [];
   modulos: any[] = [];
 
   constructor(private permisosService: PermisosService) {}
 
   ngOnInit(): void {
-    this.permisosService.getPermisos().subscribe((data) => {
+    const usuario = 'juanpgm'; // Este dato debe ser dinámico, por ejemplo, obtenido del login
+    this.permisosService.getPermisos(usuario).subscribe((data) => {
       this.permisos = data;
       this.organizarModulos();
     });
   }
 
   organizarModulos() {
-    // Agrupa las vistas por módulo
     const modulosMap = new Map();
 
     this.permisos.forEach((permiso) => {
