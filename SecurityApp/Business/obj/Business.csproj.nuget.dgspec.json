@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj": {}
+    "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj": {
+    "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Business\\obj\\",
+        "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\Adminsena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Maryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adminsena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj"
+              "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj"
               },
-              "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj"
+              "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj"
               }
             }
           }
@@ -72,24 +72,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj": {
+    "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Data\\obj\\",
+        "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Adminsena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Maryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adminsena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -105,8 +105,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj"
+              "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj"
               }
             }
           }
@@ -141,24 +141,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
+    "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\Adminsena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Maryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Adminsena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -232,7 +232,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

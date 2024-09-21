@@ -3,7 +3,6 @@ package com.persona.Backend.Service.Security;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.persona.Backend.Dto.IDatosUsuarioDto;
@@ -25,14 +24,9 @@ public class UsuarioService extends BaseService<Usuario> implements IUsuarioServ
 		return repository.ObtenerDatosUsuario(id);
 	}
 
-	@Override
-	public Usuario saveUsuarioJwt(Usuario instanceEntity) throws Exception {
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		String encodedPassword = passwordEncoder.encode(instanceEntity.getContrasenia());
-		instanceEntity.setContrasenia(encodedPassword);
-		return repository.save(instanceEntity);
-	}
+	
 
+	
 	@Override
 	public Boolean getLogin(String user, String password) throws Exception {
 	    Optional<ILoginDto> datosUsuario = repository.getLogin(user);
@@ -53,6 +47,9 @@ public class UsuarioService extends BaseService<Usuario> implements IUsuarioServ
 	    
 	    return false;
 	}
+
+
+
 
 	@Override
 	public List<PermisosDto> validarPermisos(String user) {

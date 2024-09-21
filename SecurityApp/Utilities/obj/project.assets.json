@@ -8109,23 +8109,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maryu\\.nuget\\packages\\": {},
+    "C:\\Users\\Adminsena\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
       "projectName": "Utilities",
-      "projectPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
-      "packagesPath": "C:\\Users\\Maryu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maryu\\Desktop\\2024\\SheduleFrontend\\SecurityApp\\Utilities\\obj\\",
+      "projectPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Utilities\\Utilities.csproj",
+      "packagesPath": "C:\\Users\\Adminsena\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Adminsena\\Desktop\\SheduleFrontend\\SecurityApp\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Maryu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adminsena\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8183,7 +8183,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

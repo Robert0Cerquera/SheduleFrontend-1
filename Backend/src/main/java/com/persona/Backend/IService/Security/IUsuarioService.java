@@ -13,8 +13,7 @@ public interface IUsuarioService extends IBaseService<Usuario>{
 	
 	Optional<IDatosUsuarioDto> ObtenerDatosUsuario(Long id);
 
-	Usuario saveUsuarioJwt(Usuario instanceEntity) throws Exception;
-
+	
 	Boolean getLogin(String user, String password) throws Exception;
 	
 	List<PermisosDto> validarPermisos(String user);
