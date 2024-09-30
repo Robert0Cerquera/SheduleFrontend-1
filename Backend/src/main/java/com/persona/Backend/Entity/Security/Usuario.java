@@ -15,7 +15,7 @@ public class Usuario extends BaseEntity {
 	@Column(name = "usuario_nombre", length = 40, nullable = false)
 	private String usuarioNombre;
 
-	@Column(name = "contrasenia", length = 40, nullable = false)
+	@Column(name = "contrasenia", nullable = false)
 	private String contrasenia;
 
 	@OneToOne(fetch = FetchType.EAGER, optional = false)

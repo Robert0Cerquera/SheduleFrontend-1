@@ -63,5 +63,7 @@ public interface IUsuarioRepository extends IBaseRepository<Usuario, Long>{
 			+ "					AND v.state = TRUE   "
 			+ "					AND mo.state = TRUE", nativeQuery = true)
 	List<PermisosDto> validarPermisos(String user);
+
+	Optional<Usuario> findByUsuarioNombre(String usuario);
 }
  
