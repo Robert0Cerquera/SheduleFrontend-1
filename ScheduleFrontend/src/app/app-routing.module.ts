@@ -9,9 +9,10 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { ContinenteComponent } from './Parametrizacion/Ubicacion/continente/continente.component';
 import { PaisComponent } from './Parametrizacion/Ubicacion/pais/pais.component';
 import { DepartamentoComponent } from './Parametrizacion/Ubicacion/departamento/departamento.component';
+import { CiudadComponent } from './Parametrizacion/Ubicacion/ciudad/ciudad.component';
+import { LocalidadComponent } from './Parametrizacion/Ubicacion/localidad/localidad.component';
 import { LoginComponent } from './Pages/login-component/login-component.component';
 import { AuthGuard } from './Services/Jwt/AuthGuard'; // Importa la guarda de autenticación
-
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -26,6 +27,12 @@ const routes: Routes = [
   { path: 'registro_departamento', component: DepartamentoComponent },
   // Redirige a home cualquier ruta no válida después de autenticarse
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
+
+  {
+    path: '**',
+    redirectTo: 'home', 
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

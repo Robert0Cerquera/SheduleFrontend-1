@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Localidad } from '../../../models/Parameter/Ubicacion/localidad'; // Ajusta la ruta del modelo según la estructura del proyecto
+import { Localidad } from '../../../models/Parameter/Ubicacion/localidad';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalidadService {
-
   private apiUrl = 'http://localhost:9000/base/api/v1/base/parameter/ubicacion/localidad';
 
   constructor(private http: HttpClient) { }
@@ -15,13 +14,9 @@ export class LocalidadService {
   getLocalidades(): Observable<Localidad[]> {
     return this.http.get<Localidad[]>(this.apiUrl);
   }
-
-  getLocalidadesByCiudad(ciudadId: number): Observable<Localidad[]> {
-    return this.http.get<Localidad[]>(`${this.apiUrl}?ciudadId=${ciudadId}`);
-  }
-
-  getLocalidadById(id: number): Observable<Localidad> {
-    return this.http.get<Localidad>(`${this.apiUrl}/${id}`);
+  
+  getLocalidadesSinEliminar(): Observable<Localidad[]> {
+    return this.http.get<Localidad[]>(`${this.apiUrl}/consultarRegistrosSinEliminar`);
   }
 
   createLocalidad(localidad: Localidad): Observable<Localidad> {

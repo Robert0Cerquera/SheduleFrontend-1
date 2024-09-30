@@ -4,8 +4,8 @@ export interface Departamento {
   codigo: string;
   state: boolean;
   createdAt?: string;
-    updatedAt?: string;
-    deletedAt?: string | null;
+  updatedAt?: string;
+  deletedAt?: string | null;
   paisId: {
     id: number,
     nombre?: string

@@ -29,7 +29,7 @@ import {AuthInterceptorService} from "./Services/Jwt/auth-interceptor.service";
     FormsModule,
     ReactiveFormsModule,// Importa esto para los formularios reactivos
     HttpClientModule, // Para hacer peticiones HTTP
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthService,

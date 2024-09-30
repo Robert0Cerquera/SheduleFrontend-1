@@ -20,7 +20,12 @@ export class DepartamentoComponent implements OnInit {
   paises: Pais[] = [];
   departamentoForm!: FormGroup; // Formulario reactivo
   isEditing: boolean = false;
-  headers: string[] = ['Nombre', 'Código', 'País', 'Estado', 'Opciones'];
+  headers = [
+    { title: 'Nombre', field: 'nombre' },
+    { title: 'Código', field: 'codigo' },
+    { title: 'Pais', field: 'paisId.nombre' },
+    { title: 'Estado', field: 'state' }
+  ];
 
   constructor(
     private fb: FormBuilder,
@@ -43,13 +48,16 @@ export class DepartamentoComponent implements OnInit {
       paisId: this.fb.group({
         id: [null, Validators.required]
       }),
-      state: [true]
+      state: [true],
+      createdAt: [''],  // Añadir createdAt al formulario
+      updatedAt: ['']   // Añadir updatedAt al formulario
     });
   }
+  
 
   // Obtiene la lista de departamentos sin eliminar
   getDepartamentos(): void {
-    this.departamentoService.getDepartamentos().subscribe(
+    this.departamentoService.getDepartamentosSinEliminar().subscribe(
       data => {
         this.departamentos = data;
       },
@@ -63,7 +71,10 @@ export class DepartamentoComponent implements OnInit {
   getPaises(): void {
     this.paisService.getPaisSinEliminar().subscribe(
       data => {
-        this.paises = data;
+        this.paises = data.map(pais=>({
+          ...pais,
+          nombreCompleto:`${pais.nombre} (${pais.state ? 'Activo' : 'Inactivo'})` 
+        }))
       },
       error => {
         console.error('Error al obtener los países:', error);
@@ -99,7 +110,12 @@ export class DepartamentoComponent implements OnInit {
 
   // Actualiza un departamento existente
   updateDepartamento(departamento: Departamento): void {
-    this.departamentoService.updateDepartamento(departamento).subscribe(
+    const updatedDepartamento: Departamento = {
+      ...departamento,
+      updatedAt: new Date().toISOString() // Actualiza la fecha de actualización
+    };
+  
+    this.departamentoService.updateDepartamento(updatedDepartamento).subscribe(
       response => {
         console.log('Departamento actualizado con éxito:', response);
         this.getDepartamentos();
@@ -111,6 +127,7 @@ export class DepartamentoComponent implements OnInit {
       }
     );
   }
+  
 
   // Edita un departamento seleccionado
   editDepartamento(departamento: Departamento): void {
@@ -120,11 +137,14 @@ export class DepartamentoComponent implements OnInit {
       nombre: departamento.nombre,
       codigo: departamento.codigo,
       paisId: {
-        id: departamento.paisId?.id || null,
+        id: departamento.paisId?.id || null
       },
-      state: departamento.state
+      state: departamento.state,
+      createdAt: departamento.createdAt,  // Mantén el valor de createdAt
+      updatedAt: departamento.updatedAt   // Mantén el valor de updatedAt
     });
   }
+  
   deleteDepartamento(id: number): void {
     const departamentoToDelete = this.departamentos.find(departamento => departamento.id === id);
     if (departamentoToDelete) {

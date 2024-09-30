@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Ciudad } from '../../../models/Parameter/Ubicacion/ciudad'; // Ajusta la ruta del modelo según la estructura del proyecto
+import { Ciudad } from '../../../models/Parameter/Ubicacion/ciudad';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CiudadService {
-
   private apiUrl = 'http://localhost:9000/base/api/v1/base/parameter/ubicacion/ciudad';
 
   constructor(private http: HttpClient) { }
@@ -15,13 +14,9 @@ export class CiudadService {
   getCiudades(): Observable<Ciudad[]> {
     return this.http.get<Ciudad[]>(this.apiUrl);
   }
-
-  getCiudadesByDepartamento(departamentoId: number): Observable<Ciudad[]> {
-    return this.http.get<Ciudad[]>(`${this.apiUrl}?departamentoId=${departamentoId}`);
-  }
-
-  getCiudadById(id: number): Observable<Ciudad> {
-    return this.http.get<Ciudad>(`${this.apiUrl}/${id}`);
+  
+  getCiudadesSinEliminar(): Observable<Ciudad[]> {
+    return this.http.get<Ciudad[]>(`${this.apiUrl}/consultarRegistrosSinEliminar`);
   }
 
   createCiudad(ciudad: Ciudad): Observable<Ciudad> {

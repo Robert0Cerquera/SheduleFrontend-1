@@ -1,32 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModuloService } from '../../Services/Security/modulo.service';
 import { Modulo } from '../../models/Security/modulo';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { TableComponent } from '../../Componentes/table/table.component';
 
 @Component({
   selector: 'app-modulo',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [ReactiveFormsModule, NgSelectModule, TableComponent],
   templateUrl: './modulo.component.html',
   styleUrls: ['./modulo.component.css']
 })
 export class ModuloComponent implements OnInit {
   modulos: Modulo[] = [];
-  selectedModulo: Modulo = {
-    id: 0,
-    nombre: '',
-    ruta: '',
-    icono: '',
-    state: true,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    deletedAt: undefined
-  };
+  moduloForm!: FormGroup; // Formulario reactivo
   isEditing: boolean = false;
-  duplicateNameError: boolean = false; // Bandera para mostrar alerta
 
-  // Lista de íconos disponibles
+  headers = [
+    { title: 'Nombre', field: 'nombre' },
+    { title: 'Ruta', field: 'ruta' },
+    { title: 'Icono', field: 'icono' },
+    { title: 'Estado', field: 'state' }
+  ];
+
+  // Lista de íconos disponibles para seleccionar
   iconos = [
     { id: 1, name: 'Home', class: 'fa fa-home' },
     { id: 2, name: 'Usuario', class: 'fa fa-user' },
@@ -42,109 +41,126 @@ export class ModuloComponent implements OnInit {
     { id: 12, name: 'Edificio', class: 'fa fa-building' },
     { id: 13, name: 'Ubicación', class: 'fa fa-map-marker-alt' }
   ];
-  
-  selectedIcon: { id: number, name: string, class: string } = this.iconos[0];
 
-  constructor(private moduloService: ModuloService) {}
+  constructor(
+    private fb: FormBuilder,
+    private moduloService: ModuloService
+  ) {}
 
   ngOnInit(): void {
     this.getModulos();
+    this.initializeForm();
   }
 
-  getModulos(): void {
-    this.moduloService.getModulos().subscribe(data => {
-      this.modulos = data.filter(modulo => !modulo.deletedAt);
-      console.log('Modulos obtenidos:', this.modulos); // Verifica los datos en la consola
-    }, error => {
-      console.error('Error al obtener los módulos:', error);
+  // Inicializa el formulario reactivo
+  initializeForm(): void {
+    this.moduloForm = this.fb.group({
+      id: [0],
+      nombre: ['', Validators.required],
+      ruta: ['', Validators.required],
+      icono: ['', Validators.required],
+      state: [true],
+      createdAt: [''],
+      updatedAt: ['']
     });
   }
 
+  // Obtiene la lista de módulos sin eliminar
+  getModulos(): void {
+    this.moduloService.getModulosSinEliminar().subscribe(
+      data => {
+        this.modulos = data;
+      },
+      error => {
+        console.error('Error al obtener los módulos:', error);
+      }
+    );
+  }
+
+  // Envía el formulario
   onSubmit(): void {
-    const duplicateModulo = this.modulos.find(modulo => modulo.nombre.toLowerCase() === this.selectedModulo.nombre.toLowerCase());
-
-    if (duplicateModulo) {
-      this.duplicateNameError = true;
-      return;
-    } else {
-      this.duplicateNameError = false;
-    }
-
-    if (this.isEditing) {
-      this.updateModulo(this.selectedModulo);
-    } else {
-      this.createModulo();
+    if (this.moduloForm.valid) {
+      const modulo: Modulo = this.moduloForm.value;
+      if (this.isEditing) {
+        this.updateModulo(modulo);
+      } else {
+        this.createModulo(modulo);
+      }
     }
   }
 
-  createModulo(): void {
-    this.selectedModulo.icono = this.selectedIcon.class;
-  
-    this.selectedModulo.createdAt = new Date().toISOString();
-    this.selectedModulo.updatedAt = new Date().toISOString();
-    this.selectedModulo.deletedAt = undefined;
-  
-    this.moduloService.createModulo(this.selectedModulo).subscribe(
-      (response: Modulo) => {
+  // Crea un nuevo módulo
+  createModulo(modulo: Modulo): void {
+    this.moduloService.createModulo(modulo).subscribe(
+      response => {
         console.log('Módulo creado con éxito:', response);
         this.getModulos();
         this.resetForm();
       },
-      (error) => {
+      error => {
         console.error('Error al crear el módulo:', error);
       }
     );
   }
 
-  editModulo(modulo: Modulo): void {
-    this.selectedModulo = { ...modulo };
-    this.selectedIcon = this.iconos.find(icon => icon.class === modulo.icono) || this.iconos[0];
-    this.isEditing = true;
-  }
-
+  // Actualiza un módulo existente
   updateModulo(modulo: Modulo): void {
-    modulo.icono = this.selectedIcon.class;
-    modulo.updatedAt = new Date().toISOString();
-  
-    this.moduloService.updateModulo(modulo).subscribe(
-      (response: Modulo) => {
+    const updatedModulo: Modulo = {
+      ...modulo,
+      updatedAt: new Date().toISOString() // Actualiza la fecha de actualización
+    };
+
+    this.moduloService.updateModulo(updatedModulo).subscribe(
+      response => {
         console.log('Módulo actualizado con éxito:', response);
         this.getModulos();
         this.resetForm();
         this.isEditing = false;
       },
-      (error) => {
+      error => {
         console.error('Error al actualizar el módulo:', error);
       }
     );
   }
 
+  // Edita un módulo seleccionado
+  editModulo(modulo: Modulo): void {
+    this.isEditing = true;
+    this.moduloForm.patchValue({
+      id: modulo.id,
+      nombre: modulo.nombre,
+      ruta: modulo.ruta,
+      icono: modulo.icono,
+      state: modulo.state,
+      createdAt: modulo.createdAt,
+      updatedAt: modulo.updatedAt
+    });
+  }
   deleteModulo(id: number): void {
     const moduloToDelete = this.modulos.find(modulo => modulo.id === id);
     if (moduloToDelete) {
       moduloToDelete.deletedAt = new Date().toISOString();
-      this.moduloService.updateModulo(moduloToDelete).subscribe(() => {
-        console.log('Módulo eliminado con éxito (soft delete)');
-        this.getModulos();
-      }, error => {
-        console.error('Error al eliminar el módulo:', error);
-      });
+      this.moduloService.updateModulo(moduloToDelete).subscribe(
+        () => {
+          this.modulos = this.modulos.filter(modulo => modulo.id !== id);
+          console.log('Módulo eliminado visualmente');
+        },
+        error => {
+          console.error('Error al eliminar el módulo:', error);
+        }
+      );
     }
   }
 
+  // Resetea el formulario para agregar o editar un nuevo módulo
   resetForm(): void {
-    this.selectedModulo = {
+    this.moduloForm.reset({
       id: 0,
       nombre: '',
       ruta: '',
       icono: '',
-      state: true,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-      deletedAt: undefined
-    };
-    this.selectedIcon = this.iconos[0];
+      state: true
+    });
     this.isEditing = false;
-    this.duplicateNameError = false;
   }
 }
