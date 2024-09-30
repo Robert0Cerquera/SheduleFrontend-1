@@ -1,5 +1,7 @@
 package com.persona.Backend.Controller.Jwt;
 
+import com.persona.Backend.Dto.Jwt.AuthenticationRequest;
+import com.persona.Backend.Dto.Jwt.AuthenticationResponse;
 import com.persona.Backend.Service.Jwt.CustomUserDetailsService;
 import com.persona.Backend.Utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ public class AuthenticationController {
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
 
-    @PostMapping("/authenticate")
+    @PostMapping("/login")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
             // Autenticación del usuario

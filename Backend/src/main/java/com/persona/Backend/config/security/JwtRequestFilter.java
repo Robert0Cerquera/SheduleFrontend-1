@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.Date;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
@@ -67,6 +68,15 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     private boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
-        return username.equals(userDetails.getUsername());
+
+        // Comprobar si el token coincide con el usuario y si no ha expirado
+        Claims claims = Jwts.parser()
+                .setSigningKey(secretKey)
+                .parseClaimsJws(token)
+                .getBody();
+
+        // Verificar que el token no haya expirado
+        return username.equals(userDetails.getUsername()) && !claims.getExpiration().before(new Date());
     }
+
 }

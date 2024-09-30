@@ -3,12 +3,7 @@ package com.persona.Backend.Controller.Security;
 import java.util.Optional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.persona.Backend.Controller.BaseController;
 import com.persona.Backend.Dto.IDatosUsuarioDto;
@@ -40,5 +35,10 @@ public class UsuarioController extends BaseController<Usuario> {
 	@GetMapping("/validar/permisos")
 	public List<PermisosDto> validarPermisos(@RequestParam String User){
 		return service.validarPermisos(User);
+	}
+
+	@PostMapping("/GuardarUsuarioJwt")
+	public Usuario saveUsuarioJwt(@RequestBody Usuario usuario) throws Exception{
+		return service.saveUsuarioJwt(usuario);
 	}
 }
