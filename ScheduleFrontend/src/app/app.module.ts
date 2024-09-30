@@ -6,6 +6,10 @@ import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientMo
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Pages/menu/menu.component';
 import { NavbarComponent } from './Pages/navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 // import { LoginComponent } from './Pages/login/login.component';
 
 @NgModule({
@@ -13,12 +17,15 @@ import { NavbarComponent } from './Pages/navbar/navbar.component';
     // LoginComponent,
     AppComponent,
     MenuComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule // Agrega HttpClientModule en los imports
+    FormsModule,
+    ReactiveFormsModule,// Importa esto para los formularios reactivos
+    HttpClientModule, // Para hacer peticiones HTTP
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent,] //LoginComponent]

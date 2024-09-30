@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Role } from '../models/role'; // Asegúrate de ajustar la ruta del modelo
+import { Role } from '../../models/Security/role'; // Asegúrate de ajustar la ruta del modelo
 
 @Injectable({
   providedIn: 'root'

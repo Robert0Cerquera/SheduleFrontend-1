@@ -9,7 +9,7 @@ import com.persona.Backend.Entity.Parameter.Ubicacion.Departamento;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1/base/parameter/infraestructura/departamento")
+@RequestMapping("/api/v1/base/parameter/ubicacion/departamento")
 public class DepartamentoController extends BaseController<Departamento>{
 
 }

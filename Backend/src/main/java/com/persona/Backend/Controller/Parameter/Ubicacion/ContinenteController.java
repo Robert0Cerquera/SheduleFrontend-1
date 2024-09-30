@@ -9,7 +9,7 @@ import com.persona.Backend.Entity.Parameter.Ubicacion.Continente;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1/base/parameter/infraestructura/continente")
+@RequestMapping("/api/v1/base/parameter/ubicacion/continente")
 public class ContinenteController extends BaseController<Continente>{
 
 }

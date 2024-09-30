@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VistaService } from '../../Services/vista.service'; // Asegúrate de que la ruta al servicio sea correcta
-import { Vista } from '../../models/vista'; // Asegúrate de que la ruta al modelo sea correcta
+import { VistaService } from '../../Services/Security/vista.service'; // Asegúrate de que la ruta al servicio sea correcta
+import { Vista } from '../../models/Security/vista'; // Asegúrate de que la ruta al modelo sea correcta
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 

@@ -6,6 +6,11 @@ import { VistaComponent } from './Security/vista/vista.component';
 import { RoleComponent } from './Security/role/role.component';
 import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { ContinenteComponent } from './Parametrizacion/Ubicacion/continente/continente.component';
+import { PaisComponent } from './Parametrizacion/Ubicacion/pais/pais.component';
+import { DepartamentoComponent } from './Parametrizacion/Ubicacion/departamento/departamento.component';
+
+
 
 
 const routes: Routes = [
@@ -17,7 +22,12 @@ const routes: Routes = [
 { path: 'registro_role', component: RoleComponent },
 { path: 'about', component: AboutComponent },
 { path: 'contact', component: ContactComponent },
+{ path: 'registro_continente', component: ContinenteComponent },
+{ path: 'registro_pais', component: PaisComponent },
+{ path: 'registro_departamento', component: DepartamentoComponent },
 
+
+//{ path: 'ubicacion', component:  UbicacionFormComponent },
 
 
 

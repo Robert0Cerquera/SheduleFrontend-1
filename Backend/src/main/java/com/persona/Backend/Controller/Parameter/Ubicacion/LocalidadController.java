@@ -9,7 +9,7 @@ import com.persona.Backend.Entity.Parameter.Ubicacion.Localidad;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1/base/parameter/infraestructura/localidad")
+@RequestMapping("/api/v1/base/parameter/ubicacion/localidad")
 public class LocalidadController extends BaseController<Localidad>{
 
 }

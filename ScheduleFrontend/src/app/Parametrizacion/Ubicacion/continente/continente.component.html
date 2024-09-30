@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Continente' : 'Registrar Continente' }}</h2>
+
+  <!-- Formulario para Crear/Editar Continente -->
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre del Continente:</label>
+      <input type="text" id="nombre" class="form-control" [(ngModel)]="selectedContinente.nombre" name="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="codigo" class="form-label">Código:</label>
+      <input type="text" id="codigo" class="form-control" [(ngModel)]="selectedContinente.codigo" name="codigo" required>
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="estado" [(ngModel)]="selectedContinente.state" name="state">
+        <label class="form-check-label" for="estado">{{ selectedContinente.state ? 'Activo' : 'Inactivo' }}</label>
+      </div>
+    </div>
+
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla de Continentes -->
+<div class="table-container mt-5">
+  <h2 class="text-center mb-4">Lista de Continentes</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Estado</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let continente of continentes">
+          <td>{{ continente.nombre }}</td>
+          <td>{{ continente.codigo }}</td>
+          <td>{{ continente.state ? 'Activo' : 'Inactivo' }}</td>
+          <td>
+            <button (click)="editContinente(continente)" class="btn btn-primary btn-sm">Editar</button>
+            <button (click)="deleteContinente(continente.id)" class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -9,7 +9,7 @@ import com.persona.Backend.Entity.Parameter.Ubicacion.Pais;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1/base/parameter/infraestructura/pais")
+@RequestMapping("/api/v1/base/parameter/ubicacion/pais")
 public class PaisController extends BaseController<Pais> {
 
 }

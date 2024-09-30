@@ -14,4 +14,10 @@ public interface IBaseService<T> {
 	void update(Long id, T instanceEntity) throws Exception;
 
 	void delete(Long id) throws Exception;
+	
+	List<T> findByDeletedAtIsNullAndStateTrue();
+	
+	List<T> findByDeletedAtIsNull();
+	
+
 }

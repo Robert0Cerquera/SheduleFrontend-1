@@ -64,4 +64,16 @@ public abstract class BaseService<T extends BaseEntity> implements IBaseService<
         auditService.setAuditOnDelete(objetoToDelete); // Set audit details for deletion
         this.repository.save(objetoToDelete); // Save the updated entity with deletion details
     }
+    
+    @Override
+    public List<T> findByDeletedAtIsNullAndStateTrue(){
+    	return repository.findByDeletedAtIsNullAndStateTrue();
+    }
+    
+    @Override
+    public List<T> findByDeletedAtIsNull(){
+    	return repository.findByDeletedAtIsNull();
+    }
+    
+    
 }
