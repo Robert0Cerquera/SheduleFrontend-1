@@ -80,4 +80,24 @@ public abstract class BaseController<T extends BaseEntity> {
     public void delete(@PathVariable Long id) throws Exception {
         serviceT.delete(id);
     }
+    
+    @Operation(summary = "Traer solo los registros con fecha de eliminación distintos a Null", responses = {
+    		 @ApiResponse(responseCode = "200", description = "Consulta de registro exitosa"),
+             @ApiResponse(responseCode = "404", description = "No se encontró registro") })
+    @GetMapping("/consultarRegistrosSinEliminarActivos")
+    public List<T> findByDeletedAtIsNullAndStateTrue(){
+    	return serviceT.findByDeletedAtIsNullAndStateTrue();
+    }
+    
+    
+    @Operation(summary = "Traer solo los registros con fecha de eliminación distintos a Null", responses = {
+   		 @ApiResponse(responseCode = "200", description = "Consulta de registro exitosa"),
+            @ApiResponse(responseCode = "404", description = "No se encontró registro") })
+   @GetMapping("/consultarRegistrosSinEliminar")
+   public List<T> findByDeletedAtIsNull(){
+   	return serviceT.findByDeletedAtIsNull();
+   }
+    
+    
+    
 }

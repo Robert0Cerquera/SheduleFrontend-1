@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
-import { Vista } from '../models/vista'; // Ajusta la ruta si es necesario
+import { Vista } from '../../models/Security/vista'; // Ajusta la ruta si es necesario
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RoleService } from '../../Services/role.service'; // Asegúrate de que la ruta al servicio sea correcta
-import { Role } from '../../models/role'; // Asegúrate de que la ruta al modelo sea correcta
+import { RoleService } from '../../Services/Security/role.service'; // Asegúrate de que la ruta al servicio sea correcta
+import { Role } from '../../models/Security/role'; // Asegúrate de que la ruta al modelo sea correcta
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 

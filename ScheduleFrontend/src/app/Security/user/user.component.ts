@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../Services/user.service';
-import { PersonService } from '../../Services/person.service';
-import { User } from '../../models/user';
-import { Person } from '../../models/person';
+import { UserService } from '../../Services/Security/user.service';
+import { PersonService } from '../../Services/Security/person.service';
+import { User } from '../../models/Security/user';
+import { Person } from '../../models/Security/person';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 

@@ -21,7 +21,7 @@ public class Pais extends BaseEntity {
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "continente_id", nullable = false, unique = false)
-	private Continente coninenteId;
+	private Continente continenteId;
 
 	public String getNombre() {
 		return nombre;
@@ -39,12 +39,14 @@ public class Pais extends BaseEntity {
 		this.codigo = codigo;
 	}
 
-	public Continente getConinenteId() {
-		return coninenteId;
+	public Continente getContinenteId() {
+		return continenteId;
 	}
 
-	public void setConinenteId(Continente coninenteId) {
-		this.coninenteId = coninenteId;
+	public void setContinenteId(Continente continenteId) {
+		this.continenteId = continenteId;
 	}
+
+	
 
 }
