@@ -14,6 +14,9 @@ export class DepartamentoService {
   getDepartamentos(): Observable<Departamento[]> {
     return this.http.get<Departamento[]>(this.apiUrl);
   }
+  getDepartamentosSinEliminar(): Observable<Departamento[]> {
+    return this.http.get<Departamento[]>(this.apiUrl+"/consultarRegistrosSinEliminar");
+  }
 
   createDepartamento(departamento: Departamento): Observable<Departamento> {
     return this.http.post<Departamento>(this.apiUrl, departamento);

@@ -16,7 +16,7 @@
       <div formGroupName="paisId">
         <ng-select 
           [items]="paises"
-          bindLabel="nombre"
+          bindLabel="nombreCompleto"
           bindValue="id"
           formControlName="id"
           placeholder="Seleccione un país"
@@ -42,6 +42,7 @@
 <div class="table-container mt-5">
   <h2 class="text-center mb-4">Lista de Departamentos</h2>
   <div class="table-responsive">
-    <app-table [headers]="headers" [data]="departamentos" (edit)="editDepartamento($event)" (delete)="deleteDepartamento($event)"></app-table>
+    <app-table [headers]="headers" [data]="departamentos" (edit)="editDepartamento($event)" (delete)="deleteDepartamento($event)">
+    </app-table>
   </div>
 </div>

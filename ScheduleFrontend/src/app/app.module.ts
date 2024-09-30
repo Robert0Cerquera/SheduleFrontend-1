@@ -25,7 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     ReactiveFormsModule,// Importa esto para los formularios reactivos
     HttpClientModule, // Para hacer peticiones HTTP
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent,] //LoginComponent]

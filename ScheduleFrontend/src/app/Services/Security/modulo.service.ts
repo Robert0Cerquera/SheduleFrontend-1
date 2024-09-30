@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core'; 
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Modulo } from '../../models/Security/modulo'; // Asegúrate de tener el modelo de 'Modulo'
+import { Modulo } from '../../models/Security/modulo';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +9,14 @@ import { Modulo } from '../../models/Security/modulo'; // Asegúrate de tener el
 export class ModuloService {
   private apiUrl = 'http://localhost:9000/base/api/v1/base/security/modulo';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getModulos(): Observable<Modulo[]> {
     return this.http.get<Modulo[]>(this.apiUrl);
+  }
+
+  getModulosSinEliminar(): Observable<Modulo[]> {
+    return this.http.get<Modulo[]>(`${this.apiUrl}/consultarRegistrosSinEliminar`);
   }
 
   createModulo(modulo: Modulo): Observable<Modulo> {

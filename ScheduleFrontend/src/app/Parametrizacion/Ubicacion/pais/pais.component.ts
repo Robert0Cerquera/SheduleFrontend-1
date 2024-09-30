@@ -11,7 +11,7 @@ import { TableComponent } from '../../../Componentes/table/table.component';
 @Component({
   selector: 'app-pais',
   standalone: true,
-  imports: [ReactiveFormsModule, NgSelectModule, TableComponent],
+  imports: [ReactiveFormsModule, NgSelectModule, TableComponent], // Importar directamente
   templateUrl: './pais.component.html',
   styleUrls: ['./pais.component.css']
 })
@@ -20,7 +20,12 @@ export class PaisComponent implements OnInit {
   continentes: Continente[] = [];
   paisForm!: FormGroup; // Formulario reactivo
   isEditing: boolean = false;
-  headers: string[] = ['Nombre', 'Código', 'Continente', 'Estado', 'Opciones'];
+  headers = [
+    { title: 'Nombre', field: 'nombre' },
+    { title: 'Código', field: 'codigo' },
+    { title: 'Continente', field: 'continenteId.nombre' },
+    { title: 'Estado', field: 'state' }
+  ];
 
   constructor(
     private fb: FormBuilder,
@@ -34,7 +39,6 @@ export class PaisComponent implements OnInit {
     this.initializeForm();
   }
 
-  // Inicializa el formulario reactivo
   initializeForm(): void {
     this.paisForm = this.fb.group({
       id: [0],
@@ -43,9 +47,12 @@ export class PaisComponent implements OnInit {
       continenteId: this.fb.group({
         id: [null, Validators.required]
       }),
-      state: [true]
+      state: [true],
+      createdAt: [''],  
+      updatedAt: ['']   
     });
-  }  
+  }
+   
 
   // Obtiene la lista de países sin eliminar
   getPaises(): void {
@@ -103,11 +110,13 @@ export class PaisComponent implements OnInit {
     );
   }
 
-  // Actualiza un país existente
   updatePais(pais: Pais): void {
-    pais.updatedAt = new Date().toISOString();
-
-    this.paisService.updatePais(pais).subscribe(
+    const updatedPais: Pais = {
+      ...pais,
+      updatedAt: new Date().toISOString() 
+    };
+  
+    this.paisService.updatePais(updatedPais).subscribe(
       response => {
         console.log('País actualizado con éxito:', response);
         this.getPaises();
@@ -119,8 +128,9 @@ export class PaisComponent implements OnInit {
       }
     );
   }
+  
 
-  // Edita un país seleccionado
+
   editPais(pais: Pais): void {
     this.isEditing = true;
     this.paisForm.patchValue({
@@ -128,11 +138,14 @@ export class PaisComponent implements OnInit {
       nombre: pais.nombre,
       codigo: pais.codigo,
       continenteId: {
-        id: pais.continenteId?.id || null,
+        id: pais.continenteId?.id || null
       },
-      state: pais.state
+      state: pais.state,
+      createdAt: pais.createdAt,  
+      updatedAt: pais.updatedAt   
     });
   }
+  
 
   // Elimina (visualmente) un país estableciendo la fecha de eliminación
   deletePais(id: number): void {

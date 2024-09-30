@@ -1,1 +1,49 @@
-<p>ciudad works!</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">{{ isEditing ? 'Editar Ciudad' : 'Registrar Ciudad' }}</h2>
+  
+    <!-- Formulario para Crear/Editar Ciudad -->
+    <form [formGroup]="ciudadForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre de la Ciudad:</label>
+        <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="codigo" class="form-label">Código:</label>
+        <input type="text" id="codigo" class="form-control" formControlName="codigo" required>
+      </div>
+      <div class="mb-3">
+        <label for="departamento" class="form-label">Departamento:</label>
+        <div formGroupName="departamentoId">
+          <ng-select 
+            [items]="departamentos"
+            bindLabel="nombreCompleto"
+            bindValue="id"
+            formControlName="id"
+            placeholder="Seleccione un departamento"
+            required>
+          </ng-select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado:</label>
+        <div class="form-check form-switch">
+          <input type="checkbox" class="form-check-input" id="estado" formControlName="state">
+          <label class="form-check-label" for="estado">{{ ciudadForm.get('state')?.value ? 'Activo' : 'Inactivo' }}</label>
+        </div>
+      </div>
+  
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Tabla de Ciudades -->
+  <div class="table-container mt-5">
+    <h2 class="text-center mb-4">Lista de Ciudades</h2>
+    <div class="table-responsive">
+      <app-table [headers]="headers" [data]="ciudades" (edit)="editCiudad($event)" (delete)="deleteCiudad($event)">
+      </app-table>
+    </div>
+  </div>
+  

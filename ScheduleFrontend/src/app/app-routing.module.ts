@@ -9,6 +9,9 @@ import { ContactComponent } from './Pages/contact/contact.component';
 import { ContinenteComponent } from './Parametrizacion/Ubicacion/continente/continente.component';
 import { PaisComponent } from './Parametrizacion/Ubicacion/pais/pais.component';
 import { DepartamentoComponent } from './Parametrizacion/Ubicacion/departamento/departamento.component';
+import { CiudadComponent } from './Parametrizacion/Ubicacion/ciudad/ciudad.component';
+import { LocalidadComponent } from './Parametrizacion/Ubicacion/localidad/localidad.component';
+
 
 
 
@@ -25,6 +28,13 @@ const routes: Routes = [
 { path: 'registro_continente', component: ContinenteComponent },
 { path: 'registro_pais', component: PaisComponent },
 { path: 'registro_departamento', component: DepartamentoComponent },
+{ path: 'registro_ciudad', component: CiudadComponent },
+{ path: 'registro_localidad', component: LocalidadComponent },
+{ path: 'registro_localidad', component: LocalidadComponent },
+
+
+
+
 
 
 //{ path: 'ubicacion', component:  UbicacionFormComponent },
