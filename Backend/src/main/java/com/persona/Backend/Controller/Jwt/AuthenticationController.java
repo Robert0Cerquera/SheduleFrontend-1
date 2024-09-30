@@ -1,7 +1,5 @@
 package com.persona.Backend.Controller.Jwt;
 
-import com.persona.Backend.Dto.Security.AuthenticationRequest;
-import com.persona.Backend.Dto.Security.AuthenticationResponse;
 import com.persona.Backend.Service.Jwt.CustomUserDetailsService;
 import com.persona.Backend.Utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
