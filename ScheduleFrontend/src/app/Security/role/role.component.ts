@@ -1,124 +1,146 @@
 import { Component, OnInit } from '@angular/core';
-import { RoleService } from '../../Services/Security/role.service'; // Asegúrate de que la ruta al servicio sea correcta
-import { Role } from '../../models/Security/role'; // Asegúrate de que la ruta al modelo sea correcta
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RoleService } from '../../Services/Security/role.service';
+import { Role } from '../../models/M-Security/role';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { TableComponent } from '../../Componentes/table/table.component';
 
 @Component({
   selector: 'app-role',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [ReactiveFormsModule, NgSelectModule, TableComponent],
   templateUrl: './role.component.html',
   styleUrls: ['./role.component.css']
 })
 export class RoleComponent implements OnInit {
   roles: Role[] = [];
-  selectedRole: Role = {
-    id: 0,
-    nombre: '',
-    descripcion: '',
-    state: true,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    deletedAt: undefined
-  };
+  roleForm!: FormGroup; // Formulario reactivo
   isEditing: boolean = false;
-  duplicateNameError: boolean = false; // Bandera para mostrar alerta
+  headers = [
+    { title: 'Nombre', field: 'nombre' },
+    { title: 'Descripción', field: 'descripcion' },
+    { title: 'Estado', field: 'state' }
+  ];
 
-  constructor(private roleService: RoleService) {}
+  constructor(
+    private fb: FormBuilder,
+    private roleService: RoleService
+  ) {}
 
   ngOnInit(): void {
     this.getRoles();
+    this.initializeForm();
   }
 
-  getRoles(): void {
-    this.roleService.getRoles().subscribe(data => {
-      this.roles = data.filter(role => !role.deletedAt);
-    }, error => {
-      console.error('Error al obtener los roles:', error);
+  // Inicializa el formulario reactivo
+  initializeForm(): void {
+    this.roleForm = this.fb.group({
+      id: [0],
+      nombre: ['', Validators.required],
+      descripcion: ['', Validators.required],
+      state: [true],
+      createdAt: [''],
+      updatedAt: ['']
     });
   }
 
-  onSubmit(): void {
-    // Verificar si el nombre del rol ya existe
-    const duplicateRole = this.roles.find(role => role.nombre.toLowerCase() === this.selectedRole.nombre.toLowerCase());
-    
-    if (duplicateRole) {
-      this.duplicateNameError = true; // Muestra la alerta
-      return;
-    } else {
-      this.duplicateNameError = false;
-    }
+  // Obtiene la lista de roles sin eliminar
+  getRoles(): void {
+    this.roleService.getRolesSinEliminar().subscribe(
+      data => {
+        this.roles = data;
+      },
+      error => {
+        console.error('Error al obtener los roles:', error);
+      }
+    );
+  }
 
-    if (this.isEditing) {
-      this.updateRole(this.selectedRole);
-    } else {
-      this.createRole();
+  // Envía el formulario
+  onSubmit(): void {
+    if (this.roleForm.valid) {
+      const role: Role = this.roleForm.value;
+      if (this.isEditing) {
+        this.updateRole(role);
+      } else {
+        this.createRole(role);
+      }
     }
   }
 
-  createRole(): void {
-    this.selectedRole.createdAt = new Date().toISOString();
-    this.selectedRole.updatedAt = new Date().toISOString();
-    this.selectedRole.deletedAt = undefined;
-
-    this.roleService.createRole(this.selectedRole).subscribe(
-      (response: Role) => {
+  // Crea un nuevo role
+  createRole(role: Role): void {
+    this.roleService.createRole(role).subscribe(
+      response => {
         console.log('Rol creado con éxito:', response);
-        this.getRoles(); // Refresca la lista después de crear
-        this.resetForm(); // Limpia el formulario después de crear
+        this.getRoles();
+        this.resetForm();
       },
-      (error) => {
+      error => {
         console.error('Error al crear el rol:', error);
       }
     );
   }
 
-  editRole(role: Role): void {
-    this.selectedRole = { ...role };
-    this.isEditing = true;
-  }
-
+  // Actualiza un role existente
   updateRole(role: Role): void {
-    role.updatedAt = new Date().toISOString();
+    const updatedRole: Role = {
+      ...role,
+      updatedAt: new Date().toISOString() // Actualiza la fecha de actualización
+    };
 
-    this.roleService.updateRole(role).subscribe(
-      (response: Role) => {
+    this.roleService.updateRole(updatedRole).subscribe(
+      response => {
         console.log('Rol actualizado con éxito:', response);
-        this.getRoles(); // Refresca la lista después de actualizar
-        this.resetForm(); // Limpia el formulario después de actualizar
+        this.getRoles();
+        this.resetForm();
         this.isEditing = false;
       },
-      (error) => {
+      error => {
         console.error('Error al actualizar el rol:', error);
       }
     );
   }
 
+  // Edita un rol seleccionado
+  editRole(role: Role): void {
+    this.isEditing = true;
+    this.roleForm.patchValue({
+      id: role.id,
+      nombre: role.nombre,
+      descripcion: role.descripcion,
+      state: role.state,
+      createdAt: role.createdAt,
+      updatedAt: role.updatedAt
+    });
+  }
+
+  // Elimina (visualmente) un role estableciendo la fecha de eliminación
   deleteRole(id: number): void {
     const roleToDelete = this.roles.find(role => role.id === id);
     if (roleToDelete) {
-      roleToDelete.deletedAt = new Date().toISOString(); // Marca como eliminado con la fecha actual
-      this.roleService.updateRole(roleToDelete).subscribe(() => {
-        console.log('Rol eliminado con éxito (soft delete)');
-        this.getRoles(); // Refresca la lista después de eliminar
-      }, error => {
-        console.error('Error al eliminar el rol:', error);
-      });
+      roleToDelete.deletedAt = new Date().toISOString();
+      this.roleService.updateRole(roleToDelete).subscribe(
+        () => {
+          this.roles = this.roles.filter(role => role.id !== id);
+          console.log('Rol eliminado visualmente');
+        },
+        error => {
+          console.error('Error al eliminar el rol:', error);
+        }
+      );
     }
   }
 
+  // Resetea el formulario para agregar o editar un nuevo rol
   resetForm(): void {
-    this.selectedRole = {
+    this.roleForm.reset({
       id: 0,
       nombre: '',
       descripcion: '',
-      state: true,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-      deletedAt: undefined
-    };
+      state: true
+    });
     this.isEditing = false;
-    this.duplicateNameError = false; // Restablece la alerta al limpiar el formulario
   }
 }

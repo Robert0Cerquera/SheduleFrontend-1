@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Localidad } from '../../../models/Parameter/Ubicacion/localidad';
+import { Localidad } from '../../../models/M-Parameter/Ubicacion/localidad';
 
 @Injectable({
   providedIn: 'root'

@@ -18,8 +18,8 @@ public class CentroFormacion extends BaseEntity {
 	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
 
-	@Column(name = "acronimo", length = 10, nullable = false)
-	private String acronimo;
+	@Column(name = "codigo", length = 10, nullable = false)
+	private String codigo;
 
 	@Column(name = "direccion", length = 45, nullable = false)
 	private String direccion;
@@ -42,14 +42,6 @@ public class CentroFormacion extends BaseEntity {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getAcronimo() {
-		return acronimo;
-	}
-
-	public void setAcronimo(String acronimo) {
-		this.acronimo = acronimo;
 	}
 
 	public String getDireccion() {

@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Pais } from '../../../models/Parameter/Ubicacion/pais';
+import { Pais } from '../../../models/M-Parameter/Ubicacion/pais';
 
 @Injectable({
   providedIn: 'root'

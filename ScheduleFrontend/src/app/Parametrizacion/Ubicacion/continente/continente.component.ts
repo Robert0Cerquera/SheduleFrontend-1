@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContinenteService } from '../../../Services/Parameter/Ubicacion/continente.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Continente } from '../../../models/Parameter/Ubicacion/continente';
+import { Continente } from '../../../models/M-Parameter/Ubicacion/continente';
 
 
 @Component({

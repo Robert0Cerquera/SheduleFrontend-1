@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class TableComponent {
   @Input() headers: { title: string; field: string }[] = []; // Cabeceras y campos de los datos
   @Input() data: any[] = []; // Datos a mostrar en la tabla
+  @Input() formatField?: (item: any, field: string) => string | HTMLElement;
   @Output() edit = new EventEmitter<any>(); // Emite un evento al hacer clic en "Editar"
   @Output() delete = new EventEmitter<number>(); // Emite un evento al hacer clic en "Eliminar"
 

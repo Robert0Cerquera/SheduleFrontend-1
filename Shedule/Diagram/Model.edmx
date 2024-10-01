@@ -13,262 +13,265 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Users" EntityType="Model.UsuarioRole" />
-          <EntitySet Name="RoleSet" EntityType="Model.Role" />
-          <EntitySet Name="RoleVistaSet" EntityType="Model.RoleVista" />
-          <EntitySet Name="VistaSet1" EntityType="Model.Vista" />
-          <EntitySet Name="ModuloSet1" EntityType="Model.Modulo" />
+          <EntitySet Name="Users" EntityType="Model.usuarios_roles" />
+          <EntitySet Name="roleSet1" EntityType="Model.role" />
+          <EntitySet Name="vistas_rolesSet" EntityType="Model.vistas_roles" />
+          <EntitySet Name="vistaSet" EntityType="Model.vista" />
+          <EntitySet Name="moduloSet" EntityType="Model.modulo" />
           <EntitySet Name="UsuarioSet1" EntityType="Model.Usuario" />
           <EntitySet Name="PersonaSet" EntityType="Model.Persona" />
-          <EntitySet Name="FichaEmpleadoSet" EntityType="Model.FichaEmpleado" />
-          <AssociationSet Name="ModuloVista" Association="Model.ModuloVista">
-            <End Role="Modulo" EntitySet="ModuloSet1" />
-            <End Role="Vista" EntitySet="VistaSet1" />
-          </AssociationSet>
-          <AssociationSet Name="VistaRoleVista" Association="Model.VistaRoleVista">
-            <End Role="Vista" EntitySet="VistaSet1" />
-            <End Role="RoleVista" EntitySet="RoleVistaSet" />
-          </AssociationSet>
-          <AssociationSet Name="RoleRoleVista" Association="Model.RoleRoleVista">
-            <End Role="Role" EntitySet="RoleSet" />
-            <End Role="RoleVista" EntitySet="RoleVistaSet" />
-          </AssociationSet>
-          <AssociationSet Name="PersonaUsuario" Association="Model.PersonaUsuario">
-            <End Role="Persona" EntitySet="PersonaSet" />
-            <End Role="Usuario" EntitySet="UsuarioSet1" />
-          </AssociationSet>
-          <AssociationSet Name="UsuarioUsuarioRole" Association="Model.UsuarioUsuarioRole">
-            <End Role="Usuario" EntitySet="UsuarioSet1" />
-            <End Role="UsuarioRole" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="RoleUsuarioRole" Association="Model.RoleUsuarioRole">
-            <End Role="Role" EntitySet="RoleSet" />
-            <End Role="UsuarioRole" EntitySet="Users" />
-          </AssociationSet>
-          <EntitySet Name="FichaSet" EntityType="Model.Ficha" />
-          <EntitySet Name="ProgramaFormacionSet" EntityType="Model.ProgramaFormacion" />
-          <EntitySet Name="EspecialidadSet" EntityType="Model.Especialidad" />
-          <EntitySet Name="FaseSet" EntityType="Model.Fase" />
-          <EntitySet Name="ActividadProyectoSet" EntityType="Model.ActividadProyecto" />
-          <EntitySet Name="AmbienteSet" EntityType="Model.Ambiente" />
-          <AssociationSet Name="EspecialidadAmbiente" Association="Model.EspecialidadAmbiente">
-            <End Role="Especialidad" EntitySet="EspecialidadSet" />
-            <End Role="Ambiente" EntitySet="AmbienteSet" />
-          </AssociationSet>
-          <EntitySet Name="CompetenciaSet" EntityType="Model.Competencia" />
-          <EntitySet Name="RapSet" EntityType="Model.Rap" />
-          <EntitySet Name="RapCompetenciaSet" EntityType="Model.RapCompetencia" />
-          <EntitySet Name="PisoSet" EntityType="Model.Piso" />
-          <EntitySet Name="EmpleadoSet" EntityType="Model.Empleado" />
-          <EntitySet Name="MatriculaSet" EntityType="Model.Matricula" />
-          <EntitySet Name="ProyectoFormativoSet" EntityType="Model.ProyectoFormativo" />
-          <EntitySet Name="ProyectoFormativoFichaSet" EntityType="Model.ProyectoFormativoFicha" />
+          <EntitySet Name="ficha_empleadoSet" EntityType="Model.ficha_empleado" />
+          <EntitySet Name="fichaSet1" EntityType="Model.ficha" />
+          <EntitySet Name="programa_formacionSet" EntityType="Model.programa_formacion" />
+          <EntitySet Name="especialidadSet1" EntityType="Model.especialidad" />
+          <EntitySet Name="faseSet1" EntityType="Model.fase" />
+          <EntitySet Name="actividad_proyectoSet" EntityType="Model.actividad_proyecto" />
+          <EntitySet Name="ambienteSet1" EntityType="Model.ambiente" />
+          <EntitySet Name="competenciaSet1" EntityType="Model.competencia" />
+          <EntitySet Name="rapSet1" EntityType="Model.rap" />
+          <EntitySet Name="raps_competenciasSet" EntityType="Model.raps_competencias" />
+          <EntitySet Name="pisoSet1" EntityType="Model.piso" />
+          <EntitySet Name="empleadoSet1" EntityType="Model.empleado" />
+          <EntitySet Name="matriculaSet1" EntityType="Model.matricula" />
+          <EntitySet Name="proyecto_formativoSet" EntityType="Model.proyecto_formativo" />
+          <EntitySet Name="proyectos_formativos_fichasSet" EntityType="Model.proyectos_formativos_fichas" />
           <AssociationSet Name="PersonaEmpleado" Association="Model.PersonaEmpleado">
             <End Role="Persona" EntitySet="PersonaSet" />
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
+            <End Role="Empleado" EntitySet="empleadoSet1" />
           </AssociationSet>
           <AssociationSet Name="ProyectoFormativoProyectoFormativoFicha" Association="Model.ProyectoFormativoProyectoFormativoFicha">
-            <End Role="ProyectoFormativo" EntitySet="ProyectoFormativoSet" />
-            <End Role="ProyectoFormativoFicha" EntitySet="ProyectoFormativoFichaSet" />
+            <End Role="ProyectoFormativo" EntitySet="proyecto_formativoSet" />
+            <End Role="ProyectoFormativoFicha" EntitySet="proyectos_formativos_fichasSet" />
           </AssociationSet>
-          <EntitySet Name="CompetenciaProgramaFormacionSet" EntityType="Model.CompetenciaProgramaFormacion" />
-          <AssociationSet Name="ProgramaFormacionCompetenciaProgramaFormacion" Association="Model.ProgramaFormacionCompetenciaProgramaFormacion">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="CompetenciaProgramaFormacion" EntitySet="CompetenciaProgramaFormacionSet" />
-          </AssociationSet>
-          <EntitySet Name="TipoContratoSet" EntityType="Model.TipoContrato" />
-          <EntitySet Name="CentroFormacionSet" EntityType="Model.CentroFormacion" />
-          <EntitySet Name="RegionalSet" EntityType="Model.Regional" />
-          <EntitySet Name="CiudadSet" EntityType="Model.Ciudad" />
-          <EntitySet Name="JornadaSet" EntityType="Model.Jornada" />
-          <EntitySet Name="NivelFormacionSet" EntityType="Model.NivelFormacion" />
-          <EntitySet Name="TipoFormacionSet" EntityType="Model.TipoFormacion" />
-          <EntitySet Name="ModalidadSet" EntityType="Model.Modalidad" />
-          <EntitySet Name="ConvocatoriaSet" EntityType="Model.Convocatoria" />
-          <EntitySet Name="PaisSet" EntityType="Model.Pais" />
-          <EntitySet Name="ContinenteSet" EntityType="Model.Continente" />
-          <EntitySet Name="DepartamentoSet" EntityType="Model.Departamento" />
-          <AssociationSet Name="ContinentePais" Association="Model.ContinentePais">
-            <End Role="Continente" EntitySet="ContinenteSet" />
-            <End Role="Pais" EntitySet="PaisSet" />
-          </AssociationSet>
-          <AssociationSet Name="PaisDepartamento" Association="Model.PaisDepartamento">
-            <End Role="Pais" EntitySet="PaisSet" />
-            <End Role="Departamento" EntitySet="DepartamentoSet" />
-          </AssociationSet>
-          <AssociationSet Name="DepartamentoCiudad" Association="Model.DepartamentoCiudad">
-            <End Role="Departamento" EntitySet="DepartamentoSet" />
-            <End Role="Ciudad" EntitySet="CiudadSet" />
-          </AssociationSet>
-          <EntitySet Name="SedeSet" EntityType="Model.Sede" />
-          <AssociationSet Name="RegionalCentroFormacion" Association="Model.RegionalCentroFormacion">
-            <End Role="Regional" EntitySet="RegionalSet" />
-            <End Role="CentroFormacion" EntitySet="CentroFormacionSet" />
-          </AssociationSet>
-          <AssociationSet Name="CentroFormacionSede" Association="Model.CentroFormacionSede">
-            <End Role="CentroFormacion" EntitySet="CentroFormacionSet" />
-            <End Role="Sede" EntitySet="SedeSet" />
-          </AssociationSet>
-          <AssociationSet Name="SedePiso" Association="Model.SedePiso">
-            <End Role="Sede" EntitySet="SedeSet" />
-            <End Role="Piso" EntitySet="PisoSet" />
-          </AssociationSet>
-          <AssociationSet Name="CentroFormacionCiudad" Association="Model.CentroFormacionCiudad">
-            <End Role="CentroFormacion" EntitySet="CentroFormacionSet" />
-            <End Role="Ciudad" EntitySet="CiudadSet" />
-          </AssociationSet>
+          <EntitySet Name="competencias_programas_formacionSet" EntityType="Model.competencias_programas_formacion" />
+          <EntitySet Name="tipo_contratoSet" EntityType="Model.tipo_contrato" />
+          <EntitySet Name="centro_formacionSet" EntityType="Model.centro_formacion" />
+          <EntitySet Name="regionalSet1" EntityType="Model.regional" />
+          <EntitySet Name="ciudadSet1" EntityType="Model.ciudad" />
+          <EntitySet Name="jornadaSet1" EntityType="Model.jornada" />
+          <EntitySet Name="nivel_formacionSet" EntityType="Model.nivel_formacion" />
+          <EntitySet Name="tipo_formacionSet" EntityType="Model.tipo_formacion" />
+          <EntitySet Name="modalidadSet1" EntityType="Model.modalidad" />
+          <EntitySet Name="convocatoriaSet1" EntityType="Model.convocatoria" />
+          <EntitySet Name="paisSet1" EntityType="Model.pais" />
+          <EntitySet Name="continenteSet1" EntityType="Model.continente" />
+          <EntitySet Name="departamentoSet1" EntityType="Model.departamento" />
+          <EntitySet Name="sedeSet1" EntityType="Model.sede" />
           <AssociationSet Name="TipoContratoEmpleado" Association="Model.TipoContratoEmpleado">
-            <End Role="TipoContrato" EntitySet="TipoContratoSet" />
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
+            <End Role="TipoContrato" EntitySet="tipo_contratoSet" />
+            <End Role="Empleado" EntitySet="empleadoSet1" />
           </AssociationSet>
-          <EntitySet Name="CargoSet" EntityType="Model.Cargo" />
+          <EntitySet Name="cargoSet1" EntityType="Model.cargo" />
           <AssociationSet Name="CargoEmpleado" Association="Model.CargoEmpleado">
-            <End Role="Cargo" EntitySet="CargoSet" />
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
+            <End Role="Cargo" EntitySet="cargoSet1" />
+            <End Role="Empleado" EntitySet="empleadoSet1" />
           </AssociationSet>
-          <EntitySet Name="FuncionesSet" EntityType="Model.Funciones" />
+          <EntitySet Name="funcionesSet1" EntityType="Model.funciones" />
           <AssociationSet Name="CargoFunciones" Association="Model.CargoFunciones">
-            <End Role="Cargo" EntitySet="CargoSet" />
-            <End Role="Funciones" EntitySet="FuncionesSet" />
+            <End Role="Cargo" EntitySet="cargoSet1" />
+            <End Role="Funciones" EntitySet="funcionesSet1" />
           </AssociationSet>
           <AssociationSet Name="ProgramaFormacionProyectoFormativo" Association="Model.ProgramaFormacionProyectoFormativo">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="ProyectoFormativo" EntitySet="ProyectoFormativoSet" />
+            <End Role="ProgramaFormacion" EntitySet="programa_formacionSet" />
+            <End Role="ProyectoFormativo" EntitySet="proyecto_formativoSet" />
           </AssociationSet>
           <AssociationSet Name="CentroFormacionProyectoFormativo" Association="Model.CentroFormacionProyectoFormativo">
-            <End Role="CentroFormacion" EntitySet="CentroFormacionSet" />
-            <End Role="ProyectoFormativo" EntitySet="ProyectoFormativoSet" />
+            <End Role="CentroFormacion" EntitySet="centro_formacionSet" />
+            <End Role="ProyectoFormativo" EntitySet="proyecto_formativoSet" />
           </AssociationSet>
-          <EntitySet Name="ActividadProyectoRapSet" EntityType="Model.ActividadProyectoRap" />
-          <AssociationSet Name="RapRapCompetencia" Association="Model.RapRapCompetencia">
-            <End Role="Rap" EntitySet="RapSet" />
-            <End Role="RapCompetencia" EntitySet="RapCompetenciaSet" />
-          </AssociationSet>
+          <EntitySet Name="actividades_proyectos_rapsSet" EntityType="Model.actividades_proyectos_raps" />
           <AssociationSet Name="RapActividadProyectoRap" Association="Model.RapActividadProyectoRap">
-            <End Role="Rap" EntitySet="RapSet" />
-            <End Role="ActividadProyectoRap" EntitySet="ActividadProyectoRapSet" />
-          </AssociationSet>
-          <AssociationSet Name="CompetenciaRapCompetencia" Association="Model.CompetenciaRapCompetencia">
-            <End Role="Competencia" EntitySet="CompetenciaSet" />
-            <End Role="RapCompetencia" EntitySet="RapCompetenciaSet" />
-          </AssociationSet>
-          <AssociationSet Name="CompetenciaCompetenciaProgramaFormacion" Association="Model.CompetenciaCompetenciaProgramaFormacion">
-            <End Role="Competencia" EntitySet="CompetenciaSet" />
-            <End Role="CompetenciaProgramaFormacion" EntitySet="CompetenciaProgramaFormacionSet" />
-          </AssociationSet>
-          <AssociationSet Name="ProgramaFormacionModalidad" Association="Model.ProgramaFormacionModalidad">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="Modalidad" EntitySet="ModalidadSet" />
-          </AssociationSet>
-          <AssociationSet Name="ProgramaFormacionNivelFormacion" Association="Model.ProgramaFormacionNivelFormacion">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="NivelFormacion" EntitySet="NivelFormacionSet" />
-          </AssociationSet>
-          <AssociationSet Name="ProgramaFormacionTipoFormacion" Association="Model.ProgramaFormacionTipoFormacion">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="TipoFormacion" EntitySet="TipoFormacionSet" />
+            <End Role="Rap" EntitySet="rapSet1" />
+            <End Role="ActividadProyectoRap" EntitySet="actividades_proyectos_rapsSet" />
           </AssociationSet>
           <AssociationSet Name="ProyectoFormativoFase" Association="Model.ProyectoFormativoFase">
-            <End Role="ProyectoFormativo" EntitySet="ProyectoFormativoSet" />
-            <End Role="Fase" EntitySet="FaseSet" />
+            <End Role="ProyectoFormativo" EntitySet="proyecto_formativoSet" />
+            <End Role="Fase" EntitySet="faseSet1" />
           </AssociationSet>
           <AssociationSet Name="FaseActividadProyecto" Association="Model.FaseActividadProyecto">
-            <End Role="Fase" EntitySet="FaseSet" />
-            <End Role="ActividadProyecto" EntitySet="ActividadProyectoSet" />
+            <End Role="Fase" EntitySet="faseSet1" />
+            <End Role="ActividadProyecto" EntitySet="actividad_proyectoSet" />
           </AssociationSet>
           <AssociationSet Name="ActividadProyectoActividadProyectoRap" Association="Model.ActividadProyectoActividadProyectoRap">
-            <End Role="ActividadProyecto" EntitySet="ActividadProyectoSet" />
-            <End Role="ActividadProyectoRap" EntitySet="ActividadProyectoRapSet" />
-          </AssociationSet>
-          <AssociationSet Name="ProgramaFormacionFicha" Association="Model.ProgramaFormacionFicha">
-            <End Role="ProgramaFormacion" EntitySet="ProgramaFormacionSet" />
-            <End Role="Ficha" EntitySet="FichaSet" />
+            <End Role="ActividadProyecto" EntitySet="actividad_proyectoSet" />
+            <End Role="ActividadProyectoRap" EntitySet="actividades_proyectos_rapsSet" />
           </AssociationSet>
           <AssociationSet Name="FichaProyectoFormativoFicha" Association="Model.FichaProyectoFormativoFicha">
-            <End Role="Ficha" EntitySet="FichaSet" />
-            <End Role="ProyectoFormativoFicha" EntitySet="ProyectoFormativoFichaSet" />
-          </AssociationSet>
-          <AssociationSet Name="FichaJornada" Association="Model.FichaJornada">
-            <End Role="Ficha" EntitySet="FichaSet" />
-            <End Role="Jornada" EntitySet="JornadaSet" />
+            <End Role="Ficha" EntitySet="fichaSet1" />
+            <End Role="ProyectoFormativoFicha" EntitySet="proyectos_formativos_fichasSet" />
           </AssociationSet>
           <AssociationSet Name="FichaFichaEmpleado" Association="Model.FichaFichaEmpleado">
-            <End Role="Ficha" EntitySet="FichaSet" />
-            <End Role="FichaEmpleado" EntitySet="FichaEmpleadoSet" />
+            <End Role="Ficha" EntitySet="fichaSet1" />
+            <End Role="FichaEmpleado" EntitySet="ficha_empleadoSet" />
           </AssociationSet>
           <AssociationSet Name="EmpleadoFichaEmpleado" Association="Model.EmpleadoFichaEmpleado">
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
-            <End Role="FichaEmpleado" EntitySet="FichaEmpleadoSet" />
+            <End Role="Empleado" EntitySet="empleadoSet1" />
+            <End Role="FichaEmpleado" EntitySet="ficha_empleadoSet" />
           </AssociationSet>
           <AssociationSet Name="PersonaMatricula" Association="Model.PersonaMatricula">
             <End Role="Persona" EntitySet="PersonaSet" />
-            <End Role="Matricula" EntitySet="MatriculaSet" />
+            <End Role="Matricula" EntitySet="matriculaSet1" />
           </AssociationSet>
           <AssociationSet Name="FichaMatricula" Association="Model.FichaMatricula">
-            <End Role="Ficha" EntitySet="FichaSet" />
-            <End Role="Matricula" EntitySet="MatriculaSet" />
+            <End Role="Ficha" EntitySet="fichaSet1" />
+            <End Role="Matricula" EntitySet="matriculaSet1" />
           </AssociationSet>
-          <AssociationSet Name="FichaConvocatoria" Association="Model.FichaConvocatoria">
-            <End Role="Ficha" EntitySet="FichaSet" />
-            <End Role="Convocatoria" EntitySet="ConvocatoriaSet" />
-          </AssociationSet>
-          <EntitySet Name="ProgramacionFichaSet" EntityType="Model.ProgramacionFicha" />
-          <EntitySet Name="HorarioEmpleadoSet" EntityType="Model.HorarioEmpleado" />
+          <EntitySet Name="programacion_fichaSet" EntityType="Model.programacion_ficha" />
+          <EntitySet Name="horario_empleadoSet" EntityType="Model.horario_empleado" />
           <AssociationSet Name="ProgramacionFichaHorario" Association="Model.ProgramacionFichaHorario">
-            <End Role="ProgramacionFicha" EntitySet="ProgramacionFichaSet" />
-            <End Role="Horario" EntitySet="HorarioEmpleadoSet" />
+            <End Role="ProgramacionFicha" EntitySet="programacion_fichaSet" />
+            <End Role="Horario" EntitySet="horario_empleadoSet" />
           </AssociationSet>
-          <EntitySet Name="HorarioAmbienteSet" EntityType="Model.HorarioAmbiente" />
+          <EntitySet Name="horario_ambienteSet" EntityType="Model.horario_ambiente" />
           <AssociationSet Name="EmpleadoHorarioEmpleado" Association="Model.EmpleadoHorarioEmpleado">
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
-            <End Role="HorarioEmpleado" EntitySet="HorarioEmpleadoSet" />
+            <End Role="Empleado" EntitySet="empleadoSet1" />
+            <End Role="HorarioEmpleado" EntitySet="horario_empleadoSet" />
           </AssociationSet>
           <AssociationSet Name="ProgramacionFichaHorarioAmbiente" Association="Model.ProgramacionFichaHorarioAmbiente">
-            <End Role="ProgramacionFicha" EntitySet="ProgramacionFichaSet" />
-            <End Role="HorarioAmbiente" EntitySet="HorarioAmbienteSet" />
+            <End Role="ProgramacionFicha" EntitySet="programacion_fichaSet" />
+            <End Role="HorarioAmbiente" EntitySet="horario_ambienteSet" />
           </AssociationSet>
           <AssociationSet Name="AmbienteHorarioAmbiente" Association="Model.AmbienteHorarioAmbiente">
-            <End Role="Ambiente" EntitySet="AmbienteSet" />
-            <End Role="HorarioAmbiente" EntitySet="HorarioAmbienteSet" />
+            <End Role="Ambiente" EntitySet="ambienteSet1" />
+            <End Role="HorarioAmbiente" EntitySet="horario_ambienteSet" />
+          </AssociationSet>
+          <AssociationSet Name="VistaModulo" Association="Model.VistaModulo">
+            <End Role="modulo" EntitySet="moduloSet" />
+            <End Role="vista" EntitySet="vistaSet" />
+          </AssociationSet>
+          <AssociationSet Name="vistavistas_roles" Association="Model.vistavistas_roles">
+            <End Role="vista" EntitySet="vistaSet" />
+            <End Role="vistas_roles" EntitySet="vistas_rolesSet" />
+          </AssociationSet>
+          <AssociationSet Name="VistasRolesRoles" Association="Model.VistasRolesRoles">
+            <End Role="role" EntitySet="roleSet1" />
+            <End Role="vistas_roles" EntitySet="vistas_rolesSet" />
+          </AssociationSet>
+          <AssociationSet Name="UsuariosRolesRole" Association="Model.UsuariosRolesRole">
+            <End EntitySet="roleSet1" Role="role" />
+            <End EntitySet="Users" Role="usuarios_roles" />
+          </AssociationSet>
+          <AssociationSet Name="UsuariosRolesUsuario" Association="Model.UsuariosRolesUsuario">
+            <End Role="Usuario" EntitySet="UsuarioSet1" />
+            <End Role="usuarios_roles" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="UsuarioPersona" Association="Model.UsuarioPersona">
+            <End Role="Persona" EntitySet="PersonaSet" />
+            <End Role="Usuario" EntitySet="UsuarioSet1" />
+          </AssociationSet>
+          <AssociationSet Name="ContinentePais" Association="Model.ContinentePais">
+            <End Role="Continente" EntitySet="continenteSet1" />
+            <End Role="Pais" EntitySet="paisSet1" />
+          </AssociationSet>
+          <AssociationSet Name="PaisDepartamento" Association="Model.PaisDepartamento">
+            <End Role="Pais" EntitySet="paisSet1" />
+            <End Role="Departamento" EntitySet="departamentoSet1" />
+          </AssociationSet>
+          <AssociationSet Name="DepartamentoCiudad" Association="Model.DepartamentoCiudad">
+            <End Role="Departamento" EntitySet="departamentoSet1" />
+            <End Role="Ciudad" EntitySet="ciudadSet1" />
+          </AssociationSet>
+          <AssociationSet Name="EspecialidadAmbiente" Association="Model.EspecialidadAmbiente">
+            <End Role="Especialidad" EntitySet="especialidadSet1" />
+            <End Role="Ambiente" EntitySet="ambienteSet1" />
           </AssociationSet>
           <AssociationSet Name="PisoAmbiente" Association="Model.PisoAmbiente">
-            <End Role="Piso" EntitySet="PisoSet" />
-            <End Role="Ambiente" EntitySet="AmbienteSet" />
+            <End Role="Piso" EntitySet="pisoSet1" />
+            <End Role="Ambiente" EntitySet="ambienteSet1" />
+          </AssociationSet>
+          <AssociationSet Name="RegionalCentroFormacion" Association="Model.RegionalCentroFormacion">
+            <End Role="Regional" EntitySet="regionalSet1" />
+            <End Role="CentroFormacion" EntitySet="centro_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="SedePiso" Association="Model.SedePiso">
+            <End Role="Sede" EntitySet="sedeSet1" />
+            <End Role="Piso" EntitySet="pisoSet1" />
+          </AssociationSet>
+          <AssociationSet Name="DepartamentoRegional" Association="Model.DepartamentoRegional">
+            <End Role="Departamento" EntitySet="departamentoSet1" />
+            <End Role="Regional" EntitySet="regionalSet1" />
+          </AssociationSet>
+          <AssociationSet Name="CentroFormacionSede" Association="Model.CentroFormacionSede">
+            <End Role="CentroFormacion" EntitySet="centro_formacionSet" />
+            <End Role="Sede" EntitySet="sedeSet1" />
+          </AssociationSet>
+          <EntitySet Name="localidadSet1" EntityType="Model.localidad" />
+          <AssociationSet Name="CiudadLocalidad" Association="Model.CiudadLocalidad">
+            <End Role="ciudad" EntitySet="ciudadSet1" />
+            <End Role="localidad" EntitySet="localidadSet1" />
+          </AssociationSet>
+          <AssociationSet Name="LocalidadCentroFormacion" Association="Model.LocalidadCentroFormacion">
+            <End Role="localidad" EntitySet="localidadSet1" />
+            <End Role="centro_formacion" EntitySet="centro_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="CompetenciasProgramasFormacionProgramaFormacion" Association="Model.CompetenciasProgramasFormacionProgramaFormacion">
+            <End Role="programa_formacion" EntitySet="programa_formacionSet" />
+            <End Role="competencias_programas_formacion" EntitySet="competencias_programas_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="CompetenciasProgramasFormacionCompetencia" Association="Model.CompetenciasProgramasFormacionCompetencia">
+            <End Role="competencia" EntitySet="competenciaSet1" />
+            <End Role="competencias_programas_formacion" EntitySet="competencias_programas_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramaFormacionModalidad" Association="Model.ProgramaFormacionModalidad">
+            <End Role="modalidad" EntitySet="modalidadSet1" />
+            <End Role="programa_formacion" EntitySet="programa_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramaFormacionNivelFormacion" Association="Model.ProgramaFormacionNivelFormacion">
+            <End Role="nivel_formacion" EntitySet="nivel_formacionSet" />
+            <End Role="programa_formacion" EntitySet="programa_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramaFormacionTipoFormacion" Association="Model.ProgramaFormacionTipoFormacion">
+            <End Role="tipo_formacion" EntitySet="tipo_formacionSet" />
+            <End Role="programa_formacion" EntitySet="programa_formacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="RapsCompetenciasCompetencia" Association="Model.RapsCompetenciasCompetencia">
+            <End Role="competencia" EntitySet="competenciaSet1" />
+            <End Role="raps_competencias" EntitySet="raps_competenciasSet" />
+          </AssociationSet>
+          <AssociationSet Name="RapsCompetenciasRap" Association="Model.RapsCompetenciasRap">
+            <End Role="rap" EntitySet="rapSet1" />
+            <End Role="raps_competencias" EntitySet="raps_competenciasSet" />
+          </AssociationSet>
+          <AssociationSet Name="FichaJornada" Association="Model.FichaJornada">
+            <End Role="jornada" EntitySet="jornadaSet1" />
+            <End Role="ficha" EntitySet="fichaSet1" />
+          </AssociationSet>
+          <AssociationSet Name="FichaConvocatoria" Association="Model.FichaConvocatoria">
+            <End Role="convocatoria" EntitySet="convocatoriaSet1" />
+            <End Role="ficha" EntitySet="fichaSet1" />
+          </AssociationSet>
+          <AssociationSet Name="FichaProgramaFormacion" Association="Model.FichaProgramaFormacion">
+            <End Role="programa_formacion" EntitySet="programa_formacionSet" />
+            <End Role="ficha" EntitySet="fichaSet1" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="UsuarioRole">
+        <EntityType Name="usuarios_roles">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="usuarioId" Relationship="Model.UsuarioUsuarioRole" FromRole="UsuarioRole" ToRole="Usuario" />
-          <NavigationProperty Name="roleId" Relationship="Model.RoleUsuarioRole" FromRole="UsuarioRole" ToRole="Role" />
+          <NavigationProperty Name="roleId" Relationship="Model.UsuariosRolesRole" FromRole="usuarios_roles" ToRole="role" />
+          <NavigationProperty Name="usuarioId" Relationship="Model.UsuariosRolesUsuario" FromRole="usuarios_roles" ToRole="Usuario" />
         </EntityType>
-        <EntityType Name="Role">
+        <EntityType Name="role">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="RoleVista" Relationship="Model.RoleRoleVista" FromRole="Role" ToRole="RoleVista" />
-          <NavigationProperty Name="UsuarioRole" Relationship="Model.RoleUsuarioRole" FromRole="Role" ToRole="UsuarioRole" />
+          <NavigationProperty Name="VistasRoles" Relationship="Model.VistasRolesRoles" FromRole="role" ToRole="vistas_roles" />
+          <NavigationProperty Name="UsuariosRoles" Relationship="Model.UsuariosRolesRole" FromRole="role" ToRole="usuarios_roles" />
         </EntityType>
-        <EntityType Name="RoleVista">
+        <EntityType Name="vistas_roles">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="vistaId" Relationship="Model.VistaRoleVista" FromRole="RoleVista" ToRole="Vista" />
-          <NavigationProperty Name="roleId" Relationship="Model.RoleRoleVista" FromRole="RoleVista" ToRole="Role" />
+          <NavigationProperty Name="vistaId" Relationship="Model.vistavistas_roles" FromRole="vistas_roles" ToRole="vista" />
+          <NavigationProperty Name="roleId" Relationship="Model.VistasRolesRoles" FromRole="vistas_roles" ToRole="role" />
         </EntityType>
-        <EntityType Name="Vista">
+        <EntityType Name="vista">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -276,54 +279,50 @@
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
           <Property Name="ruta" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="moduloId" Relationship="Model.ModuloVista" FromRole="Vista" ToRole="Modulo" />
-          <NavigationProperty Name="RoleVista" Relationship="Model.VistaRoleVista" FromRole="Vista" ToRole="RoleVista" />
+          <NavigationProperty Name="moduloId" Relationship="Model.VistaModulo" FromRole="vista" ToRole="modulo" />
+          <NavigationProperty Name="VistasRoles" Relationship="Model.vistavistas_roles" FromRole="vista" ToRole="vistas_roles" />
         </EntityType>
-        <EntityType Name="Modulo">
+        <EntityType Name="modulo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="Vista" Relationship="Model.ModuloVista" FromRole="Modulo" ToRole="Vista" />
+          <Property Name="ruta" Type="String" Nullable="false" />
+          <Property Name="icono" Type="String" Nullable="false" />
+          <NavigationProperty Name="Vista" Relationship="Model.VistaModulo" FromRole="modulo" ToRole="vista" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombreUsuario" Type="String" Nullable="false" />
+          <Property Name="usuario_nombre" Type="String" Nullable="false" />
           <Property Name="contrasenia" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="personaId" Relationship="Model.PersonaUsuario" FromRole="Usuario" ToRole="Persona" />
-          <NavigationProperty Name="UsuarioRole" Relationship="Model.UsuarioUsuarioRole" FromRole="Usuario" ToRole="UsuarioRole" />
+          <NavigationProperty Name="UsuariosRoles" Relationship="Model.UsuariosRolesUsuario" FromRole="Usuario" ToRole="usuarios_roles" />
+          <NavigationProperty Name="personaId" Relationship="Model.UsuarioPersona" FromRole="Usuario" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Persona">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="primerNombre" Type="String" Nullable="false" />
-          <Property Name="segundoNombre" Type="String" Nullable="false" />
-          <Property Name="primerApellido" Type="String" Nullable="false" />
-          <Property Name="segundoApellido" Type="String" Nullable="false" />
-          <Property Name="tipoDocumento" Type="String" Nullable="false" />
-          <Property Name="documento" Type="String" Nullable="false" />
-          <Property Name="correo" Type="String" Nullable="false" />
+          <Property Name="primer_nombre" Type="String" Nullable="false" />
+          <Property Name="segundo_nombre" Type="String" Nullable="false" />
+          <Property Name="primer_apellido" Type="String" Nullable="false" />
+          <Property Name="segundo_apellido" Type="String" Nullable="false" />
+          <Property Name="tipo_documento" Type="String" Nullable="false" />
+          <Property Name="numero_documento" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
           <Property Name="genero" Type="String" Nullable="false" />
           <Property Name="direccion" Type="String" Nullable="false" />
           <Property Name="telefono" Type="String" Nullable="false" />
-          <Property Name="fechaNacimiento" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="Model.PersonaUsuario" FromRole="Persona" ToRole="Usuario" />
+          <Property Name="fecha_nacimiento" Type="String" Nullable="false" />
           <NavigationProperty Name="Empleado" Relationship="Model.PersonaEmpleado" FromRole="Persona" ToRole="Empleado" />
           <NavigationProperty Name="Matricula" Relationship="Model.PersonaMatricula" FromRole="Persona" ToRole="Matricula" />
+          <NavigationProperty Name="Usuario" Relationship="Model.UsuarioPersona" FromRole="Persona" ToRole="Usuario" />
         </EntityType>
-        <EntityType Name="FichaEmpleado">
+        <EntityType Name="ficha_empleado">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -331,65 +330,39 @@
           <NavigationProperty Name="Ficha" Relationship="Model.FichaFichaEmpleado" FromRole="FichaEmpleado" ToRole="Ficha" />
           <NavigationProperty Name="Empleado" Relationship="Model.EmpleadoFichaEmpleado" FromRole="FichaEmpleado" ToRole="Empleado" />
         </EntityType>
-        <Association Name="ModuloVista">
-          <End Type="Model.Modulo" Role="Modulo" Multiplicity="1" />
-          <End Type="Model.Vista" Role="Vista" Multiplicity="*" />
-        </Association>
-        <Association Name="VistaRoleVista">
-          <End Type="Model.Vista" Role="Vista" Multiplicity="*" />
-          <End Type="Model.RoleVista" Role="RoleVista" Multiplicity="*" />
-        </Association>
-        <Association Name="RoleRoleVista">
-          <End Type="Model.Role" Role="Role" Multiplicity="*" />
-          <End Type="Model.RoleVista" Role="RoleVista" Multiplicity="*" />
-        </Association>
-        <Association Name="PersonaUsuario">
-          <End Type="Model.Persona" Role="Persona" Multiplicity="1" />
-          <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
-        </Association>
-        <Association Name="UsuarioUsuarioRole">
-          <End Type="Model.Usuario" Role="Usuario" Multiplicity="*" />
-          <End Type="Model.UsuarioRole" Role="UsuarioRole" Multiplicity="*" />
-        </Association>
-        <Association Name="RoleUsuarioRole">
-          <End Type="Model.Role" Role="Role" Multiplicity="*" />
-          <End Type="Model.UsuarioRole" Role="UsuarioRole" Multiplicity="*" />
-        </Association>
-        <EntityType Name="Ficha">
+        <EntityType Name="ficha">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
-          <Property Name="fechaInicio" Type="String" Nullable="false" />
-          <Property Name="fechaFin" Type="String" Nullable="false" />
+          <Property Name="fecha_inicio" Type="String" Nullable="false" />
+          <Property Name="fecha_fin" Type="String" Nullable="false" />
           <Property Name="cupo" Type="String" Nullable="false" />
           <Property Name="etapa" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionFicha" FromRole="Ficha" ToRole="ProgramaFormacion" />
           <NavigationProperty Name="ProyectoFormativoFicha" Relationship="Model.FichaProyectoFormativoFicha" FromRole="Ficha" ToRole="ProyectoFormativoFicha" />
-          <NavigationProperty Name="Jornada" Relationship="Model.FichaJornada" FromRole="Ficha" ToRole="Jornada" />
           <NavigationProperty Name="FichaEmpleado" Relationship="Model.FichaFichaEmpleado" FromRole="Ficha" ToRole="FichaEmpleado" />
           <NavigationProperty Name="Matricula" Relationship="Model.FichaMatricula" FromRole="Ficha" ToRole="Matricula" />
-          <NavigationProperty Name="Convocatoria" Relationship="Model.FichaConvocatoria" FromRole="Ficha" ToRole="Convocatoria" />
+          <NavigationProperty Name="jornadaId" Relationship="Model.FichaJornada" FromRole="ficha" ToRole="jornada" />
+          <NavigationProperty Name="convocatoriaId" Relationship="Model.FichaConvocatoria" FromRole="ficha" ToRole="convocatoria" />
+          <NavigationProperty Name="programaFormacionId" Relationship="Model.FichaProgramaFormacion" FromRole="ficha" ToRole="programa_formacion" />
         </EntityType>
-        <EntityType Name="ProgramaFormacion">
+        <EntityType Name="programa_formacion">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="modalidad" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
           <Property Name="duraccion" Type="String" Nullable="false" />
-          <NavigationProperty Name="CompetenciaProgramaFormacion" Relationship="Model.ProgramaFormacionCompetenciaProgramaFormacion" FromRole="ProgramaFormacion" ToRole="CompetenciaProgramaFormacion" />
           <NavigationProperty Name="ProyectoFormativo" Relationship="Model.ProgramaFormacionProyectoFormativo" FromRole="ProgramaFormacion" ToRole="ProyectoFormativo" />
-          <NavigationProperty Name="Modalidad" Relationship="Model.ProgramaFormacionModalidad" FromRole="ProgramaFormacion" ToRole="Modalidad" />
-          <NavigationProperty Name="NivelFormacion" Relationship="Model.ProgramaFormacionNivelFormacion" FromRole="ProgramaFormacion" ToRole="NivelFormacion" />
-          <NavigationProperty Name="TipoFormacion" Relationship="Model.ProgramaFormacionTipoFormacion" FromRole="ProgramaFormacion" ToRole="TipoFormacion" />
-          <NavigationProperty Name="Ficha" Relationship="Model.ProgramaFormacionFicha" FromRole="ProgramaFormacion" ToRole="Ficha" />
+          <NavigationProperty Name="competencias_programas_formacion" Relationship="Model.CompetenciasProgramasFormacionProgramaFormacion" FromRole="programa_formacion" ToRole="competencias_programas_formacion" />
+          <NavigationProperty Name="modalidadId" Relationship="Model.ProgramaFormacionModalidad" FromRole="programa_formacion" ToRole="modalidad" />
+          <NavigationProperty Name="nivelFormacionId" Relationship="Model.ProgramaFormacionNivelFormacion" FromRole="programa_formacion" ToRole="nivel_formacion" />
+          <NavigationProperty Name="tipoFormacionId" Relationship="Model.ProgramaFormacionTipoFormacion" FromRole="programa_formacion" ToRole="tipo_formacion" />
+          <NavigationProperty Name="Ficha" Relationship="Model.FichaProgramaFormacion" FromRole="programa_formacion" ToRole="ficha" />
         </EntityType>
-        <EntityType Name="Especialidad">
+        <EntityType Name="especialidad">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -397,10 +370,9 @@
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
           <NavigationProperty Name="Ambiente" Relationship="Model.EspecialidadAmbiente" FromRole="Especialidad" ToRole="Ambiente" />
         </EntityType>
-        <EntityType Name="Fase">
+        <EntityType Name="fase">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -412,7 +384,7 @@
           <NavigationProperty Name="ProyectoFormativo" Relationship="Model.ProyectoFormativoFase" FromRole="Fase" ToRole="ProyectoFormativo" />
           <NavigationProperty Name="ActividadProyecto" Relationship="Model.FaseActividadProyecto" FromRole="Fase" ToRole="ActividadProyecto" />
         </EntityType>
-        <EntityType Name="ActividadProyecto">
+        <EntityType Name="actividad_proyecto">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -424,7 +396,7 @@
           <NavigationProperty Name="Fase" Relationship="Model.FaseActividadProyecto" FromRole="ActividadProyecto" ToRole="Fase" />
           <NavigationProperty Name="ActividadProyectoRap" Relationship="Model.ActividadProyectoActividadProyectoRap" FromRole="ActividadProyecto" ToRole="ActividadProyectoRap" />
         </EntityType>
-        <EntityType Name="Ambiente">
+        <EntityType Name="ambiente">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -432,16 +404,11 @@
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="cupo" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="especialidadId" Relationship="Model.EspecialidadAmbiente" FromRole="Ambiente" ToRole="Especialidad" />
           <NavigationProperty Name="HorarioAmbiente" Relationship="Model.AmbienteHorarioAmbiente" FromRole="Ambiente" ToRole="HorarioAmbiente" />
+          <NavigationProperty Name="especialidadId" Relationship="Model.EspecialidadAmbiente" FromRole="Ambiente" ToRole="Especialidad" />
           <NavigationProperty Name="pisoId" Relationship="Model.PisoAmbiente" FromRole="Ambiente" ToRole="Piso" />
         </EntityType>
-        <Association Name="EspecialidadAmbiente">
-          <End Type="Model.Especialidad" Role="Especialidad" Multiplicity="1" />
-          <End Type="Model.Ambiente" Role="Ambiente" Multiplicity="*" />
-        </Association>
-        <EntityType Name="Competencia">
+        <EntityType Name="competencia">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -449,43 +416,40 @@
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
           <Property Name="duraccion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
           <Property Name="codigo" Type="String" Nullable="false" />
-          <NavigationProperty Name="RapCompetencia" Relationship="Model.CompetenciaRapCompetencia" FromRole="Competencia" ToRole="RapCompetencia" />
-          <NavigationProperty Name="CompetenciaProgramaFormacion" Relationship="Model.CompetenciaCompetenciaProgramaFormacion" FromRole="Competencia" ToRole="CompetenciaProgramaFormacion" />
+          <NavigationProperty Name="competencias_programas_formacion" Relationship="Model.CompetenciasProgramasFormacionCompetencia" FromRole="competencia" ToRole="competencias_programas_formacion" />
+          <NavigationProperty Name="RapsCompetencias" Relationship="Model.RapsCompetenciasCompetencia" FromRole="competencia" ToRole="raps_competencias" />
         </EntityType>
-        <EntityType Name="Rap">
+        <EntityType Name="rap">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="String" Nullable="false" />
           <Property Name="duracion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="nivelEnum" Type="String" Nullable="false" />
-          <NavigationProperty Name="RapCompetencia" Relationship="Model.RapRapCompetencia" FromRole="Rap" ToRole="RapCompetencia" />
+          <Property Name="nivel" Type="String" Nullable="false" />
           <NavigationProperty Name="ActividadProyectoRap" Relationship="Model.RapActividadProyectoRap" FromRole="Rap" ToRole="ActividadProyectoRap" />
+          <NavigationProperty Name="RapsCompetencias" Relationship="Model.RapsCompetenciasRap" FromRole="rap" ToRole="raps_competencias" />
         </EntityType>
-        <EntityType Name="RapCompetencia">
+        <EntityType Name="raps_competencias">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Rap" Relationship="Model.RapRapCompetencia" FromRole="RapCompetencia" ToRole="Rap" />
-          <NavigationProperty Name="Competencia" Relationship="Model.CompetenciaRapCompetencia" FromRole="RapCompetencia" ToRole="Competencia" />
+          <NavigationProperty Name="competenciaId" Relationship="Model.RapsCompetenciasCompetencia" FromRole="raps_competencias" ToRole="competencia" />
+          <NavigationProperty Name="rapId" Relationship="Model.RapsCompetenciasRap" FromRole="raps_competencias" ToRole="rap" />
         </EntityType>
-        <EntityType Name="Piso">
+        <EntityType Name="piso">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <NavigationProperty Name="Sede" Relationship="Model.SedePiso" FromRole="Piso" ToRole="Sede" />
-          <Property Name="SedeId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Ambiente" Relationship="Model.PisoAmbiente" FromRole="Piso" ToRole="Ambiente" />
+          <NavigationProperty Name="sedeId" Relationship="Model.SedePiso" FromRole="Piso" ToRole="Sede" />
         </EntityType>
-        <EntityType Name="Empleado">
+        <EntityType Name="empleado">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -499,7 +463,7 @@
           <NavigationProperty Name="FichaEmpleado" Relationship="Model.EmpleadoFichaEmpleado" FromRole="Empleado" ToRole="FichaEmpleado" />
           <NavigationProperty Name="HorarioEmpleado" Relationship="Model.EmpleadoHorarioEmpleado" FromRole="Empleado" ToRole="HorarioEmpleado" />
         </EntityType>
-        <EntityType Name="Matricula">
+        <EntityType Name="matricula">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -509,7 +473,7 @@
           <NavigationProperty Name="Persona" Relationship="Model.PersonaMatricula" FromRole="Matricula" ToRole="Persona" />
           <NavigationProperty Name="Ficha" Relationship="Model.FichaMatricula" FromRole="Matricula" ToRole="Ficha" />
         </EntityType>
-        <EntityType Name="ProyectoFormativo">
+        <EntityType Name="proyecto_formativo">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -523,7 +487,7 @@
           <NavigationProperty Name="CentroFormacion" Relationship="Model.CentroFormacionProyectoFormativo" FromRole="ProyectoFormativo" ToRole="CentroFormacion" />
           <NavigationProperty Name="Fase" Relationship="Model.ProyectoFormativoFase" FromRole="ProyectoFormativo" ToRole="Fase" />
         </EntityType>
-        <EntityType Name="ProyectoFormativoFicha">
+        <EntityType Name="proyectos_formativos_fichas">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -533,25 +497,21 @@
         </EntityType>
         <Association Name="PersonaEmpleado">
           <End Type="Model.Persona" Role="Persona" Multiplicity="1" />
-          <End Type="Model.Empleado" Role="Empleado" Multiplicity="1" />
+          <End Type="Model.empleado" Role="Empleado" Multiplicity="1" />
         </Association>
         <Association Name="ProyectoFormativoProyectoFormativoFicha">
-          <End Type="Model.ProyectoFormativo" Role="ProyectoFormativo" Multiplicity="*" />
-          <End Type="Model.ProyectoFormativoFicha" Role="ProyectoFormativoFicha" Multiplicity="1" />
+          <End Type="Model.proyecto_formativo" Role="ProyectoFormativo" Multiplicity="*" />
+          <End Type="Model.proyectos_formativos_fichas" Role="ProyectoFormativoFicha" Multiplicity="1" />
         </Association>
-        <EntityType Name="CompetenciaProgramaFormacion">
+        <EntityType Name="competencias_programas_formacion">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="programaFormacionId" Relationship="Model.ProgramaFormacionCompetenciaProgramaFormacion" FromRole="CompetenciaProgramaFormacion" ToRole="ProgramaFormacion" />
-          <NavigationProperty Name="Competencia" Relationship="Model.CompetenciaCompetenciaProgramaFormacion" FromRole="CompetenciaProgramaFormacion" ToRole="Competencia" />
+          <NavigationProperty Name="programaFormacionId" Relationship="Model.CompetenciasProgramasFormacionProgramaFormacion" FromRole="competencias_programas_formacion" ToRole="programa_formacion" />
+          <NavigationProperty Name="competenciaId" Relationship="Model.CompetenciasProgramasFormacionCompetencia" FromRole="competencias_programas_formacion" ToRole="competencia" />
         </EntityType>
-        <Association Name="ProgramaFormacionCompetenciaProgramaFormacion">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="*" />
-          <End Type="Model.CompetenciaProgramaFormacion" Role="CompetenciaProgramaFormacion" Multiplicity="*" />
-        </Association>
-        <EntityType Name="TipoContrato">
+        <EntityType Name="tipo_contrato">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -561,7 +521,7 @@
           <Property Name="cantidadHora" Type="String" Nullable="false" />
           <NavigationProperty Name="Empleado" Relationship="Model.TipoContratoEmpleado" FromRole="TipoContrato" ToRole="Empleado" />
         </EntityType>
-        <EntityType Name="CentroFormacion">
+        <EntityType Name="centro_formacion">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -569,62 +529,45 @@
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="direccion" Type="String" Nullable="false" />
-          <Property Name="acronimo" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Regional" Relationship="Model.RegionalCentroFormacion" FromRole="CentroFormacion" ToRole="Regional" />
-          <Property Name="RegionalId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Sede" Relationship="Model.CentroFormacionSede" FromRole="CentroFormacion" ToRole="Sede" />
-          <NavigationProperty Name="Ciudad" Relationship="Model.CentroFormacionCiudad" FromRole="CentroFormacion" ToRole="Ciudad" />
           <NavigationProperty Name="ProyectoFormativo" Relationship="Model.CentroFormacionProyectoFormativo" FromRole="CentroFormacion" ToRole="ProyectoFormativo" />
+          <Property Name="telefono" Type="String" Nullable="false" />
+          <NavigationProperty Name="regionalId" Relationship="Model.RegionalCentroFormacion" FromRole="CentroFormacion" ToRole="Regional" />
+          <NavigationProperty Name="Sede" Relationship="Model.CentroFormacionSede" FromRole="CentroFormacion" ToRole="Sede" />
+          <NavigationProperty Name="localidadId" Relationship="Model.LocalidadCentroFormacion" FromRole="centro_formacion" ToRole="localidad" />
         </EntityType>
-        <EntityType Name="Regional">
+        <EntityType Name="regional">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nit" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="direccion" Type="String" Nullable="false" />
           <Property Name="acronimo" Type="String" Nullable="false" />
+          <Property Name="direccion" Type="String" Nullable="false" />
           <Property Name="telefono" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
           <NavigationProperty Name="CentroFormacion" Relationship="Model.RegionalCentroFormacion" FromRole="Regional" ToRole="CentroFormacion" />
+          <NavigationProperty Name="departamentoId" Relationship="Model.DepartamentoRegional" FromRole="Regional" ToRole="Departamento" />
         </EntityType>
-        <EntityType Name="Ciudad">
+        <EntityType Name="ciudad">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Departamento" Relationship="Model.DepartamentoCiudad" FromRole="Ciudad" ToRole="Departamento" />
-          <Property Name="DepartamentoId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CentroFormacion" Relationship="Model.CentroFormacionCiudad" FromRole="Ciudad" ToRole="CentroFormacion" />
-          <Property Name="CentroFormacionId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="departamentoId" Relationship="Model.DepartamentoCiudad" FromRole="Ciudad" ToRole="Departamento" />
+          <NavigationProperty Name="localidad" Relationship="Model.CiudadLocalidad" FromRole="ciudad" ToRole="localidad" />
         </EntityType>
-        <EntityType Name="Jornada">
+        <EntityType Name="jornada">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Ficha" Relationship="Model.FichaJornada" FromRole="Jornada" ToRole="Ficha" />
+          <NavigationProperty Name="Ficha" Relationship="Model.FichaJornada" FromRole="jornada" ToRole="ficha" />
         </EntityType>
-        <EntityType Name="NivelFormacion">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="codigo" Type="String" Nullable="false" />
-          <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="descripcion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionNivelFormacion" FromRole="NivelFormacion" ToRole="ProgramaFormacion" />
-        </EntityType>
-        <EntityType Name="TipoFormacion">
+        <EntityType Name="nivel_formacion">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -632,10 +575,19 @@
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionTipoFormacion" FromRole="TipoFormacion" ToRole="ProgramaFormacion" />
+          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionNivelFormacion" FromRole="nivel_formacion" ToRole="programa_formacion" />
         </EntityType>
-        <EntityType Name="Modalidad">
+        <EntityType Name="tipo_formacion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigo" Type="String" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionTipoFormacion" FromRole="tipo_formacion" ToRole="programa_formacion" />
+        </EntityType>
+        <EntityType Name="modalidad">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -644,10 +596,9 @@
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="descripcion" Type="String" Nullable="false" />
           <Property Name="RequierePresencialidad" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionModalidad" FromRole="Modalidad" ToRole="ProgramaFormacion" />
+          <NavigationProperty Name="ProgramaFormacion" Relationship="Model.ProgramaFormacionModalidad" FromRole="modalidad" ToRole="programa_formacion" />
         </EntityType>
-        <EntityType Name="Convocatoria">
+        <EntityType Name="convocatoria">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="anio" />
@@ -658,80 +609,39 @@
           <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="anio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="trimestre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Ficha" Relationship="Model.FichaConvocatoria" FromRole="Convocatoria" ToRole="Ficha" />
+          <NavigationProperty Name="Ficha" Relationship="Model.FichaConvocatoria" FromRole="convocatoria" ToRole="ficha" />
         </EntityType>
-        <EntityType Name="Pais">
+        <EntityType Name="pais">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Continente" Relationship="Model.ContinentePais" FromRole="Pais" ToRole="Continente" />
-          <Property Name="ContinenteId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="continenteId" Relationship="Model.ContinentePais" FromRole="Pais" ToRole="Continente" />
           <NavigationProperty Name="Departamento" Relationship="Model.PaisDepartamento" FromRole="Pais" ToRole="Departamento" />
         </EntityType>
-        <EntityType Name="Continente">
+        <EntityType Name="continente">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <Property Name="PaisId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Pais" Relationship="Model.ContinentePais" FromRole="Continente" ToRole="Pais" />
         </EntityType>
-        <EntityType Name="Departamento">
+        <EntityType Name="departamento">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="Pais" Relationship="Model.PaisDepartamento" FromRole="Departamento" ToRole="Pais" />
-          <Property Name="PaisId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="paisId" Relationship="Model.PaisDepartamento" FromRole="Departamento" ToRole="Pais" />
           <NavigationProperty Name="Ciudad" Relationship="Model.DepartamentoCiudad" FromRole="Departamento" ToRole="Ciudad" />
+          <NavigationProperty Name="Regional" Relationship="Model.DepartamentoRegional" FromRole="Departamento" ToRole="Regional" />
         </EntityType>
-        <Association Name="ContinentePais">
-          <End Type="Model.Continente" Role="Continente" Multiplicity="1" />
-          <End Type="Model.Pais" Role="Pais" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Continente">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Pais">
-              <PropertyRef Name="ContinenteId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="PaisDepartamento">
-          <End Type="Model.Pais" Role="Pais" Multiplicity="1" />
-          <End Type="Model.Departamento" Role="Departamento" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pais">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Departamento">
-              <PropertyRef Name="PaisId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="DepartamentoCiudad">
-          <End Type="Model.Departamento" Role="Departamento" Multiplicity="1" />
-          <End Type="Model.Ciudad" Role="Ciudad" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Departamento">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Ciudad">
-              <PropertyRef Name="DepartamentoId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="Sede">
+        <EntityType Name="sede">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -739,64 +649,14 @@
           <Property Name="codigo" Type="String" Nullable="false" />
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="direccion" Type="String" Nullable="false" />
-          <Property Name="estado" Type="String" Nullable="false" />
-          <NavigationProperty Name="CentroFormacion" Relationship="Model.CentroFormacionSede" FromRole="Sede" ToRole="CentroFormacion" />
-          <Property Name="CentroFormacionId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Piso" Relationship="Model.SedePiso" FromRole="Sede" ToRole="Piso" />
+          <NavigationProperty Name="centroFormacionId" Relationship="Model.CentroFormacionSede" FromRole="Sede" ToRole="CentroFormacion" />
         </EntityType>
-        <Association Name="RegionalCentroFormacion">
-          <End Type="Model.Regional" Role="Regional" Multiplicity="1" />
-          <End Type="Model.CentroFormacion" Role="CentroFormacion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Regional">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="CentroFormacion">
-              <PropertyRef Name="RegionalId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CentroFormacionSede">
-          <End Type="Model.CentroFormacion" Role="CentroFormacion" Multiplicity="1" />
-          <End Type="Model.Sede" Role="Sede" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CentroFormacion">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Sede">
-              <PropertyRef Name="CentroFormacionId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="SedePiso">
-          <End Type="Model.Sede" Role="Sede" Multiplicity="1" />
-          <End Type="Model.Piso" Role="Piso" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Sede">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Piso">
-              <PropertyRef Name="SedeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="CentroFormacionCiudad">
-          <End Type="Model.CentroFormacion" Role="CentroFormacion" Multiplicity="1" />
-          <End Type="Model.Ciudad" Role="Ciudad" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CentroFormacion">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Ciudad">
-              <PropertyRef Name="CentroFormacionId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="TipoContratoEmpleado">
-          <End Type="Model.TipoContrato" Role="TipoContrato" Multiplicity="1" />
-          <End Type="Model.Empleado" Role="Empleado" Multiplicity="*" />
+          <End Type="Model.tipo_contrato" Role="TipoContrato" Multiplicity="1" />
+          <End Type="Model.empleado" Role="Empleado" Multiplicity="*" />
         </Association>
-        <EntityType Name="Cargo">
+        <EntityType Name="cargo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -808,10 +668,10 @@
           <NavigationProperty Name="Funciones" Relationship="Model.CargoFunciones" FromRole="Cargo" ToRole="Funciones" />
         </EntityType>
         <Association Name="CargoEmpleado">
-          <End Type="Model.Cargo" Role="Cargo" Multiplicity="1" />
-          <End Type="Model.Empleado" Role="Empleado" Multiplicity="*" />
+          <End Type="Model.cargo" Role="Cargo" Multiplicity="1" />
+          <End Type="Model.empleado" Role="Empleado" Multiplicity="*" />
         </Association>
-        <EntityType Name="Funciones">
+        <EntityType Name="funciones">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -822,18 +682,18 @@
           <NavigationProperty Name="Cargo" Relationship="Model.CargoFunciones" FromRole="Funciones" ToRole="Cargo" />
         </EntityType>
         <Association Name="CargoFunciones">
-          <End Type="Model.Cargo" Role="Cargo" Multiplicity="1" />
-          <End Type="Model.Funciones" Role="Funciones" Multiplicity="*" />
+          <End Type="Model.cargo" Role="Cargo" Multiplicity="1" />
+          <End Type="Model.funciones" Role="Funciones" Multiplicity="*" />
         </Association>
         <Association Name="ProgramaFormacionProyectoFormativo">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="1" />
-          <End Type="Model.ProyectoFormativo" Role="ProyectoFormativo" Multiplicity="*" />
+          <End Type="Model.programa_formacion" Role="ProgramaFormacion" Multiplicity="1" />
+          <End Type="Model.proyecto_formativo" Role="ProyectoFormativo" Multiplicity="*" />
         </Association>
         <Association Name="CentroFormacionProyectoFormativo">
-          <End Type="Model.CentroFormacion" Role="CentroFormacion" Multiplicity="1" />
-          <End Type="Model.ProyectoFormativo" Role="ProyectoFormativo" Multiplicity="1" />
+          <End Type="Model.centro_formacion" Role="CentroFormacion" Multiplicity="1" />
+          <End Type="Model.proyecto_formativo" Role="ProyectoFormativo" Multiplicity="1" />
         </Association>
-        <EntityType Name="ActividadProyectoRap">
+        <EntityType Name="actividades_proyectos_raps">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -841,79 +701,43 @@
           <NavigationProperty Name="Rap" Relationship="Model.RapActividadProyectoRap" FromRole="ActividadProyectoRap" ToRole="Rap" />
           <NavigationProperty Name="ActividadProyecto" Relationship="Model.ActividadProyectoActividadProyectoRap" FromRole="ActividadProyectoRap" ToRole="ActividadProyecto" />
         </EntityType>
-        <Association Name="RapRapCompetencia">
-          <End Type="Model.Rap" Role="Rap" Multiplicity="1" />
-          <End Type="Model.RapCompetencia" Role="RapCompetencia" Multiplicity="*" />
-        </Association>
         <Association Name="RapActividadProyectoRap">
-          <End Type="Model.Rap" Role="Rap" Multiplicity="1" />
-          <End Type="Model.ActividadProyectoRap" Role="ActividadProyectoRap" Multiplicity="*" />
-        </Association>
-        <Association Name="CompetenciaRapCompetencia">
-          <End Type="Model.Competencia" Role="Competencia" Multiplicity="1" />
-          <End Type="Model.RapCompetencia" Role="RapCompetencia" Multiplicity="*" />
-        </Association>
-        <Association Name="CompetenciaCompetenciaProgramaFormacion">
-          <End Type="Model.Competencia" Role="Competencia" Multiplicity="1" />
-          <End Type="Model.CompetenciaProgramaFormacion" Role="CompetenciaProgramaFormacion" Multiplicity="*" />
-        </Association>
-        <Association Name="ProgramaFormacionModalidad">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="1" />
-          <End Type="Model.Modalidad" Role="Modalidad" Multiplicity="1" />
-        </Association>
-        <Association Name="ProgramaFormacionNivelFormacion">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="1" />
-          <End Type="Model.NivelFormacion" Role="NivelFormacion" Multiplicity="1" />
-        </Association>
-        <Association Name="ProgramaFormacionTipoFormacion">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="1" />
-          <End Type="Model.TipoFormacion" Role="TipoFormacion" Multiplicity="1" />
+          <End Type="Model.rap" Role="Rap" Multiplicity="1" />
+          <End Type="Model.actividades_proyectos_raps" Role="ActividadProyectoRap" Multiplicity="*" />
         </Association>
         <Association Name="ProyectoFormativoFase">
-          <End Type="Model.ProyectoFormativo" Role="ProyectoFormativo" Multiplicity="1" />
-          <End Type="Model.Fase" Role="Fase" Multiplicity="*" />
+          <End Type="Model.proyecto_formativo" Role="ProyectoFormativo" Multiplicity="1" />
+          <End Type="Model.fase" Role="Fase" Multiplicity="*" />
         </Association>
         <Association Name="FaseActividadProyecto">
-          <End Type="Model.Fase" Role="Fase" Multiplicity="1" />
-          <End Type="Model.ActividadProyecto" Role="ActividadProyecto" Multiplicity="*" />
+          <End Type="Model.fase" Role="Fase" Multiplicity="1" />
+          <End Type="Model.actividad_proyecto" Role="ActividadProyecto" Multiplicity="*" />
         </Association>
         <Association Name="ActividadProyectoActividadProyectoRap">
-          <End Type="Model.ActividadProyecto" Role="ActividadProyecto" Multiplicity="1" />
-          <End Type="Model.ActividadProyectoRap" Role="ActividadProyectoRap" Multiplicity="*" />
-        </Association>
-        <Association Name="ProgramaFormacionFicha">
-          <End Type="Model.ProgramaFormacion" Role="ProgramaFormacion" Multiplicity="1" />
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="*" />
+          <End Type="Model.actividad_proyecto" Role="ActividadProyecto" Multiplicity="1" />
+          <End Type="Model.actividades_proyectos_raps" Role="ActividadProyectoRap" Multiplicity="*" />
         </Association>
         <Association Name="FichaProyectoFormativoFicha">
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="1" />
-          <End Type="Model.ProyectoFormativoFicha" Role="ProyectoFormativoFicha" Multiplicity="*" />
-        </Association>
-        <Association Name="FichaJornada">
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="1" />
-          <End Type="Model.Jornada" Role="Jornada" Multiplicity="1" />
+          <End Type="Model.ficha" Role="Ficha" Multiplicity="1" />
+          <End Type="Model.proyectos_formativos_fichas" Role="ProyectoFormativoFicha" Multiplicity="*" />
         </Association>
         <Association Name="FichaFichaEmpleado">
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="1" />
-          <End Type="Model.FichaEmpleado" Role="FichaEmpleado" Multiplicity="*" />
+          <End Type="Model.ficha" Role="Ficha" Multiplicity="1" />
+          <End Type="Model.ficha_empleado" Role="FichaEmpleado" Multiplicity="*" />
         </Association>
         <Association Name="EmpleadoFichaEmpleado">
-          <End Type="Model.Empleado" Role="Empleado" Multiplicity="1" />
-          <End Type="Model.FichaEmpleado" Role="FichaEmpleado" Multiplicity="*" />
+          <End Type="Model.empleado" Role="Empleado" Multiplicity="1" />
+          <End Type="Model.ficha_empleado" Role="FichaEmpleado" Multiplicity="*" />
         </Association>
         <Association Name="PersonaMatricula">
           <End Type="Model.Persona" Role="Persona" Multiplicity="1" />
-          <End Type="Model.Matricula" Role="Matricula" Multiplicity="*" />
+          <End Type="Model.matricula" Role="Matricula" Multiplicity="*" />
         </Association>
         <Association Name="FichaMatricula">
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="1" />
-          <End Type="Model.Matricula" Role="Matricula" Multiplicity="*" />
+          <End Type="Model.ficha" Role="Ficha" Multiplicity="1" />
+          <End Type="Model.matricula" Role="Matricula" Multiplicity="*" />
         </Association>
-        <Association Name="FichaConvocatoria">
-          <End Type="Model.Ficha" Role="Ficha" Multiplicity="1" />
-          <End Type="Model.Convocatoria" Role="Convocatoria" Multiplicity="1" />
-        </Association>
-        <EntityType Name="ProgramacionFicha">
+        <EntityType Name="programacion_ficha">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="codigo" />
@@ -931,7 +755,7 @@
           <NavigationProperty Name="Horario" Relationship="Model.ProgramacionFichaHorario" FromRole="ProgramacionFicha" ToRole="Horario" />
           <NavigationProperty Name="HorarioAmbiente" Relationship="Model.ProgramacionFichaHorarioAmbiente" FromRole="ProgramacionFicha" ToRole="HorarioAmbiente" />
         </EntityType>
-        <EntityType Name="HorarioEmpleado">
+        <EntityType Name="horario_empleado">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="horaInicio" />
@@ -944,10 +768,10 @@
           <NavigationProperty Name="Empleado" Relationship="Model.EmpleadoHorarioEmpleado" FromRole="HorarioEmpleado" ToRole="Empleado" />
         </EntityType>
         <Association Name="ProgramacionFichaHorario">
-          <End Type="Model.ProgramacionFicha" Role="ProgramacionFicha" Multiplicity="1" />
-          <End Type="Model.HorarioEmpleado" Role="Horario" Multiplicity="*" />
+          <End Type="Model.programacion_ficha" Role="ProgramacionFicha" Multiplicity="1" />
+          <End Type="Model.horario_empleado" Role="Horario" Multiplicity="*" />
         </Association>
-        <EntityType Name="HorarioAmbiente">
+        <EntityType Name="horario_ambiente">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="horaInicio" />
@@ -960,20 +784,134 @@
           <NavigationProperty Name="Ambiente" Relationship="Model.AmbienteHorarioAmbiente" FromRole="HorarioAmbiente" ToRole="Ambiente" />
         </EntityType>
         <Association Name="EmpleadoHorarioEmpleado">
-          <End Type="Model.Empleado" Role="Empleado" Multiplicity="1" />
-          <End Type="Model.HorarioEmpleado" Role="HorarioEmpleado" Multiplicity="*" />
+          <End Type="Model.empleado" Role="Empleado" Multiplicity="1" />
+          <End Type="Model.horario_empleado" Role="HorarioEmpleado" Multiplicity="*" />
         </Association>
         <Association Name="ProgramacionFichaHorarioAmbiente">
-          <End Type="Model.ProgramacionFicha" Role="ProgramacionFicha" Multiplicity="1" />
-          <End Type="Model.HorarioAmbiente" Role="HorarioAmbiente" Multiplicity="*" />
+          <End Type="Model.programacion_ficha" Role="ProgramacionFicha" Multiplicity="1" />
+          <End Type="Model.horario_ambiente" Role="HorarioAmbiente" Multiplicity="*" />
         </Association>
         <Association Name="AmbienteHorarioAmbiente">
-          <End Type="Model.Ambiente" Role="Ambiente" Multiplicity="1" />
-          <End Type="Model.HorarioAmbiente" Role="HorarioAmbiente" Multiplicity="*" />
+          <End Type="Model.ambiente" Role="Ambiente" Multiplicity="1" />
+          <End Type="Model.horario_ambiente" Role="HorarioAmbiente" Multiplicity="*" />
+        </Association>
+        <Association Name="VistaModulo">
+          <End Type="Model.modulo" Role="modulo" Multiplicity="1" />
+          <End Type="Model.vista" Role="vista" Multiplicity="*" />
+        </Association>
+        <Association Name="vistavistas_roles">
+          <End Type="Model.vista" Role="vista" Multiplicity="*" />
+          <End Type="Model.vistas_roles" Role="vistas_roles" Multiplicity="*" />
+        </Association>
+        <Association Name="VistasRolesRoles">
+          <End Type="Model.role" Role="role" Multiplicity="*" />
+          <End Type="Model.vistas_roles" Role="vistas_roles" Multiplicity="*" />
+        </Association>
+        <Association Name="UsuariosRolesRole">
+          <End Type="Model.role" Multiplicity="*" Role="role" />
+          <End Type="Model.usuarios_roles" Multiplicity="*" Role="usuarios_roles" />
+        </Association>
+        <Association Name="UsuariosRolesUsuario">
+          <End Type="Model.Usuario" Role="Usuario" Multiplicity="*" />
+          <End Type="Model.usuarios_roles" Role="usuarios_roles" Multiplicity="*" />
+        </Association>
+        <Association Name="UsuarioPersona">
+          <End Type="Model.Persona" Role="Persona" Multiplicity="1" />
+          <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
+        </Association>
+        <Association Name="ContinentePais">
+          <End Type="Model.continente" Role="Continente" Multiplicity="1" />
+          <End Type="Model.pais" Role="Pais" Multiplicity="*" />
+        </Association>
+        <Association Name="PaisDepartamento">
+          <End Type="Model.pais" Role="Pais" Multiplicity="1" />
+          <End Type="Model.departamento" Role="Departamento" Multiplicity="*" />
+        </Association>
+        <Association Name="DepartamentoCiudad">
+          <End Type="Model.departamento" Role="Departamento" Multiplicity="1" />
+          <End Type="Model.ciudad" Role="Ciudad" Multiplicity="*" />
+        </Association>
+        <Association Name="EspecialidadAmbiente">
+          <End Type="Model.especialidad" Role="Especialidad" Multiplicity="1" />
+          <End Type="Model.ambiente" Role="Ambiente" Multiplicity="*" />
         </Association>
         <Association Name="PisoAmbiente">
-          <End Type="Model.Piso" Role="Piso" Multiplicity="1" />
-          <End Type="Model.Ambiente" Role="Ambiente" Multiplicity="*" />
+          <End Type="Model.piso" Role="Piso" Multiplicity="1" />
+          <End Type="Model.ambiente" Role="Ambiente" Multiplicity="*" />
+        </Association>
+        <Association Name="RegionalCentroFormacion">
+          <End Type="Model.regional" Role="Regional" Multiplicity="1" />
+          <End Type="Model.centro_formacion" Role="CentroFormacion" Multiplicity="*" />
+        </Association>
+        <Association Name="SedePiso">
+          <End Type="Model.sede" Role="Sede" Multiplicity="1" />
+          <End Type="Model.piso" Role="Piso" Multiplicity="*" />
+        </Association>
+        <Association Name="DepartamentoRegional">
+          <End Type="Model.departamento" Role="Departamento" Multiplicity="1" />
+          <End Type="Model.regional" Role="Regional" Multiplicity="1" />
+        </Association>
+        <Association Name="CentroFormacionSede">
+          <End Type="Model.centro_formacion" Role="CentroFormacion" Multiplicity="1" />
+          <End Type="Model.sede" Role="Sede" Multiplicity="*" />
+        </Association>
+        <EntityType Name="localidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" />
+          <Property Name="codigo_postal" Type="String" Nullable="false" />
+          <NavigationProperty Name="ciudadId" Relationship="Model.CiudadLocalidad" FromRole="localidad" ToRole="ciudad" />
+          <NavigationProperty Name="CentroFormacion" Relationship="Model.LocalidadCentroFormacion" FromRole="localidad" ToRole="centro_formacion" />
+        </EntityType>
+        <Association Name="CiudadLocalidad">
+          <End Type="Model.ciudad" Role="ciudad" Multiplicity="1" />
+          <End Type="Model.localidad" Role="localidad" Multiplicity="*" />
+        </Association>
+        <Association Name="LocalidadCentroFormacion">
+          <End Type="Model.localidad" Role="localidad" Multiplicity="1" />
+          <End Type="Model.centro_formacion" Role="centro_formacion" Multiplicity="1" />
+        </Association>
+        <Association Name="CompetenciasProgramasFormacionProgramaFormacion">
+          <End Type="Model.programa_formacion" Role="programa_formacion" Multiplicity="*" />
+          <End Type="Model.competencias_programas_formacion" Role="competencias_programas_formacion" Multiplicity="*" />
+        </Association>
+        <Association Name="CompetenciasProgramasFormacionCompetencia">
+          <End Type="Model.competencia" Role="competencia" Multiplicity="*" />
+          <End Type="Model.competencias_programas_formacion" Role="competencias_programas_formacion" Multiplicity="*" />
+        </Association>
+        <Association Name="ProgramaFormacionModalidad">
+          <End Type="Model.modalidad" Role="modalidad" Multiplicity="1" />
+          <End Type="Model.programa_formacion" Role="programa_formacion" Multiplicity="1" />
+        </Association>
+        <Association Name="ProgramaFormacionNivelFormacion">
+          <End Type="Model.nivel_formacion" Role="nivel_formacion" Multiplicity="1" />
+          <End Type="Model.programa_formacion" Role="programa_formacion" Multiplicity="1" />
+        </Association>
+        <Association Name="ProgramaFormacionTipoFormacion">
+          <End Type="Model.tipo_formacion" Role="tipo_formacion" Multiplicity="1" />
+          <End Type="Model.programa_formacion" Role="programa_formacion" Multiplicity="1" />
+        </Association>
+        <Association Name="RapsCompetenciasCompetencia">
+          <End Type="Model.competencia" Role="competencia" Multiplicity="*" />
+          <End Type="Model.raps_competencias" Role="raps_competencias" Multiplicity="*" />
+        </Association>
+        <Association Name="RapsCompetenciasRap">
+          <End Type="Model.rap" Role="rap" Multiplicity="*" />
+          <End Type="Model.raps_competencias" Role="raps_competencias" Multiplicity="*" />
+        </Association>
+        <Association Name="FichaJornada">
+          <End Type="Model.jornada" Role="jornada" Multiplicity="1" />
+          <End Type="Model.ficha" Role="ficha" Multiplicity="1" />
+        </Association>
+        <Association Name="FichaConvocatoria">
+          <End Type="Model.convocatoria" Role="convocatoria" Multiplicity="1" />
+          <End Type="Model.ficha" Role="ficha" Multiplicity="1" />
+        </Association>
+        <Association Name="FichaProgramaFormacion">
+          <End Type="Model.programa_formacion" Role="programa_formacion" Multiplicity="1" />
+          <End Type="Model.ficha" Role="ficha" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>

@@ -25,7 +25,7 @@ public class Persona extends BaseEntity {
 	@Column(name = "segundo_apellido", length = 45)
 	private String segundoApellido;
 
-	@Column(name = "tipoDocumento")
+	@Column(name = "tipo_documento")
 	private TipoDocumento tipoDocumento;
 
 	@Column(name = "numero_documento")

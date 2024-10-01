@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModuloService } from '../../Services/Security/modulo.service';
-import { Modulo } from '../../models/Security/modulo';
+import { Modulo } from '../../models/M-Security/modulo';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { TableComponent } from '../../Componentes/table/table.component';

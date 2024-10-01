@@ -1,0 +1,54 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">{{ isEditing ? 'Editar Relación Vista-Rol' : 'Registrar Relación Vista-Rol' }}</h2>
+  
+    <!-- Formulario para Crear/Editar Relación Vista-Rol -->
+    <form [formGroup]="vistasRolesForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="vista" class="form-label">Vista:</label>
+        <div formGroupName="vistaId">
+          <ng-select 
+            [items]="vistas"
+            bindLabel="nombreCompleto"
+            bindValue="id"
+            formControlName="id"
+            placeholder="Seleccione una vista"
+            required>
+          </ng-select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="role" class="form-label">Rol:</label>
+        <div formGroupName="roleId">
+          <ng-select 
+            [items]="roles"
+            bindLabel="nombreCompleto"
+            bindValue="id"
+            formControlName="id"
+            placeholder="Seleccione un rol"
+            required>
+          </ng-select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado:</label>
+        <div class="form-check form-switch">
+          <input type="checkbox" class="form-check-input" id="estado" formControlName="state">
+          <label class="form-check-label" for="estado">{{ vistasRolesForm.get('state')?.value ? 'Activo' : 'Inactivo' }}</label>
+        </div>
+      </div>
+  
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Tabla de Vistas-Roles -->
+  <div class="table-container mt-5">
+    <h2 class="text-center mb-4">Lista de Relaciones Vista-Rol</h2>
+    <div class="table-responsive">
+      <app-table [headers]="headers" [data]="vistasRoles" (edit)="editVistasRoles($event)" (delete)="deleteVistasRoles($event)">
+      </app-table>
+    </div>
+  </div>
+  

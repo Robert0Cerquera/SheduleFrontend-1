@@ -86,3 +86,36 @@ textarea.form-control {
 .btn i {
   font-size: 16px;
 }
+.icon-select {
+  width: 100%;
+  padding: 5px;
+}
+
+.icon-select option {
+  display: flex;
+  align-items: center;
+}
+
+.icon-select option i {
+  margin-right: 8px;
+  font-size: 16px; /* Tamaño del ícono en el dropdown */
+}
+.form-control {
+  display: flex;
+  align-items: center;
+}
+.icon-select {
+  font-size: 16px; /* Ajusta el tamaño del ícono en el select */
+}
+.icon-option {
+  display: flex;
+  align-items: center;
+}
+.icon-option i {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  font-size: 16px; /* Tamaño del ícono */
+}
+.form-select {
+  display: flex;
+  align-items: center;
+}
