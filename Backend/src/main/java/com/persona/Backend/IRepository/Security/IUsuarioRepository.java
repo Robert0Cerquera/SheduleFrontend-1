@@ -46,22 +46,27 @@ public interface IUsuarioRepository extends IBaseRepository<Usuario, Long>{
 			+ "					mo.ruta moduloRuta,   "
 			+ "					mo.nombre moduloNombre,  "
 			+ "					mo.icono,  "
+			+ "                 sub.ruta submoduloRuta,   "
+			+ "					sub.nombre submoduloNombre,  "
+			+ "					sub.icono subIcono,  "
 			+ "					r.nombre as rol, "
 			+ "					CONCAT(pe.primer_nombre, pe.segundo_nombre) as personaNombre  "
 			+ "					   "
 			+ "				FROM  persona pe  "
 			+ "					INNER JOIN usuario u ON pe.id = u.persona_id   "
-			+ "                    INNER JOIN usuarios_roles ur ON u.id = ur.usuario_id "
+			+ "                 INNER JOIN usuarios_roles ur ON u.id = ur.usuario_id "
 			+ "					INNER JOIN role r ON r.id = ur.role_id   "
 			+ "					INNER JOIN vistas_roles vr ON vr.role_id = r.id   "
 			+ "					INNER JOIN vista v ON v.id = vr.vista_id   "
-			+ "					INNER JOIN modulo mo ON mo.id = v.modulo_id   "
+			+ "					INNER JOIN modulo mo ON mo.id = v.modulo_id  "
+			+ "                    INNER JOIN submodulo sub ON mo.id = sub.modulo_id "
 			+ "				WHERE    "
-			+ "					u.usuario_nombre = :user    "
+			+ "					u.usuario_nombre = :user "
 			+ "					AND u.state = TRUE   "
 			+ "					AND r.state = TRUE   "
 			+ "					AND v.state = TRUE   "
-			+ "					AND mo.state = TRUE", nativeQuery = true)
+			+ "					AND mo.state = TRUE "
+			+ "                    AND sub.state = TRUE", nativeQuery = true)
 	List<PermisosDto> validarPermisos(String user);
 
 	Optional<Usuario> findByUsuarioNombre(String usuario);

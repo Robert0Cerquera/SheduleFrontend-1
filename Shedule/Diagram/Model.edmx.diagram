@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eca650e4c2b0413b97ae83b00d55c9a5" Name="Diagram1" ZoomLevel="90" >
-        <EntityTypeShape EntityType="Model.usuarios_roles" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.role" Width="1.5" PointX="6.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vistas_roles" Width="1.5" PointX="4.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.vista" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+      <Diagram DiagramId="eca650e4c2b0413b97ae83b00d55c9a5" Name="Diagram1" ZoomLevel="67" >
+        <EntityTypeShape EntityType="Model.usuarios_roles" Width="1.5" PointX="10.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.role" Width="1.5" PointX="8.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vistas_roles" Width="1.5" PointX="6.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vista" Width="1.5" PointX="4.125" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.modulo" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Usuario" Width="1.5" PointX="10.375" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Persona" Width="1.5" PointX="12.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Usuario" Width="1.5" PointX="12.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Persona" Width="1.5" PointX="14.25" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ficha_empleado" Width="1.5" PointX="16.5" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.ficha" Width="2" PointX="14.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ficha" Width="2" PointX="14.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.programa_formacion" Width="2" PointX="9.375" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.especialidad" Width="1.5" PointX="27" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.fase" Width="1.5" PointX="0.5" PointY="7.75" />
@@ -24,7 +24,7 @@
         <EntityTypeShape EntityType="Model.raps_competencias" Width="1.5" PointX="2.5" PointY="16.625" />
         <EntityTypeShape EntityType="Model.piso" Width="1.875" PointX="24.75" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.empleado" Width="1.5" PointX="17.625" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.matricula" Width="1.5" PointX="14.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.matricula" Width="1.5" PointX="14.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.proyecto_formativo" Width="1.5" PointX="3.125" PointY="5.625" />
         <EntityTypeShape EntityType="Model.proyectos_formativos_fichas" Width="2" PointX="6.25" PointY="7.125" />
         <AssociationConnector Association="Model.PersonaEmpleado" />
@@ -49,11 +49,13 @@
         <EntityTypeShape EntityType="Model.funciones" Width="1.5" PointX="24.125" PointY="0.5" IsExpanded="true" />
         <AssociationConnector Association="Model.CargoFunciones" />
         <AssociationConnector Association="Model.ProgramaFormacionProyectoFormativo" ManuallyRouted="true" >
-          <ConnectorPoint PointX="9.9746078125" PointY="14.625000000000004" />
+          <ConnectorPoint PointX="9.9746078125" PointY="14.625000000000083" />
           <ConnectorPoint PointX="9.9746078125" PointY="8.9370472334740789" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="8.9370472334740789" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="8.9370472334740789" />
           <ConnectorPoint PointX="5.4963490465580227" PointY="8.9370472334740789" />
           <ConnectorPoint PointX="5.4963490465580227" PointY="13.186103515624998" />
-          <ConnectorPoint PointX="4.625" PointY="8.3744921875" />
+          <ConnectorPoint PointX="4.625" PointY="7.01209594886474" />
         </AssociationConnector>
         <AssociationConnector Association="Model.CentroFormacionProyectoFormativo" />
         <EntityTypeShape EntityType="Model.actividades_proyectos_raps" Width="2" PointX="0.5" PointY="11" />
@@ -101,6 +103,9 @@
         <AssociationConnector Association="Model.FichaJornada" />
         <AssociationConnector Association="Model.FichaConvocatoria" />
         <AssociationConnector Association="Model.FichaProgramaFormacion" />
+        <EntityTypeShape EntityType="Model.submodulo" Width="1.5" PointX="1" PointY="3.375" />
+        <AssociationConnector Association="Model.modulosubmodulo" />
+        <AssociationConnector Association="Model.submodulovista" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

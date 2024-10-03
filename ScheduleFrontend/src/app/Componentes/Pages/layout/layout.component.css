@@ -1,0 +1,42 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Altura completa de la ventana */
+  }
+  
+  .navbar {
+    background-color: #004455;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px; /* Define la altura del navbar */
+    z-index: 1000;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    margin-top: 60px; /* Asegúrate de que coincida con la altura del navbar */
+    height: calc(100vh - 60px); /* Ocupa el espacio restante debajo del navbar */
+  }
+  
+  .menu {
+    width: 250px; /* Ancho del menú lateral */
+    background-color: #004d66; /* Color del menú */
+    height: 100%; /* Altura completa del contenedor principal */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    flex: 1; /* Ocupa el resto del espacio disponible */
+    padding: 20px;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es grande */
+    height: 100%; /* Asegura que el contenido ocupe el 100% del espacio disponible */
+  }
+  
