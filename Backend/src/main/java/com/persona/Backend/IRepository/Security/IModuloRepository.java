@@ -20,5 +20,8 @@ public interface IModuloRepository extends IBaseRepository<Modulo, Long>{
 			+ "WHERE deleted_at is NULL AND estado=1 "
 			+ "ORDER BY id ASC ", nativeQuery=true)
 	Optional<DataSelectDto> SeleccionarDatos(Long id);
+	
+	
+	 Optional<Modulo> findByNombre(String nombre);
 }
 

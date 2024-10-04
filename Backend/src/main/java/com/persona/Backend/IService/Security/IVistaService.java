@@ -5,4 +5,5 @@ import com.persona.Backend.IService.IBaseService;
 
 public interface IVistaService extends IBaseService<Vista> {
 
+	 Vista findByNombre(String nombre);
 }

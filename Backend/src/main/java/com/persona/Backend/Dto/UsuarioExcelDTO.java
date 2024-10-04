@@ -3,7 +3,6 @@ package com.persona.Backend.Dto;
 import java.time.LocalDate;
 
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.persona.Backend.Entity.Enum.TipoDocumento;
 import com.persona.Backend.Entity.Security.Persona;
 
 public class UsuarioExcelDTO {
@@ -52,8 +51,62 @@ public class UsuarioExcelDTO {
 	    
 	    @ExcelProperty("rol")
 	    private String rol;
-
 	    
+	    @ExcelProperty("modulo")
+	    private String modulo;
+
+	    @ExcelProperty("moduloIcono")
+	    private String moduloIcono;
+
+	    @ExcelProperty("submodulo")
+	    private String submodulo;
+
+	    @ExcelProperty("vista")
+	    private String vista;
+
+	    @ExcelProperty("vistaRuta")
+	    private String vistaRuta;
+	    
+		public String getModulo() {
+			return modulo;
+		}
+
+		public void setModulo(String modulo) {
+			this.modulo = modulo;
+		}
+
+		public String getModuloIcono() {
+			return moduloIcono;
+		}
+
+		public void setModuloIcono(String moduloIcono) {
+			this.moduloIcono = moduloIcono;
+		}
+
+		public String getSubmodulo() {
+			return submodulo;
+		}
+
+		public void setSubmodulo(String submodulo) {
+			this.submodulo = submodulo;
+		}
+
+		public String getVista() {
+			return vista;
+		}
+
+		public void setVista(String vista) {
+			this.vista = vista;
+		}
+
+		public String getVistaRuta() {
+			return vistaRuta;
+		}
+
+		public void setVistaRuta(String vistaRuta) {
+			this.vistaRuta = vistaRuta;
+		}
+
 		public String getRol() {
 			return rol;
 		}
