@@ -1,6 +1,8 @@
 package com.persona.Backend.Entity;
 
+
 import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,16 +23,12 @@ public abstract class BaseEntity {
 	@Column(name="created_at", nullable = false)
 	private LocalDateTime createdAt;
 	
-	@Column(name="updated_at", nullable= false)
+	@Column(name="updated_at", nullable= true)
 	private LocalDateTime updatedAt;
 	
 	@Column(name="deleted_at", nullable= true)
 	private LocalDateTime deletedAt;
-	
-	
-	
 
-	
 	public Long getId() {
 		return id;
 	}
@@ -70,15 +68,9 @@ public abstract class BaseEntity {
 	public void setDeletedAt(LocalDateTime deletedAt) {
 		this.deletedAt = deletedAt;
 	}
-
-
-	
-
 	
 	
 	
 
-	
-	
-	
 }
+

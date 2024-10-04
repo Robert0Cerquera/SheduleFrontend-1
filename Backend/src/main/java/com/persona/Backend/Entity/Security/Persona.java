@@ -26,7 +26,7 @@ public class Persona extends BaseEntity {
 	private String segundoApellido;
 
 	@Column(name = "tipo_documento")
-	private TipoDocumento tipoDocumento;
+	private String tipoDocumento;
 
 	@Column(name = "numero_documento")
 	private String numeroDocumento;
@@ -78,11 +78,12 @@ public class Persona extends BaseEntity {
 		this.segundoApellido = segundoApellido;
 	}
 
-	public TipoDocumento getTipoDocumento() {
+	
+	public String getTipoDocumento() {
 		return tipoDocumento;
 	}
 
-	public void setTipoDocumento(TipoDocumento tipoDocumento) {
+	public void setTipoDocumento(String tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
 	}
 

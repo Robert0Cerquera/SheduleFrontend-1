@@ -26,22 +26,22 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers(
-                                "/api/v1/auth/login",
-                                "/api/users/register",
-                                "/api/v1/base/security/usuario/GuardarUsuarioJwt",
-                                "/api/v1/base/security/persona",
-                                "/swagger-ui.html",
-                                "/swagger-ui/**",
-                                "/v3/api-docs",
-                                "/v3/api-docs/**"
-                        ).permitAll()  // Permitir acceso sin autenticación
-                        .anyRequest().authenticated()  // Requiere autenticación para otras rutas
+                                .requestMatchers(
+                                        "/api/v1/auth/login",
+                                        "/api/users/register",
+                                        "/api/v1/base/**",
+                                        "/api/v1/base/security/persona",
+                                        "/swagger-ui.html",
+                                        "/swagger-ui/**",
+                                        "/v3/api-docs",
+                                        "/v3/api-docs/**"
+                                ).permitAll()  // Permitir acceso sin autenticación
+                                .anyRequest().authenticated()  // Requiere autenticación para otras rutas
                 )
                 .sessionManagement(sessionManagement -> sessionManagement
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // Sin sesiones
+                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // Sin sesiones
                 )
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);  // Añadir el filtro de JWT
 

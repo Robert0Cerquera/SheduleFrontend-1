@@ -18,7 +18,7 @@ public class JwtUtil {
     @Value("${jwt.secret}")
     private String secretKey;
 
-    private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60; // Token válido por 5 horas
+    private static final long JWT_TOKEN_VALIDITY = 24 * 60 * 60; // Token válido por 5 horas
 
     // Extraer el nombre de usuario del token JWT
     public String extractUsername(String token) {

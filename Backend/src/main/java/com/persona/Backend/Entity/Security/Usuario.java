@@ -12,14 +12,14 @@ import jakarta.persistence.Table;
 @Table(name = "usuario")
 public class Usuario extends BaseEntity {
 
-	@Column(name = "usuario_nombre", length = 40, nullable = false)
+	@Column(name = "usuario_nombre", length = 40)
 	private String usuarioNombre;
 
-	@Column(name = "contrasenia", nullable = false)
+	@Column(name = "contrasenia")
 	private String contrasenia;
 
 	@OneToOne(fetch = FetchType.EAGER, optional = false)
-	@JoinColumn(name = "persona_id", nullable = false, unique = true)
+	@JoinColumn(name = "persona_id", nullable = false)
 	private Persona personaId;
 
 	
