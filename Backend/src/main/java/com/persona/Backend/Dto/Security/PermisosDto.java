@@ -9,5 +9,6 @@ public interface PermisosDto {
   String getIcono();
   String getRol();
   String getPersonaNombre();
+  Long   getPadreId();
   
 }

@@ -13,22 +13,22 @@ import jakarta.persistence.Table;
 @Table(name = "persona")
 public class Persona extends BaseEntity {
 
-	@Column(name = "primer_nombre", length = 45)
+	@Column(name = "primer_nombre", length = 45, nullable = false)
 	private String primerNombre;
 
 	@Column(name = "segundo_nombre", length = 45)
 	private String segundoNombre;
 
-	@Column(name = "primer_apellido", length = 45)
+	@Column(name = "primer_apellido", length = 45, nullable = false)
 	private String primerApellido;
 
 	@Column(name = "segundo_apellido", length = 45)
 	private String segundoApellido;
 
-	@Column(name = "tipo_documento")
+	@Column(name = "tipo_documento", nullable = false)
 	private String tipoDocumento;
 
-	@Column(name = "numero_documento")
+	@Column(name = "numero_documento", nullable = false)
 	private String numeroDocumento;
 
 	@Column(name = "email")

@@ -3,6 +3,8 @@ package com.persona.Backend.Entity.Security;
 import com.persona.Backend.Entity.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,6 +19,12 @@ public class Modulo extends BaseEntity {
 	
 	@Column(name = "icono", length = 45, nullable = false)
 	private String icono;
+	
+	@ManyToOne
+    @JoinColumn(name = "padre_id", nullable = true)
+    private Modulo padreId;
+
+	
 
 	public String getNombre() {
 		return nombre;

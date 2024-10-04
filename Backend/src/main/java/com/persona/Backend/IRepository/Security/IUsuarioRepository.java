@@ -48,7 +48,7 @@ public interface IUsuarioRepository extends IBaseRepository<Usuario, Long>{
 			+ "					mo.icono,  "
 			+ "					r.nombre as rol, "
 			+ "					CONCAT(pe.primer_nombre, pe.segundo_nombre) as personaNombre  "
-			+ "					   "
+			+ "					mo.padre_id    "
 			+ "				FROM  persona pe  "
 			+ "					INNER JOIN usuario u ON pe.id = u.persona_id   "
 			+ "                 INNER JOIN usuarios_roles ur ON u.id = ur.usuario_id "
