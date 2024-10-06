@@ -3,20 +3,28 @@ package com.persona.Backend.Entity.Security;
 import com.persona.Backend.Entity.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "modulo")
 public class Modulo extends BaseEntity {
 
-	@Column(name = "nombre", length = 45, nullable = false, unique=true)
+	@Column(name = "nombre", length = 45)
 	private String nombre;
 	
-	@Column(name = "ruta", length = 45, nullable = false)
+	@Column(name = "ruta", length = 50)
 	private String ruta;
 	
-	@Column(name = "icono", length = 45, nullable = false)
+	@Column(name = "icono", length = 50)
 	private String icono;
+	
+	@ManyToOne
+    @JoinColumn(name = "padre_id", nullable = true)
+    private Modulo padreId;
+
+	
 
 	public String getNombre() {
 		return nombre;

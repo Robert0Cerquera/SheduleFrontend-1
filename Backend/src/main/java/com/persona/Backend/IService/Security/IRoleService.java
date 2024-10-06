@@ -5,4 +5,6 @@ import com.persona.Backend.IService.IBaseService;
 
 public interface IRoleService extends IBaseService<Role>{
 
+	Role findByNombre(String nombre);
+	
 }

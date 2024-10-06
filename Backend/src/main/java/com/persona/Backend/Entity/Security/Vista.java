@@ -20,7 +20,7 @@ public class Vista extends BaseEntity {
 
 	@Column(name = "ruta", length = 70, nullable = false, unique= true)
 	private String ruta;
-
+	
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "modulo_id", nullable = false, unique = false)
 	private Modulo moduloId;
@@ -31,6 +31,14 @@ public class Vista extends BaseEntity {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public Modulo getModuloId() {
+		return moduloId;
+	}
+
+	public void setModuloId(Modulo moduloId) {
+		this.moduloId = moduloId;
 	}
 
 	public String getDescripcion() {
@@ -49,12 +57,6 @@ public class Vista extends BaseEntity {
 		this.ruta = ruta;
 	}
 
-	public Modulo getModuloId() {
-		return moduloId;
-	}
 
-	public void setModuloId(Modulo moduloId) {
-		this.moduloId = moduloId;
-	}
 
 }

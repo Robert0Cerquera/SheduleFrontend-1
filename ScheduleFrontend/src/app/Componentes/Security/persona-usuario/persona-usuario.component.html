@@ -1,0 +1,36 @@
+<!-- <div class="container mt-5">
+    <h2 class="text-center mb-4">{{ isEditing ? 'Editar Persona y Usuario' : 'Registrar Persona y Usuario' }}</h2>
+  
+    Formulario para Crear/Editar Persona y Usuario 
+    <form [formGroup]="personaUsuarioForm" (ngSubmit)="onSubmit()">
+      <div formGroupName="personaId">
+        <div class="mb-3">
+          <label for="primerNombre" class="form-label">Primer Nombre:</label>
+          <input type="text" id="primerNombre" class="form-control" formControlName="primerNombre" required>
+        </div>
+        Similar input fields for other Persona properties 
+      </div>
+      <div class="mb-3">
+        <label for="usuarioName" class="form-label">Usuario:</label>
+        <input type="text" id="usuarioName" class="form-control" formControlName="usuarioName" required>
+      </div>
+      <div class="mb-3">
+        <label for="contrasenia" class="form-label">Contraseña:</label>
+        <input type="password" id="contrasenia" class="form-control" formControlName="contrasenia" required>
+      </div>
+  
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+      </div>
+    </form>
+  </div>
+  
+ Tabla de Personas y Usuarios 
+  <div class="table-container mt-5">
+    <h2 class="text-center mb-4">Lista de Personas y Usuarios</h2>
+    <div class="table-responsive">
+      <app-table [headers]="headers" [data]="personasUsuarios" (edit)="editPersonaUsuario($event)" (delete)="deletePersonaUsuario($event)">
+      </app-table>
+    </div>
+  </div>
+   -->

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Other\\Desktop\\Maryury\\SheduleFrontend\\Shedule\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A8E3B66-36CD-4F59-8B3C-0C30CE4735FE}|Diagram\\Diagram.csproj|c:\\users\\other\\desktop\\maryury\\shedulefrontend\\shedule\\diagram\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{3A8E3B66-36CD-4F59-8B3C-0C30CE4735FE}|Diagram\\Diagram.csproj|solutionrelative:diagram\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Other\\Desktop\\Maryury\\SheduleFrontend\\Shedule\\Diagram\\Model.edmx",
+              "RelativeDocumentMoniker": "Diagram\\Model.edmx",
+              "ToolTip": "C:\\Users\\Other\\Desktop\\Maryury\\SheduleFrontend\\Shedule\\Diagram\\Model.edmx [Diagram1]",
+              "RelativeToolTip": "Diagram\\Model.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-08-28T18:52:44.831Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

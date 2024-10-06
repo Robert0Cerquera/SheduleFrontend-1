@@ -91,6 +91,11 @@
 			<artifactId>jjwt-jackson</artifactId> <!-- Para manejar JSON con Jackson -->
 			<version>0.11.5</version>
 		</dependency>
+		<dependency>
+    		<groupId>com.alibaba</groupId>
+    		<artifactId>easyexcel</artifactId>
+    		<version>4.0.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>

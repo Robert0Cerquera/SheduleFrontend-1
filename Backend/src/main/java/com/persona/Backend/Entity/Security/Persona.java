@@ -13,22 +13,22 @@ import jakarta.persistence.Table;
 @Table(name = "persona")
 public class Persona extends BaseEntity {
 
-	@Column(name = "primer_nombre", length = 45)
+	@Column(name = "primer_nombre", length = 45, nullable = false)
 	private String primerNombre;
 
 	@Column(name = "segundo_nombre", length = 45)
 	private String segundoNombre;
 
-	@Column(name = "primer_apellido", length = 45)
+	@Column(name = "primer_apellido", length = 45, nullable = false)
 	private String primerApellido;
 
 	@Column(name = "segundo_apellido", length = 45)
 	private String segundoApellido;
 
-	@Column(name = "tipoDocumento")
-	private TipoDocumento tipoDocumento;
+	@Column(name = "tipo_documento", nullable = false)
+	private String tipoDocumento;
 
-	@Column(name = "numero_documento")
+	@Column(name = "numero_documento", nullable = false)
 	private String numeroDocumento;
 
 	@Column(name = "email")
@@ -78,11 +78,12 @@ public class Persona extends BaseEntity {
 		this.segundoApellido = segundoApellido;
 	}
 
-	public TipoDocumento getTipoDocumento() {
+	
+	public String getTipoDocumento() {
 		return tipoDocumento;
 	}
 
-	public void setTipoDocumento(TipoDocumento tipoDocumento) {
+	public void setTipoDocumento(String tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
 	}
 

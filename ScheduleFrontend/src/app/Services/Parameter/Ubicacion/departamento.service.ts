@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Departamento } from '../../../models/Parameter/Ubicacion/departamento';
+import { Departamento } from '../../../models/M-Parameter/Ubicacion/departamento';
 
 @Injectable({
   providedIn: 'root'

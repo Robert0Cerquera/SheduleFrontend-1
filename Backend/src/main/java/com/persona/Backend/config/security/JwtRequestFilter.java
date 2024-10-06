@@ -1,7 +1,9 @@
 package com.persona.Backend.config.security;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -40,7 +42,13 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwt = authorizationHeader.substring(7); // Remover "Bearer "
-            username = extractUsername(jwt);
+            try {
+                username = extractUsername(jwt);
+            } catch (ExpiredJwtException e) {
+                logger.warn("JWT Token has expired: " + e.getMessage());
+            } catch (SignatureException e) {
+                logger.error("JWT signature does not match: " + e.getMessage());
+            }
         }
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -61,22 +69,28 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private String extractUsername(String token) {
         Claims claims = Jwts.parser()
                 .setSigningKey(secretKey)
+                .setAllowedClockSkewSeconds(60) // Permite una desviación de hasta 60 segundos
                 .parseClaimsJws(token)
                 .getBody();
         return claims.getSubject();
     }
 
     private boolean validateToken(String token, UserDetails userDetails) {
-        final String username = extractUsername(token);
+        try {
+            final String username = extractUsername(token);
 
-        // Comprobar si el token coincide con el usuario y si no ha expirado
-        Claims claims = Jwts.parser()
-                .setSigningKey(secretKey)
-                .parseClaimsJws(token)
-                .getBody();
+            // Comprobar si el token coincide con el usuario y si no ha expirado
+            Claims claims = Jwts.parser()
+                    .setSigningKey(secretKey)
+                    .setAllowedClockSkewSeconds(60) // Permite una desviación de hasta 60 segundos
+                    .parseClaimsJws(token)
+                    .getBody();
 
-        // Verificar que el token no haya expirado
-        return username.equals(userDetails.getUsername()) && !claims.getExpiration().before(new Date());
+            // Verificar que el token no haya expirado
+            return username.equals(userDetails.getUsername()) && !claims.getExpiration().before(new Date());
+        } catch (ExpiredJwtException e) {
+            logger.warn("JWT Token has expired: " + e.getMessage());
+            return false;
+        }
     }
-
 }

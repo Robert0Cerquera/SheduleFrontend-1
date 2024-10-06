@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Carga Masiva de Usuarios</h2>
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="file">Selecciona un archivo Excel (.xlsx):</label>
+        <input type="file" id="file" (change)="onFileChange($event)" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!uploadForm.valid || isLoading">
+        {{ isLoading ? 'Subiendo...' : 'Subir archivo' }}
+      </button>
+    </form>
+    <div *ngIf="message" class="alert" [ngClass]="{'alert-success': success, 'alert-danger': !success}">
+      {{ message }}
+    </div>
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Rol' : 'Registrar Rol' }}</h2>
+
+  <!-- Formulario para Crear/Editar Rol -->
+  <form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre del Rol:</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <input type="text" id="descripcion" class="form-control" formControlName="descripcion" required>
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="estado" formControlName="state">
+        <label class="form-check-label" for="estado">{{ roleForm.get('state')?.value ? 'Activo' : 'Inactivo' }}</label>
+      </div>
+    </div>
+
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla de Roles -->
+<div class="table-container mt-5">
+  <h2 class="text-center mb-4">Lista de Roles</h2>
+  <div class="table-responsive">
+    <app-table [headers]="headers" [data]="roles" (edit)="editRole($event)" (delete)="deleteRole($event)">
+    </app-table>
+  </div>
+</div>
