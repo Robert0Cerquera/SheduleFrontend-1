@@ -1,67 +1,116 @@
 /* src/app/components/login/login.component.css */
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full height for centering */
-  background-color: #f4f4f9; /* Soft background color */
+  height: 100vh;
+  background: linear-gradient(to right, #004455 50%, transparent 50%);
+  position: relative;
+  overflow: hidden;
 }
 
-.login-form {
-  background: white; /* White background for form */
-  padding: 2rem; /* Padding around the form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: 300px; /* Fixed width for the form */
+.background-image {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1593642634367-d91a135587b5') no-repeat center center;
+  background-size: cover;
+  top: 0;
+}
+
+.login-form-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  z-index: 1;
+}
+
+.sena-logo {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 100px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 h2 {
-  text-align: center; /* Centered heading */
-  margin-bottom: 1.5rem; /* Space below heading */
-  color: #333; /* Darker text color */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #004455;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .form-group {
-  margin-bottom: 1rem; /* Space between form groups */
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 label {
-  display: block; /* Block level label */
-  margin-bottom: 0.5rem; /* Space below label */
-  color: #555; /* Medium gray color */
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #004455;
+  font-weight: 600;
 }
 
 .form-control {
-  width: 100%; /* Full width for input */
-  padding: 0.5rem; /* Padding inside input */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px; /* Rounded input */
-  font-size: 1rem; /* Font size */
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .form-control:focus {
-  border-color: #007bff; /* Blue border on focus */
-  outline: none; /* Remove outline */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light shadow on focus */
+  border-color: #39A900;
+  outline: none;
+  box-shadow: 0 0 10px rgba(57, 169, 0, 0.5);
+}
+
+.form-control.invalid {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
 }
 
 .btn {
-  width: 100%; /* Full width for button */
-  padding: 0.5rem; /* Padding inside button */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  color: white; /* White text */
-  background-color: #007bff; /* Blue background */
-  font-size: 1rem; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition */
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #004455;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 1rem;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #39A900;
+  transform: translateY(-3px);
 }
 
-.btn:disabled {
-  background-color: #c0c0c0; /* Gray background when disabled */
-  cursor: not-allowed; /* Not-allowed cursor */
+.additional-info {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.text-danger {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+}
+
+/* Añadir un efecto al fondo azul */
+.split-background {
+  width: 50%;
+  background: linear-gradient(to bottom right, #004455, #006678);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
