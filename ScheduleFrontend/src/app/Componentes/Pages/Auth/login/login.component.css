@@ -22,7 +22,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;  /* Fondo sólido sin transparencia */
   padding: 3rem;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -106,11 +106,13 @@ label {
   font-size: 0.85rem;
 }
 
-/* Añadir un efecto al fondo azul */
+/* Añadir un efecto de gradiente al lado izquierdo */
 .split-background {
   width: 50%;
-  background: linear-gradient(to bottom right, #004455, #006678);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  background: linear-gradient(to bottom right, #004455, #39A900);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }

@@ -4,9 +4,7 @@ import { PaisService } from '../../../../Services/Parameter/Ubicacion/pais.servi
 import { ContinenteService } from '../../../../Services/Parameter/Ubicacion/continente.service';
 import { Pais } from '../../../../models/M-Parameter/Ubicacion/pais';
 import { Continente } from '../../../../models/M-Parameter/Ubicacion/continente';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgSelectModule } from '@ng-select/ng-select';
-import { TableComponent } from '../../../Pages/table/table.component';
+
 
 @Component({
   selector: 'app-pais',

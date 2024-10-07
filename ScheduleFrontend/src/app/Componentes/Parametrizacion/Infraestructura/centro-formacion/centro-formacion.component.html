@@ -1,1 +1,51 @@
-<p>centro-formacion works!</p>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">{{ isEditing ? 'Editar Centro de Formación' : 'Registrar Centro de Formación' }}</h2>
+
+  <!-- Formulario para Crear/Editar Centro de Formación -->
+  <form [formGroup]="centroFormacionForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre del Centro de Formación:</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Dirección:</label>
+      <input type="text" id="direccion" class="form-control" formControlName="direccion" required>
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono:</label>
+      <input type="text" id="telefono" class="form-control" formControlName="telefono" required>
+    </div>
+    <div class="mb-3">
+      <label for="regional" class="form-label">Regional:</label>
+      <div formGroupName="regionalId">
+        <ng-select
+          [items]="regionales"
+          bindLabel="nombre"
+          bindValue="id"
+          formControlName="id"
+          placeholder="Seleccione una regional"
+          required>
+        </ng-select>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Estado:</label>
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="estado" formControlName="state">
+        <label class="form-check-label" for="estado">{{ centroFormacionForm.get('state')?.value ? 'Activo' : 'Inactivo' }}</label>
+      </div>
+    </div>
+
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
+    </div>
+  </form>
+</div>
+
+<!-- Tabla de Centros de Formación -->
+<div class="table-container mt-5">
+  <h2 class="text-center mb-4">Lista de Centros de Formación</h2>
+  <div class="table-responsive">
+    <app-table [headers]="headers" [data]="centrosFormacion" (edit)="editCentroFormacion($event)" (delete)="deleteCentroFormacion($event)"></app-table>
+  </div>
+</div>

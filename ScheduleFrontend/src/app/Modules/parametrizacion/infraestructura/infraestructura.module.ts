@@ -9,6 +9,7 @@ import { PisoComponent } from '../../../Componentes/Parametrizacion/Infraestruct
 import { RegionalComponent } from '../../../Componentes/Parametrizacion/Infraestructura/regional/regional.component';
 import { SedeComponent } from '../../../Componentes/Parametrizacion/Infraestructura/sede/sede.component';
 import { CentroFormacionComponent } from '../../../Componentes/Parametrizacion/Infraestructura/centro-formacion/centro-formacion.component';
+import { TableComponent } from '../../../Componentes/Pages/table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CentroFormacionComponent } from '../../../Componentes/Parametrizacion/I
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    InfraestructuraRoutingModule
+    InfraestructuraRoutingModule, 
+    TableComponent
   ]
 })
 export class InfraestructuraModule { }
