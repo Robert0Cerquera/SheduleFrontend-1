@@ -1,6 +1,6 @@
-<div class="container mt-5">
+  <div class="container mt-5">
     <h2 class="text-center mb-4">{{ isEditing ? 'Editar Jornada' : 'Registrar Jornada' }}</h2>
-  
+
     <!-- Formulario para Crear/Editar Jornada -->
     <form [formGroup]="jornadaForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
@@ -18,13 +18,13 @@
           <label class="form-check-label" for="estado">{{ jornadaForm.get('state')?.value ? 'Activo' : 'Inactivo' }}</label>
         </div>
       </div>
-  
+
       <div class="modal-footer d-flex justify-content-center">
         <button type="submit" class="btn btn-primary">{{ isEditing ? 'Actualizar' : 'Guardar' }}</button>
       </div>
     </form>
   </div>
-  
+
   <!-- Tabla de Jornadas -->
   <div class="table-container mt-5">
     <h2 class="text-center mb-4">Lista de Jornadas</h2>
@@ -33,4 +33,3 @@
       </app-table>
     </div>
   </div>
-  
