@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Jornada } from '../../../models/M-Operacional/GestionHorario/jornada';
+import { Jornada } from '../../models/M-Operacional/GestionHorario/jornada';
 
 
 @Injectable({
